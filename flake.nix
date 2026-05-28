@@ -137,7 +137,7 @@
           lib = nixpkgs.lib;
         }) nixpkgs.lib;
 
-      mkSystem =
+      mkBaseSystem =
         system:
         nixpkgs.lib.nixosSystem {
           specialArgs = {
@@ -201,17 +201,17 @@
       nixosConfigurations = {
         # Provides the NixOS system configuration as an output of the flake.
         # Evaluated by nixos-rebuild when generating a new system configuration.
-        # mkSystem provides a base system to share between machines,
+        # mkBaseSystem provides a base system to share between machines,
         # updated with a set of modules specific for each machine.
         #
         # See update syntax: https://nix.dev/manual/nix/2.34/language/operators#update
         #
         # forAllSystems : (listOf str) systems
-        #  ... mkSystem : (str) system -> (attrSet) nixosSystem
+        #  ... mkBaseSystem : (str) system -> (attrSet) nixosSystem
         #  ... update   : (attrSet) baseSystem + (attrSet) additionalAttrs
         lily = forAllSystems (
           system:
-          mkSystem system
+          mkBaseSystem system
           // {
             modules = [
               ./machines/lily/configuration.nix
