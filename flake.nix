@@ -70,6 +70,16 @@
           inherit system;
           overlays = (import ./overlays { inherit inputs; });
         };
+
+      # Returns nixpkgs.lib including our own lib functions found in ./lib (default.nix)
+      # Func that receives system architecture(s)
+      # Wraps around recursiveUpdate: https://noogle.dev/f/lib/recursiveUpdate/
+      lib =
+        system:
+        nixpkgs.lib.recursiveUpdate (import ./lib {
+          pkgs = mkPkgs system;
+          lib = nixpkgs.lib;
+        }) nixpkgs.lib;
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
