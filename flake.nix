@@ -60,6 +60,16 @@
         # "x86_64-darwin"
         # "aarch64-darwin"
       ];
+
+      # Returns the nixpkgs input while adding all overlays in ./overlays (checks for default.nix when specifying a directory)
+      # Func that receives system architecture(s)
+      # In particular, injects the stable package channel as an attr (nixpkgs.stable.pkg)
+      mkPkgs =
+        system:
+        import nixpkgs {
+          inherit system;
+          overlays = (import ./overlays { inherit inputs; });
+        };
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
