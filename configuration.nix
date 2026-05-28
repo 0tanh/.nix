@@ -106,6 +106,11 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
+  services.zerotierone = {
+    enable = true;
+    joinNetworks = [ "2873fd00f2c32ac1" ];
+  };
+
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
