@@ -162,12 +162,15 @@
             # Inherit the flake's own checks shellHook to load on shell activation
             inherit (self.checks.${system}.pre-commit-check) shellHook;
             # Environment variables
+            EDITOR = "nvim";
             NIX_CONFIG = "experimental-features = nix-command flakes";
             # Include packages to be available in the shell env
             packages = [
               curl
               git
+              lazygit
               magic-wormhole
+              nh
               neovim
             ];
           };
