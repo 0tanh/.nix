@@ -71,14 +71,17 @@
         # "aarch64-darwin"
       ];
 
-      # Returns the nixpkgs input while adding all overlays in ./overlays (checks for default.nix when specifying a directory)
+      # Variable to hold all overlays in ./overlays
+      # By default, nix will check for default.nix within when provided a directory as a path
+      overlays = import ./overlays { inherit inputs; };
+
+      # Returns the nixpkgs input while adding all overlays
       # Func that receives system architecture(s)
       # In particular, injects the stable package channel as an attr (nixpkgs.stable.pkg)
       mkPkgs =
         system:
         import nixpkgs {
-          inherit system;
-          overlays = (import ./overlays { inherit inputs; });
+          inherit system overlays;
         };
 
       # Returns nixpkgs.lib including our own lib functions found in ./lib (default.nix)
@@ -92,6 +95,9 @@
         }) nixpkgs.lib;
     in
     {
+      # Shorthand for overlays (the output) = overlays (the 'let' variable) ;
+      inherit overlays;
+
       # Provides flake-wide tests to run on evaluation and in devshell
       # Usage: nix flake check
       checks = forAllSystems (system: {
