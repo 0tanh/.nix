@@ -32,7 +32,7 @@
     # Manage your user's $HOME in addition to the system
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Persist & link data into your ephemeral root at boot time
@@ -65,7 +65,7 @@
     # SOPS-based secrets management
     sops-nix = {
       url = "github:mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Nix-powered centralised colortheming and style
