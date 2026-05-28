@@ -210,18 +210,25 @@
           mkBaseSystem system
           // {
             modules = [
+              # Machine-specific configuration (generated during initial install)
               ./machines/lily/configuration.nix
               ./machines/lily/disko.nix
 
+              # Shared nixos system modules common to all nixos system configurations
+              ./modules/nixos/common
+
+              # Additional optional nixos system modules
+              # ./modules/nixos/system/...
+
+              # Input nixos modules
               disko.nixosModules.disko
               nixos-hardware.nixosModules.apple-macbook-air-7
-
               home-manager.nixosModules.home-manager
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.extraSpecialArgs = { inherit inputs; };
-                home-manager.users.betty = ./home.nix;
+                home-manager.users.betty = ./machines/lily/home.nix;
               }
             ];
           }
