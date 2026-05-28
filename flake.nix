@@ -93,6 +93,16 @@
           pkgs = mkPkgs system;
           lib = nixpkgs.lib;
         }) nixpkgs.lib;
+
+      mkSystem =
+        system:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs outputs;
+            lib = lib system;
+          };
+        };
+
     in
     {
       # Shorthand for overlays (the output) = overlays (the 'let' variable) ;
@@ -143,15 +153,30 @@
         pkgs.nixfmt-rfc-style
       );
 
-      # replace yourHostname with your actual hostname!
-      nixosConfigurations.lily = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./configuration.nix
-          ./disko.nix
-          disko.nixosModules.disko
-          nixos-hardware.nixosModules.apple-macbook-air-7
-        ];
+      nixosConfigurations = {
+        # Provides the NixOS system configuration as an output of the flake.
+        # Evaluated by nixos-rebuild when generating a new system configuration.
+        # mkSystem provides a base system to share between machines,
+        # updated with a set of modules specific for each machine.
+        #
+        # See update syntax: https://nix.dev/manual/nix/2.34/language/operators#update
+        #
+        # forAllSystems : (listOf str) systems
+        #  ... mkSystem : (str) system -> (attrSet) nixosSystem
+        #  ... update   : (attrSet) baseSystem + (attrSet) additionalAttrs
+        lily = forAllSystems (
+          system:
+          mkSystem system
+          // {
+            modules = [
+              ./configuration.nix
+              ./disko.nix
+              disko.nixosModules.disko
+              nixos-hardware.nixosModules.apple-macbook-air-7
+            ];
+          }
+        );
       };
     };
+
 }
