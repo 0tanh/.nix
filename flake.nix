@@ -100,7 +100,14 @@
         };
       });
 
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      # Flake formatter. RFC style is modern, maintained and clean
+      formatter = forAllSystems (
+        system:
+        let
+          pkgs = mkPkgs system;
+        in
+        pkgs.nixfmt-rfc-style
+      );
 
       # replace yourHostname with your actual hostname!
       nixosConfigurations.lily = nixpkgs.lib.nixosSystem {
