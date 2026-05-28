@@ -73,11 +73,12 @@
         "https://nix-community.cachix.org" # Community packages
       ];
       extra-substituters = [
-       "https://nix-community.cachix.org" # Nix community Cachix server
+        "https://nix-community.cachix.org" # Nix community Cachix server
       ];
       extra-trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
+    };
   };
 
   # Configure network proxy if necessary
