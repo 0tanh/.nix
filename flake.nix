@@ -103,6 +103,31 @@
         };
       });
 
+      # Activate a temporary shell environment with extra packages and settings
+      # Can be auto-activated using nix-direnv, or loaded from the flake remotely using nix+git
+      # Usage (anywhere within the flake): nix develop
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = mkPkgs system;
+        in
+        {
+          default = pkgs.mkShell {
+            # Inherit the flake's own checks shellHook to load on shell activation
+            inherit (self.checks.${system}.pre-commit-check) shellHook;
+            # Environment variables
+            NIX_CONFIG = "experimental-features = nix-command flakes";
+            # Include packages to be available in the shell env
+            packages = [
+              curl
+              git
+              magic-wormhole
+              neovim
+            ];
+          };
+        }
+      );
+
       # Flake formatter. RFC style is modern, maintained and clean
       formatter = forAllSystems (
         system:
