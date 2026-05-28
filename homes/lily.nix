@@ -6,9 +6,9 @@
 }:
 
 {
-  imports = lib.flatten [
-    (lib.helpers.relativeToRoot "modules/nixos/home/direnv.nix")
-    (lib.helpers.relativeToRoot "modules/nixos/home/zsh.nix")
+  imports = [
+    ../modules/nixos/home/direnv.nix
+    ../modules/nixos/home/zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the
