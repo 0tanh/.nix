@@ -49,6 +49,18 @@
       sops-nix,
       ...
     }@inputs:
+    let
+      inherit (self) outputs;
+
+      # Useful helper to provide a list of system architectures you want an attrSet to be eval'able for
+      # Wraps around genAttrs: https://noogle.dev/f/lib/genAttrs/
+      # Provides systems as inputs to other functions
+      forAllSystems = nixpkgs.lib.genAttrs [
+        "x86_64-linux"
+        # "x86_64-darwin"
+        # "aarch64-darwin"
+      ];
+    in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 
