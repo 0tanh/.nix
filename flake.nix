@@ -103,7 +103,10 @@
 
       # Variable to hold all overlays in ./overlays
       # By default, nix will check for default.nix within when provided a directory as a path
-      overlays = import ./overlays { inherit inputs; };
+      overlaySet = import ./overlays { inherit inputs; };
+      overlays = [
+        overlaySet.stable-packages
+      ];
 
       # Returns nixpkgs.lib including our own lib functions found in ./lib (default.nix)
       # Func that receives system architecture(s)
