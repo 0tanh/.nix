@@ -133,10 +133,17 @@
           inherit system overlays;
         };
 
+      # Takes a system architecture and a list of modules,
+      # outputs a nixos system configuration with common system modules for that architecture,
+      # as well as the additional modules.
       mkConfig =
-        system: modules:
+        system: extraModules:
         nixpkgs.lib.nixosSystem {
-          inherit modules;
+          modules = [
+            # Shared system modules common to the architecture
+            ./modules/${system}/system/common
+          ]
+          ++ extraModules; # The ++ operator concatenates two lists
           specialArgs = {
             inherit inputs outputs;
             lib = lib system;
@@ -198,7 +205,7 @@
       nixosConfigurations = {
         # Provides the NixOS system configuration as an output of the flake.
         # Evaluated by nixos-rebuild when generating a new system configuration.
-        # mkBaseSystem provides a base system to share between machines,
+        # mkSystem provides a common interface to build any architecture,
         # updated with a set of modules specific for each machine.
         #
         # See update syntax: https://nix.dev/manual/nix/2.34/language/operators#update
@@ -212,9 +219,6 @@
             # Machine-specific configuration (generated during initial install)
             ./machines/lily/configuration.nix
             ./machines/lily/disko.nix
-
-            # Shared nixos system modules common to all nixos system configurations
-            ./modules/nixos/system/common
 
             # Additional optional nixos system modules
             # ./modules/nixos/system/...
