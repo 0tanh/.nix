@@ -29,7 +29,6 @@
   programs.zsh = {
     enable = true;
     dotDir = "/home/betty/.config/zsh";
-    nix-direnv.enable = true;
 
     autocd = true;
     autosuggestion.enable = true;
@@ -68,7 +67,8 @@
           owner = "tinted-theming";
           repo = "tinted-shell";
           rev = "main";
-          hash = "sha256-Sr4GRbczqQXN/WJDkpwqxpqe10HKPYcvTaXVF30XvEs=";
+          hash = "sha256-Z+QUeeKZP7sDP0SGlBi7zdvjhIMJPCBBnPXeznMQpMQ=";
+
         };
       }
     ];
@@ -162,7 +162,7 @@
       nano = "micro";
 
       # ripdrag
-      drag = "${pkgs.unstable.dragon-drop}/bin/dragon-drop -a -x";
+      drag = "${pkgs.dragon-drop}/bin/dragon-drop -a -x";
 
       # pet
       pets = "pet exec";
@@ -171,8 +171,8 @@
       # nix
       n = "cd ~/.nix";
       # dot = "cd ~/.nix/res/sub/dotfiles/";
-      rebuild = "${clean-problem-backup-files} && cd ~/.nix && treefmt ~/.nix && nh os switch ~/.nix";
-      update = "${clean-problem-backup-files} && cd ~/.nix && treefmt ~/.nix && just update secrets && just update dotfiles  && nh os switch ~/.nix";
+      rebuild = "cd ~/.nix && treefmt ~/.nix && nh os switch ~/.nix";
+      update = "cd ~/.nix && treefmt ~/.nix && just update secrets && just update dotfiles  && nh os switch ~/.nix";
 
       # git
       ga = "git add";
@@ -218,7 +218,7 @@
       # fixes duplication of commands when using tab-completion
       export LANG=C.UTF-8
 
-      # if [ "$TMUX" = "" ]; then tmux; fi
+      if [ "$TMUX" = "" ]; then tmux; fi
     '';
   };
 }

@@ -8,6 +8,7 @@
 {
   imports = [
     ../modules/nixos/home/direnv.nix
+    ../modules/nixos/home/tmux.nix
     ../modules/nixos/home/zsh.nix
   ];
 
