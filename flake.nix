@@ -178,7 +178,7 @@
             EDITOR = "nvim";
             NIX_CONFIG = "experimental-features = nix-command flakes";
             # Include packages to be available in the shell env
-            packages = [
+            packages = with pkgs; [
               curl
               git
               lazygit
