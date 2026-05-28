@@ -1,0 +1,1 @@
+NIX_CONFIG="access-tokens = github.com=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" nix --experimental-features 'nix-command flakes' run github:nix-community/nixos-anywhere -- --flake .#lily --target-host root@192.168.10.141
