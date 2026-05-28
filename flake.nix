@@ -1,6 +1,9 @@
 {
   inputs = {
     ## PACKAGE CHANNELS ##
+    # Don't forget to periodically update the lockfile: nix flake update
+    # Only do this when you're ready to fix any breaking changes, however
+
     # Primary nixpkgs repository: use unstable (latest rolling) by default
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # Pinned nixpkgs to most recent stable, will be injected via an overlay
