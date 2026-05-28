@@ -28,6 +28,13 @@
     # Community-managed modular hardware configurations
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
+    # Community sourced, pre-configured git pre-commit hooks
+    # Runs useful tools on pre-commit to lint & check for errors before creating a commit
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # SOPS-based secrets management
     sops-nix = {
       url = "github:mic92/sops-nix";
@@ -82,6 +89,17 @@
         }) nixpkgs.lib;
     in
     {
+      # Provides flake-wide tests to run on evaluation and in devshell
+      # Usage: nix flake check
+      checks = forAllSystems (system: {
+        pre-commit-check = pre-commit-hooks.lib.${system}.run {
+          src = ./.;
+          hooks = {
+            nixfmt-rfc-style.enable = true;
+          };
+        };
+      });
+
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 
       # replace yourHostname with your actual hostname!
