@@ -124,11 +124,6 @@
         # "aarch64-darwin"
       ];
 
-      # Helper that provides a list of all directories in ./machines
-      # ./machines should contain only directories, where each folder corresponds to a physical host
-      # Within each machine folder, all machine-specific configuration exists and will be imported
-      forAllMachines = builtins.attrNames (builtins.readDir ./machines);
-
       # Returns the nixpkgs input while adding all overlays
       # Func that receives system architecture(s)
       # In particular, injects the stable package channel as an attr (nixpkgs.stable.pkg)
