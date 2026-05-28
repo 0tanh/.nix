@@ -94,6 +94,7 @@
       home-manager,
       impermanence,
       nixos-hardware,
+      pre-commit-hooks,
       sops-nix,
       ...
     }@inputs:
