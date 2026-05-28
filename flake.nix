@@ -209,8 +209,8 @@
           mkSystem system
           // {
             modules = [
-              ./configuration.nix
-              ./disko.nix
+              ./machines/lily/configuration.nix
+              ./machines/lily/disko.nix
 
               disko.nixosModules.disko
               nixos-hardware.nixosModules.apple-macbook-air-7
