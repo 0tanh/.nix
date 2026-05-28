@@ -100,6 +100,20 @@
     let
       inherit (self) outputs;
 
+      # Variable to hold all overlays in ./overlays
+      # By default, nix will check for default.nix within when provided a directory as a path
+      overlays = import ./overlays { inherit inputs; };
+
+      # Returns nixpkgs.lib including our own lib functions found in ./lib (default.nix)
+      # Func that receives system architecture(s)
+      # Wraps around recursiveUpdate: https://noogle.dev/f/lib/recursiveUpdate/
+      lib =
+        system:
+        nixpkgs.lib.recursiveUpdate (import ./lib {
+          pkgs = mkPkgs system;
+          lib = nixpkgs.lib;
+        }) nixpkgs.lib;
+
       # Useful helper to provide a list of system architectures you want an attrSet to be eval'able for
       # Wraps around genAttrs: https://noogle.dev/f/lib/genAttrs/
       # Provides systems as inputs to other functions
@@ -114,10 +128,6 @@
       # Within each machine folder, all machine-specific configuration exists and will be imported
       forAllMachines = builtins.attrNames (builtins.readDir ./machines);
 
-      # Variable to hold all overlays in ./overlays
-      # By default, nix will check for default.nix within when provided a directory as a path
-      overlays = import ./overlays { inherit inputs; };
-
       # Returns the nixpkgs input while adding all overlays
       # Func that receives system architecture(s)
       # In particular, injects the stable package channel as an attr (nixpkgs.stable.pkg)
@@ -126,16 +136,6 @@
         import nixpkgs {
           inherit system overlays;
         };
-
-      # Returns nixpkgs.lib including our own lib functions found in ./lib (default.nix)
-      # Func that receives system architecture(s)
-      # Wraps around recursiveUpdate: https://noogle.dev/f/lib/recursiveUpdate/
-      lib =
-        system:
-        nixpkgs.lib.recursiveUpdate (import ./lib {
-          pkgs = mkPkgs system;
-          lib = nixpkgs.lib;
-        }) nixpkgs.lib;
 
       mkBaseSystem =
         system:
