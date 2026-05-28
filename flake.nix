@@ -211,8 +211,17 @@
             modules = [
               ./configuration.nix
               ./disko.nix
+
               disko.nixosModules.disko
               nixos-hardware.nixosModules.apple-macbook-air-7
+
+              home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.extraSpecialArgs = { inherit inputs; };
+                home-manager.users.betty = ./home.nix;
+              }
             ];
           }
         );
