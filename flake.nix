@@ -11,6 +11,18 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     ## PUBLIC INPUTS ##
+    # Inputs are the package repositories of nix flakes.
+    # Check out the many projects by nix-community or Mic92 on GitHub!
+    #
+    # When adding a new input, make sure to avoid channel duplication by including 'inputs.nixpkgs.follows = "nixpkgs";'
+    # when necessary (check the README of whatever input you're adding).
+    #
+    # In order to consume the module in your nixosSystem, it must be included in the attrSet passed to outputs!
+    #
+    # I have added a large variety of recommended flakes to your inputs. Some are disabled for now to avoid bloat,
+    # but I encourage you to check them out and enable if they seem cool. Just don't get too excited or things will start to take
+    # a very long time to evaluate without beefier hardware (this much is already quite a lot so far).
+
     # Declarative partitioning and formatting
     disko = {
       url = "github:nix-community/disko/latest";
@@ -28,6 +40,18 @@
       url = "github:nix-community/impermanence";
     };
 
+    # Modern, featureful, lightweight wayland compositor
+    # mango = {
+    #   url = "github:DreamMaoMao/mango";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    # Provides a search index to improve 'package not found' help text when loading pkgs into a nix shell
+    # nix-index-database = {
+    #   url = "github:Mic92/nix-index-database";
+    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # };
+
     # Community-managed modular hardware configurations
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
@@ -43,6 +67,12 @@
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    # Nix-powered centralised colortheming and style
+    # stylix = {
+    #   url = "github:danth/stylix";
+    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # };
 
     ## PRIVATE INPUTS
 
