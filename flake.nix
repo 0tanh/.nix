@@ -75,7 +75,15 @@
     # };
 
     ## PRIVATE INPUTS
+    # We will use git+ssh (ssh-agent based) authentication to download git contents from private git repos.
+    # This is where we can store additional data such as dotfiles or secrets for referencing elsewhere.
 
+    # Private SOPS secrets repository
+    # secrets = {
+    #   # This is an example. Create your own repo and reference it here.
+    #   url = "git+ssh://gitea@git.feline.fyi/0tanh/nix-secrets.git?ref=main&shallow=1";
+    #   flake = false;
+    # };
   };
 
   outputs =
@@ -132,7 +140,6 @@
             lib = lib system;
           };
         };
-
     in
     {
       # Shorthand for overlays (the output) = overlays (the 'let' variable) ;
