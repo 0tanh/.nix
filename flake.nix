@@ -109,6 +109,11 @@
         # "aarch64-darwin"
       ];
 
+      # Helper that provides a list of all directories in ./machines
+      # ./machines should contain only directories, where each folder corresponds to a physical host
+      # Within each machine folder, all machine-specific configuration exists and will be imported
+      forAllMachines = builtins.attrNames (builtins.readDir ./machines);
+
       # Variable to hold all overlays in ./overlays
       # By default, nix will check for default.nix within when provided a directory as a path
       overlays = import ./overlays { inherit inputs; };
