@@ -111,6 +111,7 @@
       # By default, nix will check for default.nix within when provided a directory as a path
       overlaySet = import ./overlays { inherit inputs; };
       overlays = [
+        overlaySet.additions
         overlaySet.stable-packages
       ];
 
@@ -183,7 +184,7 @@
     in
     {
       # Shorthand for overlays (the output) = overlays (the 'let' variable) ;
-      inherit overlays;
+      overlays = overlaySet;
 
       # Provides flake-wide tests to run on evaluation and in devshell
       # Usage: nix flake check

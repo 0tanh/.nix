@@ -7,10 +7,12 @@
 }:
 {
   home.packages = with pkgs; [
+    inkscape
     python314
 
     # nvim language servers & formatters
     bash-language-server
+    docker-compose-language-service
     dockerfile-language-server
     just-lsp
     lua-language-server
@@ -20,10 +22,9 @@
     python3Packages.python-lsp-server
     ruff
     rustfmt
-    sqlls
     stylua
-    terraformls
+    terraform-ls
     vscode-langservers-extracted
-    yamlls
+    yaml-language-server
   ];
 }

@@ -4,6 +4,9 @@
   pkgs,
   ...
 }:
+let
+  pokefetch = pkgs.callPackage ../../../pkgs/pokefetch { };
+in
 {
   # additional packages
   home.packages = with pkgs; [
@@ -216,6 +219,10 @@
 
       # fixes duplication of commands when using tab-completion
       export LANG=C.UTF-8
+
+      if [ "$TMUX" = "" ]; then tmux; fi
+
+      ${pokefetch}/bin/pokefetch
     '';
   };
 }

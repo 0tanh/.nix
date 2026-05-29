@@ -17,10 +17,10 @@
     ../modules/nixos/home/packages.nix
     ../modules/nixos/home/scripts.nix
     ../modules/nixos/home/ssh.nix
-    #../modules/nixos/home/tmux.nix
+    ../modules/nixos/home/tmux.nix
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
-    ../modules/nixos/home/zellij.nix
+    # ../modules/nixos/home/zellij.nix
     ../modules/nixos/home/zsh.nix
   ];
 
