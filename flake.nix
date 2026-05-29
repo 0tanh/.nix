@@ -216,6 +216,7 @@
             # Additional optional system modules
             ./modules/nixos/system/firefox.nix
             ./modules/nixos/system/greetd.nix
+            ./modules/nixos/system/impermanance.nix
             ./modules/nixos/system/mango.nix
             ./modules/nixos/system/sops.nix
 

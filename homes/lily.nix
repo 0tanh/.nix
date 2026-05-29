@@ -12,6 +12,7 @@
     ../modules/nixos/home/firefox.nix
     ../modules/nixos/home/fuzzel.nix
     ../modules/nixos/home/git.nix
+    ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
     ../modules/nixos/home/packages.nix
