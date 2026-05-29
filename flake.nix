@@ -276,10 +276,13 @@
             # typically only requiring importing different sets of home modules.
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.betty = ./homes/lily.nix;
+              home-manager = {
+                backupFileExtension = "hm-backup";
+                extraSpecialArgs = { inherit inputs; };
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.betty = ./homes/lily.nix;
+              };
             }
 
             # Include shared common system modules
