@@ -283,7 +283,7 @@
             ./modules/nixos/system/common
 
             # Additional optional system modules
-            # ./modules/nixos/system/...
+            ./modules/nixos/system/greetd.nix
 
             # Input nixos modules
             disko.nixosModules.disko

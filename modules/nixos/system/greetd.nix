@@ -3,28 +3,22 @@
   pkgs,
   config,
   lib,
-  host,
-  helpers,
-  host,
   ...
 }:
 let
-  opts = config.opts;
-  vars = config.opts.vars.${host};
-  isIncluded = lib.lists.elem "greetd" vars.modules;
   tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
 in
 {
-  config = lib.mkIf isIncluded {
+  config = {
     services.greetd = {
       enable = true;
       settings = {
         initial_session = {
-          command = vars.greeterCommand;
-          user = vars.mainUser;
+          command = "mango";
+          user = "betty";
         };
         default_session = {
-          command = "${tuigreet} --time --remember --cmd '${vars.greeterCommand}'";
+          command = "${tuigreet} --time --remember --cmd 'mango'";
           user = "greeter";
         };
       };
