@@ -1,96 +1,5 @@
 {
-  inputs = {
-    ## PACKAGE CHANNELS ##
-    # Don't forget to periodically update the lockfile: nix flake update
-    # Only do this when you're ready to fix any breaking changes, however
-
-    # Primary nixpkgs repository: use unstable (latest rolling) by default
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # Pinned nixpkgs to most recent stable, will be injected via an overlay
-    # You may want to edit this pin to new stables periodically
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
-
-    ## PUBLIC INPUTS ##
-    # Inputs are the package repositories of nix flakes.
-    # Check out the many projects by nix-community or Mic92 on GitHub!
-    #
-    # When adding a new input, make sure to avoid channel duplication by including 'inputs.nixpkgs.follows = "nixpkgs";'
-    # when necessary (check the README of whatever input you're adding).
-    #
-    # In order to consume the module in your nixosSystem, it must be included in the attrSet passed to outputs!
-    #
-    # I have added a large variety of recommended flakes to your inputs. Some are disabled for now to avoid bloat,
-    # but I encourage you to check them out and enable if they seem cool. Just don't get too excited or things will start to take
-    # a very long time to evaluate without beefier hardware (this much is already quite a lot so far).
-
-    # Modern desktop shell written in Quickshell QML
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Declarative partitioning and formatting
-    disko = {
-      url = "github:nix-community/disko/latest";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Manage your user's $HOME in addition to the system
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Persist & link data into your ephemeral root at boot time
-    impermanence = {
-      url = "github:nix-community/impermanence";
-    };
-
-    # Modern, featureful, lightweight wayland compositor
-    mango = {
-      url = "github:DreamMaoMao/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Provides a search index to improve 'package not found' help text when loading pkgs into a nix shell
-    # nix-index-database = {
-    #   url = "github:Mic92/nix-index-database";
-    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
-    # };
-
-    # Community-managed modular hardware configurations
-    nixos-hardware.url = "github:NixOS/nixos-hardware";
-
-    # Community sourced, pre-configured git pre-commit hooks
-    # Runs useful tools on pre-commit to lint & check for errors before creating a commit
-    pre-commit-hooks = {
-      url = "github:cachix/pre-commit-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # SOPS-based secrets management
-    sops-nix = {
-      url = "github:mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Nix-powered centralised colortheming and style
-    # stylix = {
-    #   url = "github:danth/stylix";
-    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
-    # };
-
-    ## PRIVATE INPUTS
-    # We will use git+ssh (ssh-agent based) authentication to download git contents from private git repos.
-    # This is where we can store additional data such as dotfiles or secrets for referencing elsewhere.
-
-    # Private SOPS secrets repository
-    # secrets = {
-    #   # This is an example. Create your own repo and reference it here.
-    #   url = "git+ssh://gitea@git.feline.fyi/0tanh/nix-secrets.git?ref=main&shallow=1";
-    #   flake = false;
-    # };
-  };
+  description = "my personal nixos configuration";
 
   outputs =
     {
@@ -331,5 +240,98 @@
         })
       );
     };
+
+  inputs = {
+    ## PACKAGE CHANNELS ##
+    # Don't forget to periodically update the lockfile: nix flake update
+    # Only do this when you're ready to fix any breaking changes, however
+
+    # Primary nixpkgs repository: use unstable (latest rolling) by default
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # Pinned nixpkgs to most recent stable, will be injected via an overlay
+    # You may want to edit this pin to new stables periodically
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+
+    ## PUBLIC INPUTS ##
+    # Inputs are the package repositories of nix flakes.
+    # Check out the many projects by nix-community or Mic92 on GitHub!
+    #
+    # When adding a new input, make sure to avoid channel duplication by including 'inputs.nixpkgs.follows = "nixpkgs";'
+    # when necessary (check the README of whatever input you're adding).
+    #
+    # In order to consume the module in your nixosSystem, it must be included in the attrSet passed to outputs!
+    #
+    # I have added a large variety of recommended flakes to your inputs. Some are disabled for now to avoid bloat,
+    # but I encourage you to check them out and enable if they seem cool. Just don't get too excited or things will start to take
+    # a very long time to evaluate without beefier hardware (this much is already quite a lot so far).
+
+    # Modern desktop shell written in Quickshell QML
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Declarative partitioning and formatting
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Manage your user's $HOME in addition to the system
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Persist & link data into your ephemeral root at boot time
+    impermanence = {
+      url = "github:nix-community/impermanence";
+    };
+
+    # Modern, featureful, lightweight wayland compositor
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Provides a search index to improve 'package not found' help text when loading pkgs into a nix shell
+    # nix-index-database = {
+    #   url = "github:Mic92/nix-index-database";
+    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # };
+
+    # Community-managed modular hardware configurations
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
+    # Community sourced, pre-configured git pre-commit hooks
+    # Runs useful tools on pre-commit to lint & check for errors before creating a commit
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # SOPS-based secrets management
+    sops-nix = {
+      url = "github:mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Nix-powered centralised colortheming and style
+    # stylix = {
+    #   url = "github:danth/stylix";
+    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # };
+
+    ## PRIVATE INPUTS
+    # We will use git+ssh (ssh-agent based) authentication to download git contents from private git repos.
+    # This is where we can store additional data such as dotfiles or secrets for referencing elsewhere.
+
+    # Private SOPS secrets repository
+    # secrets = {
+    #   # This is an example. Create your own repo and reference it here.
+    #   url = "git+ssh://gitea@git.feline.fyi/0tanh/nix-secrets.git?ref=main&shallow=1";
+    #   flake = false;
+    # };
+  };
 
 }
