@@ -10,18 +10,20 @@
     python314
 
     # nvim language servers & formatters
-    bashls
-    dockerls
-    jsonls
-    lua_ls
+    bash-language-server
+    dockerfile-language-server
+    just-lsp
+    lua-language-server
+    nixd
     nixfmt
     prettier
-    pylsp
+    python3Packages.python-lsp-server
     ruff
     rustfmt
     sqlls
     stylua
     terraformls
+    vscode-langservers-extracted
     yamlls
   ];
 }
