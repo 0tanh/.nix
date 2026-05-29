@@ -3,6 +3,8 @@
   inputs,
   ...
 }:
+with pkgs;
 {
-  pokefetch = pkgs.callPackage ./pokefetch { };
+  confirm-reboot = callPackage ./confirm-reboot { };
+  pokefetch = callPackage ./pokefetch { };
 }

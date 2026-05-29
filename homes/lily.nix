@@ -15,7 +15,6 @@
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
     ../modules/nixos/home/packages.nix
-    ../modules/nixos/home/scripts.nix
     ../modules/nixos/home/ssh.nix
     ../modules/nixos/home/tmux.nix
     ../modules/nixos/home/vars.nix

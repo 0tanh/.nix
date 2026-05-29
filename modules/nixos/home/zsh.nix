@@ -4,9 +4,6 @@
   pkgs,
   ...
 }:
-let
-  pokefetch = pkgs.callPackage ../../../pkgs/pokefetch { };
-in
 {
   # additional packages
   home.packages = with pkgs; [
@@ -193,7 +190,7 @@ in
       bonsai = "cbonsai -lit0.05";
 
       # safety first...
-      reboot = "confirm-reboot";
+      reboot = "${pkgs.confirm-reboot}/bin/confirm-reboot";
     };
 
     initContent = ''
@@ -222,7 +219,7 @@ in
 
       if [ "$TMUX" = "" ]; then tmux; fi
 
-      ${pokefetch}/bin/pokefetch
+      ${pkgs.pokefetch}/bin/pokefetch
     '';
   };
 }
