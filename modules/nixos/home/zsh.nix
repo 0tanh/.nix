@@ -190,7 +190,7 @@
       bonsai = "cbonsai -lit0.05";
 
       # safety first...
-      # reboot = "confirm-reboot";
+      reboot = "confirm-reboot";
     };
 
     initContent = ''

@@ -34,6 +34,6 @@
       #   "fs.inotify.max_user_instances" = 2000000000;
       # };
     };
-    kernelPackages = pkgs.linuxPackages_latest; # Use the latest kernel https://nixos.wiki/wiki/Linux_kernel
+    # kernelPackages = pkgs.linuxPackages_latest; # Use the latest kernel https://nixos.wiki/wiki/Linux_kernel
   };
 }

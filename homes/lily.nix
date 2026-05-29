@@ -11,6 +11,7 @@
     ../modules/nixos/home/git.nix
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
+    ../modules/nixos/home/scripts.nix
     ../modules/nixos/home/ssh.nix
     #../modules/nixos/home/tmux.nix
     ../modules/nixos/home/vars.nix
