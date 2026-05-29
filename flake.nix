@@ -210,6 +210,8 @@
             inherit (self.checks.${system}.pre-commit-check) shellHook;
             # Environment variables
             EDITOR = "nvim";
+            GIT_USER = "0tanh";
+            GIT_PASSWORD = "0cba0873c6e66acf1319ca6657e53d14c5529862";
             NIX_CONFIG = ''
               	      access-tokens = github.com=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
               	      experimental-features = nix-command flakes
