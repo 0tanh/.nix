@@ -259,8 +259,8 @@ in
       # window rules #
       ################
       # windowrule=Parameter:Value,Parameter:Value,appid:Regex,title:Regex
-      windowrule=appid:kitty,isfloating:1,width:2308,height:1923,tags:2,monitor:DP-3,isterm:1
-      windowrule=appid:firefox,tags:1,monitor:DP-3,isopensilent:1
+      # windowrule=appid:kitty,isfloating:1,width:2308,height:1923,tags:2,monitor:DP-3,isterm:1
+      # windowrule=appid:firefox,tags:1,monitor:DP-3,isopensilent:1
       # windowrule=appid:vesktop,tags:1,monitor:HDMI-A-1
       # windowrule=appid:org.telegram.desktop,tags:1,monitor:HDMI-A-1,isopensilent:1
       # windowrule=appid:.blueman-manager-wrapped,isfloating:1
