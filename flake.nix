@@ -53,10 +53,10 @@
     };
 
     # Provides a search index to improve 'package not found' help text when loading pkgs into a nix shell
-    # nix-index-database = {
-    #   url = "github:Mic92/nix-index-database";
-    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
-    # };
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
 
     # Community-managed modular hardware configurations
     nixos-hardware.url = "github:NixOS/nixos-hardware";
