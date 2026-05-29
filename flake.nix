@@ -173,6 +173,12 @@
 
             # Include shared common system modules
             ./modules/nixos/system/common
+
+            # Static module included to pull in overlays so that the configuration's pkgs
+            # are actually modified as expected
+            {
+              nixpkgs.overlays = overlays;
+            }
           ]
           # Always include any extra modules passed to the function
           ++ extraModules; # The ++ operator concatenates two lists
@@ -290,6 +296,12 @@
 
             # Include shared common system modules
             ./modules/nixos/system/common
+
+            # Static module included to pull in overlays so that the configuration's pkgs
+            # are actually modified as expected
+            {
+              nixpkgs.overlays = overlays;
+            }
 
             # Additional optional system modules
             ./modules/nixos/system/firefox.nix
