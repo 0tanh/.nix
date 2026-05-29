@@ -53,10 +53,10 @@
     };
 
     # Provides a search index to improve 'package not found' help text when loading pkgs into a nix shell
-    nix-index-database = {
-      url = "github:Mic92/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
+    # nix-index-database = {
+    #   url = "github:Mic92/nix-index-database";
+    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # };
 
     # Community-managed modular hardware configurations
     nixos-hardware.url = "github:NixOS/nixos-hardware";
@@ -210,7 +210,10 @@
             inherit (self.checks.${system}.pre-commit-check) shellHook;
             # Environment variables
             EDITOR = "nvim";
-            NIX_CONFIG = "experimental-features = nix-command flakes";
+            NIX_CONFIG = ''
+              	      access-tokens = github.com=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
+              	      experimental-features = nix-command flakes
+              	    '';
             # Include packages to be available in the shell env
             packages = with pkgs; [
               curl
@@ -289,8 +292,8 @@
             # Input nixos modules
             disko.nixosModules.disko
             nixos-hardware.nixosModules.apple-macbook-air-7
-            inputs.nix-index-database.nixosModules.nix-index
-            { programs.nix-index-database.comma.enable = true; }
+            # inputs.nix-index-database.nixosModules.nix-index
+            # { programs.nix-index-database.comma.enable = true; }
           ];
           specialArgs = {
             inherit inputs outputs;
