@@ -6,8 +6,7 @@
   ...
 }:
 {
-
-  home.persistence."/persistent" = {
+  home.persistence."/persist" = {
     directories = [
       "Blog"
       "Downloads"
