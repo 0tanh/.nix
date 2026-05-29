@@ -20,7 +20,6 @@
     settings = {
       # See https://jackson.dev/post/nix-reasonable-defaults/
       auto-optimise-store = true;
-      access-tokens.github.com.text = "github.com=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";
       accept-flake-config = true;
       download-buffer-size = 524288000;
       connect-timeout = 60000;
@@ -47,6 +46,9 @@
       extra-trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
+      extraOptions = ''
+        	access-tokens = github.com=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
+      '';
     };
   };
 }
