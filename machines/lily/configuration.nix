@@ -75,7 +75,7 @@
   users.users.betty = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    hashedPassword = "$y$j9T$qFd7EUbzb5hj11JY6GofP/$3jkcmkg7U1/hdWbwaVB7XI3zjMZsDJx09nkR4sqiVKA"; # mkpasswd >> configuration.nix, dd from bottom and paste here
+    hashedPasswordFile = config.sops.secrets."hashedPasswords/betty".path;
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDJfCNULFgoC3qx8H0xYWT8WHz+TuElEP0LsaN4lOtAl uncia@feline.fyi"
     ];

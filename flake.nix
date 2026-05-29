@@ -8,6 +8,7 @@
       disko,
       home-manager,
       impermanence,
+      nix-index-database,
       nixos-hardware,
       pre-commit-hooks,
       sops-nix,
@@ -216,12 +217,14 @@
             ./modules/nixos/system/firefox.nix
             ./modules/nixos/system/greetd.nix
             ./modules/nixos/system/mango.nix
+            ./modules/nixos/system/sops.nix
 
             # Input nixos modules
             disko.nixosModules.disko
+            nix-index-database.nixosModules.nix-index
+            { programs.nix-index-database.comma.enable = true; }
             nixos-hardware.nixosModules.apple-macbook-air-7
-            # inputs.nix-index-database.nixosModules.nix-index
-            # { programs.nix-index-database.comma.enable = true; }
+            sops-nix.nixosModules.sops
           ];
           specialArgs = {
             inherit inputs outputs;
@@ -295,10 +298,10 @@
     };
 
     # Provides a search index to improve 'package not found' help text when loading pkgs into a nix shell
-    # nix-index-database = {
-    #   url = "github:Mic92/nix-index-database";
-    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
-    # };
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Community-managed modular hardware configurations
     nixos-hardware.url = "github:NixOS/nixos-hardware";
@@ -319,7 +322,7 @@
     # Nix-powered centralised colortheming and style
     # stylix = {
     #   url = "github:danth/stylix";
-    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
+    #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
     ## PRIVATE INPUTS
@@ -327,11 +330,10 @@
     # This is where we can store additional data such as dotfiles or secrets for referencing elsewhere.
 
     # Private SOPS secrets repository
-    # secrets = {
-    #   # This is an example. Create your own repo and reference it here.
-    #   url = "git+ssh://gitea@git.feline.fyi/0tanh/nix-secrets.git?ref=main&shallow=1";
-    #   flake = false;
-    # };
+    secrets = {
+      url = "git+ssh://git@github.com/0tanh/nix-secrets.git?ref=main&shallow=1";
+      flake = false;
+    };
   };
 
 }

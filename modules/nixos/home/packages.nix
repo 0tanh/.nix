@@ -9,6 +9,8 @@
   home.packages = with pkgs; [
     inkscape
     python314
+    telegram-desktop
+    zeal
 
     # nvim language servers & formatters
     bash-language-server

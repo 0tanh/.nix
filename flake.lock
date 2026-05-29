@@ -204,6 +204,26 @@
         "type": "github"
       }
     },
+    "nix-index-database": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1779604987,
+        "narHash": "sha256-ZQ5z+fVhxYKtIFwtqGp5O0PD84BM1riASvqDaN5Xs+s=",
+        "owner": "Mic92",
+        "repo": "nix-index-database",
+        "rev": "8fba98c80b48fa013820e0163c5096922fea4ddd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "nix-index-database",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1779826373,
@@ -332,10 +352,12 @@
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "mango": "mango",
+        "nix-index-database": "nix-index-database",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
         "pre-commit-hooks": "pre-commit-hooks",
+        "secrets": "secrets",
         "sops-nix": "sops-nix"
       }
     },
@@ -358,6 +380,24 @@
         "owner": "wlrfx",
         "repo": "scenefx",
         "type": "github"
+      }
+    },
+    "secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780089085,
+        "narHash": "sha256-F7wdB7q522fmdRHuLlrJp4QV31EyC3cfpYXvqyO2ChY=",
+        "ref": "main",
+        "rev": "e3002576545365ed3449f74a56cd0e4507adcf7e",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/0tanh/nix-secrets.git"
+      },
+      "original": {
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/0tanh/nix-secrets.git"
       }
     },
     "sops-nix": {

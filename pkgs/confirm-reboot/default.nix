@@ -3,21 +3,9 @@
   stdenv,
   bash,
   coreutils,
-  fastfetch,
-  # fetchFromGitHub,
-  pokemon-colorscripts,
-  # python314,
   writeShellApplication,
 }:
-let
-  # pokefetchSrc = fetchFromGitHub {
-  #   owner = "aldamd";
-  #   repo = "PokeFetch";
-  #   rev = "53772bd6d2513ca080de0e53a37051eab9490a3e";
-  #   hash = "sha256-2ZZMI68krAGXenr/qElyaDo5LRpP2cCgCRGgqjQC+CM=";
-  # };
-in
-pkgs.writeShellApplication {
+writeShellApplication {
   name = "confirm-reboot";
   runtimeInputs = [
     bash
@@ -31,5 +19,4 @@ pkgs.writeShellApplication {
       reboot
     fi
   '';
-
 }
