@@ -284,10 +284,13 @@
 
             # Additional optional system modules
             ./modules/nixos/system/greetd.nix
+            ./modules/nixos/system/mango.nix
 
             # Input nixos modules
             disko.nixosModules.disko
             nixos-hardware.nixosModules.apple-macbook-air-7
+            inputs.nix-index-database.nixosModules.nix-index
+            { programs.nix-index-database.comma.enable = true; }
           ];
           specialArgs = {
             inherit inputs outputs;
