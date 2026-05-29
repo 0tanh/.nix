@@ -22,6 +22,7 @@ in
     fuzzel
 
     wlr-randr # monitor information
+    wl-clipboard # wayland clipboard
 
     libnotify # desktop notifications
     wf-recorder # screen recorder
