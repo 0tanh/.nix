@@ -23,6 +23,12 @@
     # but I encourage you to check them out and enable if they seem cool. Just don't get too excited or things will start to take
     # a very long time to evaluate without beefier hardware (this much is already quite a lot so far).
 
+    # Modern desktop shell written in Quickshell QML
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Declarative partitioning and formatting
     disko = {
       url = "github:nix-community/disko/latest";
@@ -41,10 +47,10 @@
     };
 
     # Modern, featureful, lightweight wayland compositor
-    # mango = {
-    #   url = "github:DreamMaoMao/mango";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Provides a search index to improve 'package not found' help text when loading pkgs into a nix shell
     # nix-index-database = {
