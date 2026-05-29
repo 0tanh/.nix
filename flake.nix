@@ -306,5 +306,16 @@
           };
         };
       };
+
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = mkPkgs system;
+        in
+        (import ./pkgs {
+          inherit pkgs inputs;
+        })
+      );
     };
+
 }
