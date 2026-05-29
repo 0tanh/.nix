@@ -291,6 +291,7 @@
             ./modules/nixos/system/common
 
             # Additional optional system modules
+            ./modules/nixos/system/firefox.nix
             ./modules/nixos/system/greetd.nix
             ./modules/nixos/system/mango.nix
 
