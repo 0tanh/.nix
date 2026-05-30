@@ -314,6 +314,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Spicetify - customisable spotify
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # SOPS-based secrets management
     sops-nix = {
       url = "github:mic92/sops-nix";
@@ -335,6 +341,7 @@
       url = "git+ssh://git@github.com/0tanh/nix-secrets.git?ref=main&shallow=1";
       flake = false;
     };
+
   };
 
 }
