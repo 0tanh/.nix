@@ -11,6 +11,7 @@
       nix-index-database,
       nixos-hardware,
       pre-commit-hooks,
+      stylix,
       sops-nix,
       ...
     }@inputs:
@@ -218,6 +219,7 @@
             ./modules/nixos/system/greetd.nix
             ./modules/nixos/system/impermanance.nix
             ./modules/nixos/system/mango.nix
+            ./modules/nixos/system/stylix.nix
             ./modules/nixos/system/sops.nix
 
             # Input nixos modules
@@ -321,10 +323,10 @@
     };
 
     # Nix-powered centralised colortheming and style
-    # stylix = {
-    #   url = "github:danth/stylix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     ## PRIVATE INPUTS
     # We will use git+ssh (ssh-agent based) authentication to download git contents from private git repos.
