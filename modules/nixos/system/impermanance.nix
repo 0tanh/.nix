@@ -45,6 +45,7 @@
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
+      "/var/lib/zerotier-one/"
       "/etc/NetworkManager/system-connections"
       {
         directory = "/var/lib/colord";
