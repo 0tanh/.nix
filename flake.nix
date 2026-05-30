@@ -335,6 +335,13 @@
       url = "git+ssh://git@github.com/0tanh/nix-secrets.git?ref=main&shallow=1";
       flake = false;
     };
+
+    # Private dotfiles repository
+    secrets = {
+      url = "git+ssh://git@github.com/0tanh/dotfiles.git?ref=main&shallow=1";
+      flake = false;
+    };
+
   };
 
 }
