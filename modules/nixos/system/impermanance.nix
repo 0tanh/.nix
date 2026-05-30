@@ -8,9 +8,31 @@
 {
   imports = [ inputs.impermanence.nixosModules.impermanence ];
 
-  boot.initrd.postDeviceCommands = lib.mkAfter ''
-    zfs rollback -r zpool/root@installation
-  '';
+  boot.initrd.systemd = {
+    enable = true;
+    # https://discourse.nixos.org/t/systemd-stage-1-migration/77113/2
+    # https://blog.decent.id/post/nixos-systemd-initrd/
+    services.rollback = {
+      description = "Rollback ZFS root to blank installation for impermanence";
+
+      # Specify dependencies explicitly
+      unitConfig.DefaultDependencies = false;
+
+      requiredBy = [ "initrd.target" ]; # This service is required for boot to succeed
+      requires = [ "zfs-import-rpool.service" ]; # Wait until the ZFS pool is available
+      before = [ "sysroot.mount" ]; # Should complete before any file systems are mounted
+      after = [ "zfs-import-rpool.service" ];
+
+      # The script needs to run to completion before this service is done
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart = "${config.boot.zfs.package}/sbin/zfs rollback -r zpool/root@installation";
+        # NOTE: to be able to see errors in your script do this:
+        # StandardOutput = "journal+console";
+        # StandardError = "journal+console";
+      };
+    };
+  };
 
   environment.persistence."/persist" = {
     enable = true; # NB: Defaults to true, not needed
