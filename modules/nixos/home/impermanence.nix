@@ -9,6 +9,7 @@
   home.persistence."/persist" = {
     directories = [
       "Blog"
+      "Code"
       "Downloads"
       "Images"
       "Music"

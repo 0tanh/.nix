@@ -16,7 +16,7 @@ in
         "/etc/ssh/ssh_host_ed25519_key"
         "/home/betty/.ssh/id_ed25519"
       ];
-      keyFile = "/etc/sops/age/key.txt";
+      keyFile = "/etc/sops/age/keys.txt";
       generateKey = true;
     };
 

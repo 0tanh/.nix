@@ -8,6 +8,10 @@
 {
   imports = [ inputs.impermanence.nixosModules.impermanence ];
 
+  boot.initrd.postDeviceCommands = lib.mkAfter ''
+    zfs rollback -r zpool/root@installation
+  '';
+
   environment.persistence."/persist" = {
     enable = true; # NB: Defaults to true, not needed
     hideMounts = true;
@@ -38,14 +42,12 @@
           mode = "u=rwx,g=rx,o=";
         };
       }
-
       {
         file = "/var/keys/secret_file";
         parentDirectory = {
           mode = "u=rwx,g=,o=";
         };
       }
-
     ];
   };
 }
