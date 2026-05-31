@@ -16,6 +16,7 @@
       "Pictures"
       "Documents"
       "Videos"
+      "Windows"
 
       {
         directory = ".gnupg";
