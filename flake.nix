@@ -1,5 +1,5 @@
 {
-  description = "my personal nixos configuration";
+  description = "Betty's Personal NixOS Configuration";
 
   outputs =
     {
