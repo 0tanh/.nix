@@ -350,6 +350,12 @@
       flake = false;
     };
 
+    # Private dotfiles repository
+    dotfiles = {
+      url = "git+ssh://git@github.com/0tanh/dotfiles.git?ref=main&shallow=1";
+      flake = false;
+    };
+
   };
 
 }
