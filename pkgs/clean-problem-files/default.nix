@@ -13,8 +13,11 @@ writeShellApplication {
   ];
   text = ''
     echo "Deleting orphaned .hm-backup files & problematic files for persisting ..."
+
     rm -f /etc/machine-id
     rm -f /etc/sops/age/keys.txt
     rm -f /etc/ssh/ssh_host_ed25519_key
+
+    rm -f /home/betty/.config/zsh/.zsh_history.hm-backup
   '';
 }
