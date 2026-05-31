@@ -30,10 +30,12 @@ in
     LC_TIME = "en_US.UTF-8";
   };
 
+  #TODO get the information from the machine to switch this based on
+  # the name of the machine.
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
-    variant = "";
+    variant = "mac";
   };
 
   # Select internationalisation properties.
