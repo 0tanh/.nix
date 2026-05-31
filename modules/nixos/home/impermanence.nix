@@ -32,6 +32,7 @@
         directory = ".local/share/keyrings";
         mode = "0700";
       }
+      ".local/share/Zeal/Zeal/docsets"
       ".cache/nvim"
       ".local/share/direnv"
       ".local/share/nvim"
