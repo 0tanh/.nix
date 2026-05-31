@@ -179,8 +179,7 @@ in
       ##################
       # https://mangowc.vercel.app/docs/configuration/monitors
       # monitorrule=name,mfact,nmaster,layout,transform,scale,x,y,width,height,refreshrate
-      # monitorrule=name:^DP-3$,scale:1,x:0,y:0,width:2560,height:1440,refresh:144
-      # monitorrule=name:^HDMI-A-1$,scale:1,x:2560,y:360,width:1920,height:1080,refresh:75
+      monitorrule=name:^eDP-1$,scale:1.5,x:0,y:0,width:1440,height:900,refresh:60
 
       # input
       repeat_rate=20
