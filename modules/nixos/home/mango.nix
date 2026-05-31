@@ -212,8 +212,8 @@ in
 
       # theme
       # rootcolor=0x201b14ff        # Background color of the root window
-      bordercolor=0x00330066
-      focuscolor=0x00ff00ff
+      bordercolor=0x50608066
+      focuscolor=0xA0B0D0ff
       # urgentcolor=0xad401fff      # Urgent window border (alerts)
       # maximizescreencolor=0x89aa61ff # Maximized
       # scratchpadcolor=0x516c93ff # Scratchpad
