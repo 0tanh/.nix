@@ -222,6 +222,7 @@
             ./modules/nixos/system/mango.nix
             ./modules/nixos/system/stylix.nix
             ./modules/nixos/system/sops.nix
+            ./modules/nixos/system/virtualization.nix
 
             # Input nixos modules
             disko.nixosModules.disko
