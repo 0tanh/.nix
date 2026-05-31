@@ -135,6 +135,24 @@
         "type": "github"
       }
     },
+    "dotfiles": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780156659,
+        "narHash": "sha256-5aXVo9H4telqjyd54DC8lMbMOwnn3quFi6ODBC92ta8=",
+        "ref": "main",
+        "rev": "41d40105f9e80e607804c65c744e3acb3047d8da",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/0tanh/dotfiles.git"
+      },
+      "original": {
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/0tanh/dotfiles.git"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -512,6 +530,7 @@
       "inputs": {
         "caelestia-shell": "caelestia-shell",
         "disko": "disko",
+        "dotfiles": "dotfiles",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "mango": "mango",
