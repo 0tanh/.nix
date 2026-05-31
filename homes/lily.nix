@@ -10,6 +10,7 @@
   imports = [
     ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
+    ../modules/nixos/home/dotfiles.nix
     ../modules/nixos/home/firefox.nix
     ../modules/nixos/home/fuzzel.nix
     ../modules/nixos/home/git.nix

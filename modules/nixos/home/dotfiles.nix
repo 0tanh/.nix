@@ -24,13 +24,11 @@ in
       (module: {
         "direct-link-${module}" = inputs.home-manager.lib.hm.dag.entryAfter [ "writeBoundary" ] (''
           rm -rf /home/betty/.config/${module}
-          $DRY_RUN_CMD ln -sfvn /home/betty/.nix/dotfiles/${module} /home/betty/.config/${module}
+          $DRY_RUN_CMD ln -sfvn /home/betty/.nix/assets/submodule/dotfiles/${module} /home/betty/.config/${module}
         '');
       })
       [
         "nvim"
-        "zsh"
-        "zellij"
       ]
   );
 

@@ -170,8 +170,8 @@
       # nix
       n = "cd ~/.nix";
       # dot = "cd ~/.nix/res/sub/dotfiles/";
-      rebuild = "cd ~/.nix && treefmt ~/.nix && nh os switch ~/.nix";
-      update = "cd ~/.nix && treefmt ~/.nix && just update secrets && just update dotfiles  && nh os switch ~/.nix";
+      rebuild = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch ~/.nix";
+      update = "cd ~/.nix && treefmt ~/.nix && nix flake update secrets && nix flake update dotfiles && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch ~/.nix";
 
       # git
       ga = "git add";
