@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 
@@ -22,6 +23,7 @@
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
     # ../modules/nixos/home/zellij.nix
+    ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
   ];
 

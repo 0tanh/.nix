@@ -13,6 +13,7 @@
       pre-commit-hooks,
       stylix,
       sops-nix,
+      zen-browser,
       ...
     }@inputs:
     let
@@ -331,6 +332,11 @@
     # Nix-powered centralised colortheming and style
     stylix = {
       url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # Browser based on firefox that I like a lot
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -16,6 +16,7 @@
       "Pictures"
       "Documents"
       "Videos"
+      ".config"
       {
         directory = ".gnupg";
         mode = "0700";
@@ -32,7 +33,7 @@
         directory = ".local/share/keyrings";
         mode = "0700";
       }
-      ".local/share/Zeal/Zeal/docsets"
+      ".local/share/Zeal/Zeal"
       ".cache/nvim"
       ".local/share/direnv"
       ".local/share/nvim"
