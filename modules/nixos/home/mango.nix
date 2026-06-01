@@ -179,7 +179,7 @@ in
       ##################
       # https://mangowc.vercel.app/docs/configuration/monitors
       # monitorrule=name,mfact,nmaster,layout,transform,scale,x,y,width,height,refreshrate
-      monitorrule=name:^eDP-1$,scale:1.5,x:0,y:0,width:1440,height:900,refresh:60
+      monitorrule=name:^eDP-1$,scale:0.7,x:0,y:0,width:1440,height:900,refresh:60
 
       # input
       repeat_rate=20

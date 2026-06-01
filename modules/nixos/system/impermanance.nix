@@ -55,7 +55,7 @@
       }
     ];
     files = [
-      "/etc/machine-id"
+      # "/etc/machine-id"
       # SOPS module already handles generating this
       # {
       #   file = "/etc/sops/age/keys.txt";
@@ -63,12 +63,12 @@
       #     mode = "u=rwx,g=,o=";
       #   };
       # }
-      {
-        file = "/etc/ssh/ssh_host_ed25519_key";
-        parentDirectory = {
-          mode = "u=rwx,g=rx,o=";
-        };
-      }
+      # {
+      #   file = "/etc/ssh/ssh_host_ed25519_key";
+      #   parentDirectory = {
+      #     mode = "u=rwx,g=rx,o=";
+      #   };
+      # }
       {
         file = "/var/keys/secret_file";
         parentDirectory = {
