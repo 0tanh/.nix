@@ -38,7 +38,12 @@
       ".cache/nvim"
 
       # .config
-      ".config" # do not do this if you can avoid it, this defeats the point of deleting everything
+      ".config/inkscape"
+      ".config/zen"
+      ".config/tmux"
+      ".config/mango"
+      ".config/zsh"
+      ".config/kitty"
 
       # .local/share
       ".local/share/direnv"

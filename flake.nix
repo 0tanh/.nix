@@ -228,6 +228,7 @@
             disko.nixosModules.disko
             nix-index-database.nixosModules.nix-index
             { programs.nix-index-database.comma.enable = true; }
+            { programs.nix-ld.enable = true; }
             nixos-hardware.nixosModules.apple-macbook-air-7
             sops-nix.nixosModules.sops
           ];
