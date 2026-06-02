@@ -209,8 +209,9 @@ in
       gappoh=5
       gappov=5
 
+      # https://coolors.co/ for picking color palettes
       # theme
-      # rootcolor=0x201b14ff        # Background color of the root window
+      # rootcolor=0x203b14ff        # Background color of the root window
       bordercolor=0x50608066
       focuscolor=0xA0B0D0ff
       # urgentcolor=0xad401fff      # Urgent window border (alerts)

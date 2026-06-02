@@ -37,6 +37,14 @@
     ];
   };
 
+  security.rtkit.enable = true; # Enables real-time scheduling priority
+
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    jack.enable = true;
+  };
   # fileSystems."/" =
   #   { device = "/dev/disk/by-uuid/f71e1167-07e0-45c7-8013-72decf385604";
   #     fsType = "ext4";
