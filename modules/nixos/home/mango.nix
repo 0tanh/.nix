@@ -67,8 +67,8 @@ in
       environment = [ ];
     };
     settings = {
-      bar.status = {
-        showBattery = true;
+      bar = {
+        status.showBattery = true;
       };
       paths.wallpaperDir = "~/Images";
     };
