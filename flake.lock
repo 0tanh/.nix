@@ -543,6 +543,7 @@
         "sops-nix": "sops-nix",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
+        "tuxedo": "tuxedo",
         "zen-browser": "zen-browser"
       }
     },
@@ -750,6 +751,22 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "tuxedo": {
+      "locked": {
+        "lastModified": 1780436788,
+        "narHash": "sha256-305xn6wDLJNeF13da3SNgdp9hFduomaE36MaByUt/G8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "30991addb16d81aab6c9250f7a0ce99eb62e6ca8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "pull/526577/head",
+        "repo": "nixpkgs",
         "type": "github"
       }
     },

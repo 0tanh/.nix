@@ -13,6 +13,7 @@
       pre-commit-hooks,
       stylix,
       sops-nix,
+      tuxedo,
       zen-browser,
       ...
     }@inputs:
@@ -336,6 +337,12 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # A tui todo app
+    tuxedo = {
+      url = "github:NixOS/nixpkgs/pull/526577/head";
+    };
+
     # Browser based on firefox that I like a lot
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";

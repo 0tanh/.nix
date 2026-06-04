@@ -21,6 +21,7 @@
     ../modules/nixos/home/spicetify.nix
     ../modules/nixos/home/ssh.nix
     ../modules/nixos/home/tmux.nix
+    ../modules/nixos/home/tuxedo.nix
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
     # ../modules/nixos/home/zellij.nix

@@ -17,6 +17,7 @@
     reaper-reapack-extension
     reaper-sws-extension
     yabridge
+
     # nvim language servers & formatters
     bash-language-server
     docker-compose-language-service
