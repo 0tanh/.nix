@@ -106,9 +106,8 @@ in
       exec-once=kitty
 
       # spawn apps
-      exec-once=firefox
-      exec-once=Telegram
-      exec-once=vesktop
+      exec-once=zen-browser
+      exec-once=spicetify
 
       ###############
       # keybindings #

@@ -13,7 +13,6 @@
       pre-commit-hooks,
       stylix,
       sops-nix,
-      tuxedo,
       zen-browser,
       ...
     }@inputs:
@@ -26,6 +25,7 @@
       overlays = [
         overlaySet.additions
         overlaySet.stable-packages
+        overlaySet.bleeding-packages
       ];
 
       # Returns nixpkgs.lib including our own lib functions found in ./lib (default.nix)
@@ -262,6 +262,8 @@
     # You may want to edit this pin to new stables periodically
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 
+    #This is the url of the most up to date branch of nixpkgs.
+    nixpkgs-bleeding.url = "github:NixOS/nixpkgs/master";
     ## PUBLIC INPUTS ##
     # Inputs are the package repositories of nix flakes.
     # Check out the many projects by nix-community or Mic92 on GitHub!
@@ -336,11 +338,6 @@
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # A tui todo app
-    tuxedo = {
-      url = "github:NixOS/nixpkgs/pull/526577/head";
     };
 
     # Browser based on firefox that I like a lot

@@ -75,7 +75,7 @@
 
     oh-my-zsh = {
       enable = true;
-      # theme = "base16-greenscreen";
+      theme = "darkblood";
       plugins = [
         "eza"
         "fzf"

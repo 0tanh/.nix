@@ -1,12 +1,14 @@
 {
-
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 {
   home.packages = with pkgs; [
+    pkgs.bleeding.tuxedo
+
     inkscape
     python314
     telegram-desktop
@@ -37,4 +39,5 @@
     vscode-langservers-extracted
     yaml-language-server
   ];
+
 }
