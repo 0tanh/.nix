@@ -107,7 +107,7 @@ in
 
       # spawn apps
       exec-once=zen-browser
-      exec-once=spicetify
+      exec-once=spotify
 
       ###############
       # keybindings #
@@ -115,7 +115,7 @@ in
       bind=SUPER,Q,killclient
       bind=SUPER,C,spawn,kitty
       bind=SUPER,F,spawn,kitty yazi
-      bind=SUPER,F,spawn,kitty vim
+      bind=SUPER,F,spawn,kitty nvim
       bind=SUPER,space,spawn,fuzzel
       bind=SUPER,V,togglefloating
       bind=SUPER,S,spawn_shell,grim -g "$(slurp -w 0)" - | wl-copy
@@ -210,7 +210,9 @@ in
 
       # https://coolors.co/ for picking color palettes
       # theme
-      # rootcolor=0x203b14ff        # Background color of the root window
+
+      # Background color of the root window
+      rootcolor=0x203b14ff        
       bordercolor=0x50608066
       focuscolor=0xA0B0D0ff
       # urgentcolor=0xad401fff      # Urgent window border (alerts)
