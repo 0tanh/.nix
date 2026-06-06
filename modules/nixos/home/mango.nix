@@ -106,7 +106,7 @@ in
       exec-once=kitty
 
       # spawn apps
-      exec-once=zen-browser
+      exec-once=zen
       exec-once=spotify
 
       ###############
@@ -178,7 +178,7 @@ in
       ##################
       # https://mangowc.vercel.app/docs/configuration/monitors
       # monitorrule=name,mfact,nmaster,layout,transform,scale,x,y,width,height,refreshrate
-      monitorrule=name:^eDP-1$,scale:0.7,x:0,y:0,width:1440,height:900,refresh:60
+      monitorrule=name:^eDP-1$,scale:0.8,x:0,y:0,width:1440,height:900,refresh:60
 
       # input
       repeat_rate=20
@@ -215,11 +215,16 @@ in
       rootcolor=0x203b14ff        
       bordercolor=0x50608066
       focuscolor=0xA0B0D0ff
-      # urgentcolor=0xad401fff      # Urgent window border (alerts)
+      # Urgent window border (alerts)
+      urgentcolor=0xad401fff      
+
       # maximizescreencolor=0x89aa61ff # Maximized
       # scratchpadcolor=0x516c93ff # Scratchpad
-      # globalcolor=0xb153a7ff # Global
-      # overlaycolor=0x14a57cff # Overlay
+      # Global
+      globalcolor=0xb153a7ff 
+      # Overlay
+      overlaycolor=0x14a57cff 
+
       # scratchpad_width_ratio=0.8
       # scratchpad_height_ratio=0.9
 
