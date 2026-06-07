@@ -1,0 +1,3 @@
+2026-06-06 rebuild inkscape +binaries @chore
+2026-06-06 subtler configuration of stlix +ricing @ricing
+2026-06-06 configure bottles for ditherboy +binaries
