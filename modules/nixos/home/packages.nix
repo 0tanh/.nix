@@ -6,12 +6,23 @@
   ...
 }:
 {
+  # Packages added here have not been added as dedicated nix modules
+  # and cannot be enabled with a simple packages.foo.enable = true
+  # flag. The use must manage the dotfiles for these seperately.
+  #
+  # as of 06/06/2026 the recommnended workflow is to use the
+  # ../../../assets/submodule/dotfiles/ directory to manage these files
   home.packages = with pkgs; [
+    # tuxedo has not been added to the lastest stable version of
+    # nixpkgs and needs to be pulled in from the less stable
+    # main branch
     pkgs.bleeding.tuxedo
 
     inkscape
     python314
     telegram-desktop
+    swaybg
+    vlc
     zeal
 
     # Reaper for audio stuff
