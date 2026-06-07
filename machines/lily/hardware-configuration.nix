@@ -21,6 +21,10 @@
     "usb_storage"
     "sd_mod"
   ];
+
+  boot.kernel.sysctl = {
+    "fs.inotify.max_user_watches" = 524288;
+  };
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [
     "kvm-intel"

@@ -23,9 +23,14 @@
     ../modules/nixos/home/tmux.nix
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
-    # ../modules/nixos/home/zellij.nix
+    #../modules/nixos/home/zellij.nix
     ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
+  ];
+
+  #Prevents inkscape from being recompiled from source when stylix config changes
+  disabledModules = [
+    "${inputs.stylix}/modules/inkscape/home-manager.nix"
   ];
 
   # Home Manager needs a bit of information about you and the
