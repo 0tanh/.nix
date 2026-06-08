@@ -24,6 +24,7 @@
 
   boot.kernel.sysctl = {
     "fs.inotify.max_user_watches" = 524288;
+    "fs.inotify.max_user_instances" = 1024;
   };
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [
