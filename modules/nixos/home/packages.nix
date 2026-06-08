@@ -53,6 +53,7 @@
     # nixpkgs. Inkscape is here to reduce its build time.
     ++ (with pkgs.stable; [
       inkscape
+      vesktop
     ])
 
     # these packages are being pulled from the latest version of
