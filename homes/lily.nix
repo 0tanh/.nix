@@ -17,6 +17,7 @@
     ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
+    ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/packages.nix
     ../modules/nixos/home/spicetify.nix
     ../modules/nixos/home/ssh.nix
