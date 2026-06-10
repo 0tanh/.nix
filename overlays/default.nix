@@ -16,8 +16,11 @@
     stable = import inputs.nixpkgs-stable { system = final.system; };
   };
 
-  # Inject "bleeding edge" packages from the lastest master version of the nixpkgs repo
+  # An overlay was recommended by the maintainer of the affinity nix package
+  # Source: https://github.com/mrshmllow/affinity-nix
+  affinity-nix = inputs.affinity-nix.overlays.default;
 
+  # Inject "bleeding edge" packages from the lastest master version of the nixpkgs repo
   # To use, when referencing a pkg: pkgs.bleeding.pkgName
   bleeding-packages = final: prev: {
     bleeding = import inputs.nixpkgs-bleeding { system = final.system; };

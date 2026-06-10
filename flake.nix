@@ -24,8 +24,9 @@
       overlaySet = import ./overlays { inherit inputs; };
       overlays = [
         overlaySet.additions
-        overlaySet.stable-packages
+        overlaySet.affinity-nix
         overlaySet.bleeding-packages
+        overlaySet.stable-packages
       ];
 
       # Returns nixpkgs.lib including our own lib functions found in ./lib (default.nix)
@@ -276,6 +277,12 @@
     # I have added a large variety of recommended flakes to your inputs. Some are disabled for now to avoid bloat,
     # but I encourage you to check them out and enable if they seem cool. Just don't get too excited or things will start to take
     # a very long time to evaluate without beefier hardware (this much is already quite a lot so far).
+
+    # Affinity Image Editor running through Wine Bottles
+    affinity-nix = {
+      url = "github:mrshmllow/affinity-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Modern desktop shell written in Quickshell QML
     caelestia-shell = {

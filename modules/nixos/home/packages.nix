@@ -15,6 +15,8 @@
   home.packages =
     with pkgs;
     [
+      #TODO refactor this into its own package
+      affinity-v3
 
       python314
       mpv

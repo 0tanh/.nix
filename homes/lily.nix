@@ -8,6 +8,10 @@
 
 {
   imports = [
+    #TODO refactor this to be moved out of general packages for use with overlays
+    #../modules/nixos/home/affinity.nix
+    #../modules/nixos/home/tuxedo.nix
+
     ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
     ../modules/nixos/home/dotfiles.nix
