@@ -21,10 +21,12 @@
     ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
+    ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/packages.nix
     ../modules/nixos/home/spicetify.nix
     ../modules/nixos/home/ssh.nix
     ../modules/nixos/home/tmux.nix
+    ../modules/nixos/home/reaper.nix
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
     #../modules/nixos/home/zellij.nix

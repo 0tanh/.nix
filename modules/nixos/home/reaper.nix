@@ -5,20 +5,12 @@
   ...
 }:
 {
-  programs.reaper = {
-    enable = true;
-  };
 
-  programs.reaper-reapack-extension = {
-    enable = true;
-  };
-
-  programs.reaper-sws-extension = {
-    enable = true;
-  };
-
-  programs.yabridge = {
-    enable = true;
-  };
-
+  home.packages = with pkgs; [
+    # Reaper for audio stuff
+    reaper
+    reaper-reapack-extension
+    reaper-sws-extension
+    yabridge
+  ];
 }
