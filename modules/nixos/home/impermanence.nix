@@ -37,9 +37,6 @@
       # .cache
       ".cache/nvim"
 
-      # profile pic
-      ".face"
-
       # .config
       ".config/inkscape"
       ".config/zen"
@@ -60,6 +57,8 @@
     ];
     files = [
       ".config/zsh/.zsh_history"
+      # profile pic
+      ".face"
     ];
   };
 
