@@ -16,7 +16,7 @@ NIX_CONFIG="access-tokens = github.com=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"
   run github:nix-community/nixos-anywhere -- \
   --extra-files "${TEMP}" \
   --flake .#lily \
-  --target-host root@192.168.10.141
+  --target-host betty@192.168.10.141
 
 # Clean up tmpdir
 rm -rf "${TEMP}"
