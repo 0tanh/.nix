@@ -48,6 +48,7 @@
           "com.sun:auto-snapshot" = "false";
         };
         options.ashift = "12";
+        postCreateHook = "zfs list -t snapshot -H -o name | grep -E '^rpool/root@blank$' || ( zfs snapshot rpool/root@blank ; zfs snapshot rpool/home@blank ; zfs snapshot rpoot/nix@blank )";
         datasets = {
           "root" = {
             type = "zfs_fs";

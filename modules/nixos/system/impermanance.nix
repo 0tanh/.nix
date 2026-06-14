@@ -31,8 +31,8 @@
       };
 
       script = ''
-        ${config.boot.zfs.package}/sbin/zfs rollback -r rpool/root@installation
-        ${config.boot.zfs.package}/sbin/zfs rollback -r rpool/home@installation
+        ${config.boot.zfs.package}/sbin/zfs rollback -r rpool/root@blank
+        ${config.boot.zfs.package}/sbin/zfs rollback -r rpool/home@blank
       '';
     };
   };
