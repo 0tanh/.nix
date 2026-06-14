@@ -5,7 +5,7 @@ TEMP=$(mktemp -d) # Create tmpdir
 USER=$(whoami) # Get username
 
 # Set up SSH key to be copied after install
-install -d -m755 "$HOME/home/${USER}/.ssh"
+install -d -m755 "${TEMP}/home/${USER}/.ssh"
 cp "/home/${USER}/.ssh/id_ed25519" "${TEMP}/home/${USER}/.ssh/id_ed25519"
 chmod 600 "${TEMP}/home/${USER}/.ssh/id_ed25519"
 
