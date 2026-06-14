@@ -40,9 +40,10 @@
       rpool = {
         type = "zpool";
         rootFsOptions = {
-          mountpoint = "none";
-          compression = "zstd";
           acltype = "posixacl";
+          atime = "off";
+          compression = "zstd";
+          mountpoint = "none";
           xattr = "sa";
           "com.sun:auto-snapshot" = "false";
         };
