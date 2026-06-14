@@ -17,6 +17,14 @@
                 mountOptions = [ "nofail" ];
               };
             };
+            swap = {
+              size = "4G";
+              content = {
+                type = "swap";
+                # Clear the swap at startup and when a sector is freed.
+                discardPolicy = "both";
+              };
+            };
             zfs = {
               size = "100%";
               content = {
@@ -59,24 +67,6 @@
             options.mountpoint = "legacy";
             mountpoint = "/persist";
           };
-
-          # # README MORE: https://wiki.archlinux.org/title/ZFS#Swap_volume
-          # "root/swap" = {
-          #   type = "zfs_volume";
-          #   size = "8M";
-          #   content = {
-          #     type = "swap";
-          #   };
-          #   options = {
-          #     volblocksize = "4096";
-          #     compression = "zle";
-          #     logbias = "throughput";
-          #     sync = "always";
-          #     primarycache = "metadata";
-          #     secondarycache = "none";
-          #     "com.sun:auto-snapshot" = "false";
-          #   };
-          # };
         };
       };
     };
