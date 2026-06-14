@@ -6,7 +6,7 @@ USER=$(whoami) # Get username
 
 # Set up SSH key to be copied after install
 install -d -m755 "$HOME/home/${USER}/.ssh"
-cp /home/${USER}/.ssh/id_ed25519 "${TEMP}/home/${USER}/.ssh/id_ed25519"
+cp "/home/${USER}/.ssh/id_ed25519" "${TEMP}/home/${USER}/.ssh/id_ed25519"
 chmod 600 "${TEMP}/home/${USER}/.ssh/id_ed25519"
 
 # Perform the install
@@ -22,6 +22,6 @@ NIX_CONFIG="access-tokens = github.com=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"
 rm -rf "${TEMP}"
 
 # Remove known_hosts entry, it will have changed if we try to connect after install
-sed -ie '/^192\.168\.10\.141/d' /home/${USER}/.ssh/known_hosts
+sed -ie '/^192\.168\.10\.141/d' "/home/${USER}/.ssh/known_hosts"
 
 echo "Success!"
