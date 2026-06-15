@@ -17,12 +17,15 @@
     ../modules/nixos/home/dotfiles.nix
     ../modules/nixos/home/firefox.nix
     ../modules/nixos/home/fuzzel.nix
+    ../modules/nixos/home/ghostty.nix
     ../modules/nixos/home/git.nix
     ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
+    ../modules/nixos/home/minimal.nix
     ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/packages.nix
+    ../modules/nixos/home/pet.nix
     ../modules/nixos/home/spicetify.nix
     ../modules/nixos/home/ssh.nix
     ../modules/nixos/home/tmux.nix
