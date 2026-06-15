@@ -13,8 +13,8 @@ chmod 600 "${TEMP}/home/${USER}/.ssh/id_ed25519"
 # TODO: take flake name and host as args $1 and $2
 export NIXPKGS_ALLOW_INSECURE=1 NIXPKGS_ALLOW_UNFREE=1 NIXPKGS_ALLOW_BROKEN=1
 NIX_CONFIG="access-tokens = github.com=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" \
-  nix --impure --experimental-features 'nix-command flakes' \
-  run github:nix-community/nixos-anywhere -- \
+  nix --experimental-features 'nix-command flakes' \
+  run github:nix-community/nixos-anywhere --impure -- \
   --extra-files "${TEMP}" \
   --flake .#lily \
   --target-host root@192.168.10.141
