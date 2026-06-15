@@ -22,7 +22,7 @@
               size = "100%";
               content = {
                 type = "zfs";
-                pool = "zpool";
+                pool = "rpool";
               };
             };
           };
@@ -30,7 +30,7 @@
       };
     };
     zpool = {
-      zpool = {
+      rpool = {
         type = "zpool";
         rootFsOptions = {
           mountpoint = "none";

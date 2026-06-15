@@ -25,6 +25,7 @@
       vlc
       zeal
 
+      zed
     ]
 
     # these packages are from a stable version of

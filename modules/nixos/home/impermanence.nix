@@ -58,7 +58,7 @@
     files = [
       ".config/zsh/.zsh_history"
       # profile pic
-      ".face"
+      # ".face"
     ];
   };
 

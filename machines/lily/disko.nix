@@ -8,7 +8,7 @@
           type = "gpt";
           partitions = {
             ESP = {
-              size = "1G";
+              size = "2G";
               type = "EF00";
               content = {
                 type = "filesystem";
@@ -17,11 +17,19 @@
                 mountOptions = [ "nofail" ];
               };
             };
+            swap = {
+              size = "4G";
+              content = {
+                type = "swap";
+                # Clear the swap at startup and when a sector is freed.
+                discardPolicy = "both";
+              };
+            };
             zfs = {
               size = "100%";
               content = {
                 type = "zfs";
-                pool = "zpool";
+                pool = "rpool";
               };
             };
           };
@@ -29,16 +37,18 @@
       };
     };
     zpool = {
-      zpool = {
+      rpool = {
         type = "zpool";
         rootFsOptions = {
-          mountpoint = "none";
-          compression = "zstd";
           acltype = "posixacl";
+          atime = "off";
+          compression = "zstd";
+          mountpoint = "none";
           xattr = "sa";
           "com.sun:auto-snapshot" = "false";
         };
         options.ashift = "12";
+        postCreateHook = "zfs list -t snapshot -H -o name | grep -E '^rpool/root@blank$' || ( zfs snapshot rpool/root@blank ; zfs snapshot rpool/home@blank ; zfs snapshot rpoot/nix@blank )";
         datasets = {
           "root" = {
             type = "zfs_fs";
@@ -59,24 +69,6 @@
             options.mountpoint = "legacy";
             mountpoint = "/persist";
           };
-
-          # # README MORE: https://wiki.archlinux.org/title/ZFS#Swap_volume
-          # "root/swap" = {
-          #   type = "zfs_volume";
-          #   size = "8M";
-          #   content = {
-          #     type = "swap";
-          #   };
-          #   options = {
-          #     volblocksize = "4096";
-          #     compression = "zle";
-          #     logbias = "throughput";
-          #     sync = "always";
-          #     primarycache = "metadata";
-          #     secondarycache = "none";
-          #     "com.sun:auto-snapshot" = "false";
-          #   };
-          # };
         };
       };
     };

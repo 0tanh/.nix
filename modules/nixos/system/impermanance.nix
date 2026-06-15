@@ -18,9 +18,9 @@
       # Specify dependencies explicitly
       unitConfig.DefaultDependencies = false;
       requiredBy = [ "initrd.target" ]; # This service is required for boot to succeed
-      requires = [ "zfs-import-zpool.service" ]; # Wait until the ZFS pool is available
+      requires = [ "zfs-import-rpool.service" ]; # Wait until the ZFS pool is available
       before = [ "sysroot.mount" ]; # Should complete before any file systems are mounted
-      after = [ "zfs-import-zpool.service" ];
+      after = [ "zfs-import-rpool.service" ];
 
       # The script needs to run to completion before this service is done
       serviceConfig = {
@@ -31,8 +31,8 @@
       };
 
       script = ''
-        ${config.boot.zfs.package}/sbin/zfs rollback -r zpool/root@installation
-        ${config.boot.zfs.package}/sbin/zfs rollback -r zpool/home@installation
+        ${config.boot.zfs.package}/sbin/zfs rollback -r rpool/root@blank
+        ${config.boot.zfs.package}/sbin/zfs rollback -r rpool/home@blank
       '';
     };
   };
