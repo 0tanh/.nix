@@ -17,7 +17,7 @@ in
         "/home/betty/.ssh/id_ed25519"
       ];
       keyFile = "/etc/sops/age/keys.txt";
-      generateKey = true;
+      generateKey = false;
     };
 
     secrets = {
