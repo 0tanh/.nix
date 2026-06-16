@@ -137,6 +137,7 @@
         # zstyle ':omz:plugins:eza' 'git-status' yes
         # zstyle ':omz:plugins:eza' 'dirs-first' yes
 
+
         zstyle ':omz:update' mode auto      # update automatically without asking
       '';
     };
@@ -164,6 +165,7 @@
       drag = "${pkgs.dragon-drop}/bin/dragon-drop -a -x";
 
       # pet
+      # saves cool snippets
       pets = "pet exec";
       petc = "pet clip";
 
