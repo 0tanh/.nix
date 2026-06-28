@@ -137,6 +137,7 @@
         # zstyle ':omz:plugins:eza' 'git-status' yes
         # zstyle ':omz:plugins:eza' 'dirs-first' yes
 
+
         zstyle ':omz:update' mode auto      # update automatically without asking
       '';
     };
@@ -164,6 +165,7 @@
       drag = "${pkgs.dragon-drop}/bin/dragon-drop -a -x";
 
       # pet
+      # saves cool snippets
       pets = "pet exec";
       petc = "pet clip";
 
@@ -172,6 +174,7 @@
       # dot = "cd ~/.nix/res/sub/dotfiles/";
       rebuild = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch ~/.nix";
       update = "cd ~/.nix && treefmt ~/.nix && nix flake update secrets && nix flake update dotfiles && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch ~/.nix";
+      drybuild = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os boot ~/.nix";
 
       # git
       ga = "git add";

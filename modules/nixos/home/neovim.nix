@@ -25,6 +25,7 @@
                 tree-sitter-c
                 tree-sitter-elixir
                 tree-sitter-heex
+                tree-sitter-svelte
               ]
             ))
           ];

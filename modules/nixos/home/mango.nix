@@ -106,8 +106,8 @@ in
       exec-once=kitty
 
       # spawn apps
-      exec-once=zen
-      exec-once=spotify
+      # exec-once=zen
+      # exec-once=spotify
 
       ###############
       # keybindings #

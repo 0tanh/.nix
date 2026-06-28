@@ -37,6 +37,10 @@
     };
   };
 
+  environment.sessionVariables = {
+    SOPS_AGE_KEY_FILE = config.sops.age.keyFile;
+  };
+
   environment.persistence."/persist" = {
     enable = true; # NB: Defaults to true, not needed
     hideMounts = true;
@@ -56,13 +60,14 @@
     ];
     files = [
       # "/etc/machine-id"
-      # SOPS module already handles generating this
-      # {
-      #   file = "/etc/sops/age/keys.txt";
-      #   parentDirectory = {
-      #     mode = "u=rwx,g=,o=";
-      #   };
-      # }
+      {
+        file = "/etc/sops/age/keys.txt";
+        parentDirectory = {
+          user = "root";
+          group = "wheel";
+          mode = "u=rwx,g=rx,o=";
+        };
+      }
       # {
       #   file = "/etc/ssh/ssh_host_ed25519_key";
       #   parentDirectory = {
