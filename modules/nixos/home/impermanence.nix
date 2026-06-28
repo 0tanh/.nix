@@ -54,6 +54,7 @@
       ".local/share/nvim"
       ".local/share/TelegramDesktop"
       ".local/share/Zeal"
+      ".local/share/zoxide"
 
       # .local/state
       ".local/state/nvim"
