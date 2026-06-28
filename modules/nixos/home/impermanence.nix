@@ -6,6 +6,9 @@
   ...
 }:
 {
+  # Directories in here persist after reboot.
+  # Ensure that only things you really care about are in here,
+  # and that you keep the contents of these directories backed up.
   home.persistence."/persist" = {
     directories = [
       "Blog"
