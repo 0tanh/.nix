@@ -319,6 +319,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Pure Nix Neovim configuration
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+    };
+
     # Community-managed modular hardware configurations
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
