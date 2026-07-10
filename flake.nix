@@ -134,9 +134,14 @@
             GIT_USER = "0tanh";
             GIT_PASSWORD = "0cba0873c6e66acf1319ca6657e53d14c5529862";
             NIX_CONFIG = ''
-              	      access-tokens = github.com=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
+              	      access-tokens = github.com=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 
+
+
               	      experimental-features = nix-command flakes
               	    '';
+
+            #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
+            #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
             # Include packages to be available in the shell env
             packages = with pkgs; [
               curl

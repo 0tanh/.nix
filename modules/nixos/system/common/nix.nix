@@ -8,7 +8,7 @@
 {
   config.nix = {
     extraOptions = ''
-      	access-tokens = github.com=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
+      	access-tokens = github.com=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 
     '';
     gc = {
       automatic = true;
