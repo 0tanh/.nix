@@ -41,11 +41,14 @@
       ".cache/nvim"
 
       # .config
+      ".config/blender"
       ".config/celestia"
       ".config/inkscape"
+      ".config/figma-linux"
       ".config/kitty"
       ".config/mango"
       ".config/REAPER"
+      ".config/spicetify"
       ".config/tmux"
       ".config/zen"
       ".config/zsh"

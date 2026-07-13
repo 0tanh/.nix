@@ -8,13 +8,18 @@
 
 {
   imports = [
+    # Combos are groups of related modules for easy set-up on a new machine, depending on need
+    ../modules/nixos/home/combos/art-work.nix
+    ../modules/nixos/home/combos/audio-work.nix
+    ../modules/nixos/home/combos/dev-work.nix
+    ../modules/nixos/home/combos/minimal.nix
+
     ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
     ../modules/nixos/home/dotfiles.nix
     ../modules/nixos/home/firefox.nix
     ../modules/nixos/home/fuzzel.nix
     ../modules/nixos/home/git.nix
-    #   ../modules/nixos/home/impermanence.nix #don't want impermanence on her
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
     ../modules/nixos/home/packages.nix
@@ -23,7 +28,6 @@
     ../modules/nixos/home/tmux.nix
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
-    # ../modules/nixos/home/zellij.nix
     ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
   ];

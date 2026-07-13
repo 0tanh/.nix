@@ -21,6 +21,7 @@
     ../modules/nixos/home/fuzzel.nix
     ../modules/nixos/home/ghostty.nix
     ../modules/nixos/home/git.nix
+    ../modules/nixos/home/godot.nix
     ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
