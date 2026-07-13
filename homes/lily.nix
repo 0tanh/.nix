@@ -37,7 +37,7 @@
     ../modules/nixos/home/zsh.nix
   ];
 
-  #Prevents inkscape from being recompiled from source when stylix config changes
+  # Prevents inkscape from being recompiled from source when stylix config changes
   disabledModules = [
     "${inputs.stylix}/modules/inkscape/home-manager.nix"
   ];
