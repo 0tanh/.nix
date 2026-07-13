@@ -9,8 +9,8 @@
   # This module imports a bunch of related modules for working with and making visual art
   # e.g. Image Editors, 3D graphics, Vector Graphics
   imports = [
-    ./figma.nix
-    ./blender.nix
+    ../figma.nix
+    ../blender.nix
   ];
 
   home.packages =

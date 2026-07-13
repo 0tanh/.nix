@@ -8,10 +8,13 @@
 
 {
   imports = [
-    ../modules/nixos/home/art-work.nix
-    ../modules/nixos/home/audio-work.nix
+    # Combos are groups of related modules for easy set-up on a new machine, depending on need
+    ../modules/nixos/home/combos/art-work.nix
+    ../modules/nixos/home/combos/audio-work.nix
+    ../modules/nixos/home/combos/dev-work.nix
+    ../modules/nixos/home/combos/minimal.nix
+    # Standard modules composed for this home manager.
     ../modules/nixos/home/devenv.nix
-    ../modules/nixos/home/dev-work.nix
     ../modules/nixos/home/direnv.nix
     ../modules/nixos/home/dotfiles.nix
     ../modules/nixos/home/firefox.nix
@@ -21,17 +24,14 @@
     ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
     ../modules/nixos/home/mango.nix
-    ../modules/nixos/home/minimal.nix
     ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/packages.nix
     ../modules/nixos/home/pet.nix
     ../modules/nixos/home/spicetify.nix
     ../modules/nixos/home/ssh.nix
     ../modules/nixos/home/tmux.nix
-    ../modules/nixos/home/reaper.nix
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
-    #../modules/nixos/home/zellij.nix
     ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
   ];
