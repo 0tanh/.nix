@@ -15,27 +15,17 @@
   home.packages =
     with pkgs;
     [
-      #TODO refactor this into its own package
-      affinity-v3
-      docker
-      jetbrains.idea
-
       python314
       mpv
       telegram-desktop
       rclone
       swaybg
       vlc
-
-      vscode.fhs
-      zeal
-
     ]
 
     # these packages are from a stable version of
     # nixpkgs. Inkscape is here to reduce its build time.
     ++ (with pkgs.stable; [
-      inkscape
       vesktop
     ])
 

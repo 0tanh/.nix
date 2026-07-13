@@ -11,6 +11,7 @@
     ../modules/nixos/home/art-work.nix
     ../modules/nixos/home/audio-work.nix
     ../modules/nixos/home/devenv.nix
+    ../modules/nixos/home/dev-work.nix
     ../modules/nixos/home/direnv.nix
     ../modules/nixos/home/dotfiles.nix
     ../modules/nixos/home/firefox.nix
