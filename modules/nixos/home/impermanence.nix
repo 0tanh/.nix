@@ -41,13 +41,14 @@
       ".cache/nvim"
 
       # .config
-      ".config/inkscape"
-      ".config/zen"
-      ".config/tmux"
-      ".config/mango"
-      ".config/zsh"
-      ".config/kitty"
       ".config/celestia"
+      ".config/inkscape"
+      ".config/kitty"
+      ".config/mango"
+      ".config/REAPER"
+      ".config/tmux"
+      ".config/zen"
+      ".config/zsh"
 
       # .local/share
       ".local/share/direnv"
