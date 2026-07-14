@@ -53,6 +53,9 @@
       ".config/zen"
       ".config/zsh"
 
+      # Discord
+      ".config/vesktop"
+
       # .local/share
       ".local/share/direnv"
       ".local/share/nvim"
