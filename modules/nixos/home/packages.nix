@@ -15,8 +15,10 @@
   home.packages =
     with pkgs;
     [
-      python314
       mpv
+      # Terminal Spotify Player
+      ncspot
+      python314
       telegram-desktop
       rclone
       swaybg
