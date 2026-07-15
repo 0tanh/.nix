@@ -7,11 +7,12 @@
 }:
 let
   shell-config = builtins.path {
-    path = ../../../assets/submodule/dotfiles/quickshell/GlobalStates.qml;
+    path = ../../../assets/submodule/dotfiles/quickshell/shell.qml;
     name = "betty-shell";
   };
   all-configs = {
     modules = ../../../assets/submodule/dotfiles/quickshell;
+    main = ../../../assets/submodule/dotfiles/quickshell/shell.qml;
   };
 
 in
