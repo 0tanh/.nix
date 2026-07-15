@@ -6,6 +6,10 @@
   ...
 }:
 let
+  shell-config = builtins.path {
+    path = ../../../assets/submodule/dotfiles/quickshell/config.json;
+    name = "betty-shell";
+  };
 in
 {
   imports = [
@@ -58,26 +62,14 @@ in
     early_exit=false
     fill_shape=false
   '';
-
-  programs.caelestia = {
+  programs.quickshell = {
     enable = true;
     systemd = {
       enable = true; # if you prefer starting from your compositor
       target = "graphical-session.target";
-      environment = [ ];
     };
-    settings = {
-      bar = {
-        status.showBattery = true;
-      };
-      paths.wallpaperDir = "~/Images";
-    };
-    cli = {
-      enable = true; # Also add caelestia-cli to path
-      settings = {
-        theme.enableGtk = false;
-      };
-    };
+    activeConfig = shell-config;
+
   };
 
   wayland.windowManager.mango = {
