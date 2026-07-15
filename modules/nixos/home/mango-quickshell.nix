@@ -7,15 +7,29 @@
 }:
 let
   shell-config = builtins.path {
-    path = ../../../assets/submodule/dotfiles/quickshell/config.json;
+    path = ../../../assets/submodule/dotfiles/quickshell/GlobalStates.qml;
     name = "betty-shell";
   };
+  all-configs = {
+    modules = ../../../assets/submodule/dotfiles/quickshell;
+  };
+
 in
 {
   imports = [
     inputs.mango.hmModules.mango
-    inputs.caelestia-shell.homeManagerModules.default
   ];
+
+  # QuickShell for things like sidebar.
+  programs.quickshell = {
+    enable = true;
+    systemd = {
+      enable = true; # if you prefer starting from your compositor
+      target = "graphical-session.target";
+    };
+    activeConfig = shell-config;
+    configs = all-configs;
+  };
 
   # additional packages
   home.packages = with pkgs; [
@@ -62,15 +76,6 @@ in
     early_exit=false
     fill_shape=false
   '';
-  programs.quickshell = {
-    enable = true;
-    systemd = {
-      enable = true; # if you prefer starting from your compositor
-      target = "graphical-session.target";
-    };
-    activeConfig = shell-config;
-
-  };
 
   wayland.windowManager.mango = {
     enable = true;
@@ -85,7 +90,7 @@ in
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 
       # set up wallpaper
-      # exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/res/img/stairs-green.jpg
+      exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/SPLINTER_Wallpaper_Cut.png
 
       # start the desktop shell
       # exec-once=${inputs.caelestia-shell.packages."x86_64-linux".default}/bin/caelestia-shell
@@ -273,6 +278,4 @@ in
       # mmsg -d disable_monitor,DP-1
     '';
   };
-
-  # additional configuration
 }
