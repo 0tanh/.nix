@@ -23,6 +23,8 @@
       rclone
       swaybg
       vlc
+
+      webcamoid
     ]
 
     # these packages are from a stable version of

@@ -11,8 +11,10 @@ let
     name = "betty-shell";
   };
   all-configs = {
-    modules = ../../../assets/submodule/dotfiles/quickshell;
-    main = ../../../assets/submodule/dotfiles/quickshell/shell.qml;
+    modules = ../../../assets/submodule/dotfiles/quickshell/modules;
+    overview = ../../../assets/submodule/dotfiles/quickshell/overview;
+    services = ../../../assets/submodule/dotfiles/quickshell/services;
+    default = ../../../assets/submodule/dotfiles/quickshell/main;
   };
 
 in
@@ -21,6 +23,17 @@ in
     inputs.mango.hmModules.mango
   ];
 
+  # Add shell.qml to quickshell as an immutable linked item.
+  # TODO find a more idiomatic way to do this kind of linking
+  home.file.".config/quickshell/shell.qml".source =
+    ../../../assets/submodule/dotfiles/quickshell/shell.qml;
+  home.file.".config/quickshell/config.json".source =
+    ../../../assets/submodule/dotfiles/quickshell/config.json;
+  home.file.".config/quickshell/qml_color.json".source =
+    ../../../assets/submodule/dotfiles/quickshell/qml_color.json;
+  home.file.".config/quickshell/GlobalStates.qml".source =
+    ../../../assets/submodule/dotfiles/quickshell/GlobalStates.qml;
+
   # QuickShell for things like sidebar.
   programs.quickshell = {
     enable = true;
@@ -28,7 +41,7 @@ in
       enable = true; # if you prefer starting from your compositor
       target = "graphical-session.target";
     };
-    activeConfig = shell-config;
+    activeConfig = "../../../assets/submodule/dotfiles/quickshell/main/shell.qml";
     configs = all-configs;
   };
 
@@ -89,6 +102,8 @@ in
       # autostart
       # xwayland on xdg dbus activation
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
+
+      exec-once=qs
 
       # set up wallpaper
       exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/SPLINTER_Wallpaper_Cut.png
