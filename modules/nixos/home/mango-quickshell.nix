@@ -31,7 +31,13 @@ in
       target = "graphical-session.target";
     };
   };
-
+  # Add a shell alias to switch a prototype ta mutable file
+  programs.zsh.shellAliases = {
+    # switch running quickshell to a devlopemnt-ersion
+    qs-dev = "echo 'Doing QuickShellDev'";
+    # backup a running qs-dev version to my dotfiles repo
+    qsd-back = "echo 'Backing up to dotfiles'";
+  };
   # additional packages
   home.packages = with pkgs; [
     # screenshots
