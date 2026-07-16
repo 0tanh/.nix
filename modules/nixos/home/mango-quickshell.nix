@@ -6,34 +6,23 @@
   ...
 }:
 let
-  shell-config = builtins.path {
-    path = ../../../assets/submodule/dotfiles/quickshell/shell.qml;
-    name = "betty-shell";
-  };
   all-configs = {
     modules = ../../../assets/submodule/dotfiles/quickshell/modules;
     overview = ../../../assets/submodule/dotfiles/quickshell/overview;
     services = ../../../assets/submodule/dotfiles/quickshell/services;
-    default = ../../../assets/submodule/dotfiles/quickshell/main;
+    main = ../../../assets/submodule/dotfiles/quickshell/main;
   };
+  qs-path = {
 
+  };
 in
 {
   imports = [
     inputs.mango.hmModules.mango
   ];
 
-  # Add shell.qml to quickshell as an immutable linked item.
-  # TODO find a more idiomatic way to do this kind of linking
-  home.file.".config/quickshell/shell.qml".source =
-    ../../../assets/submodule/dotfiles/quickshell/shell.qml;
-  home.file.".config/quickshell/config.json".source =
-    ../../../assets/submodule/dotfiles/quickshell/config.json;
-  home.file.".config/quickshell/qml_color.json".source =
-    ../../../assets/submodule/dotfiles/quickshell/qml_color.json;
-  home.file.".config/quickshell/GlobalStates.qml".source =
-    ../../../assets/submodule/dotfiles/quickshell/GlobalStates.qml;
-
+  # Link to ~/.config/quickshell/ from dotfiles/quickshell
+  xdg.configFile."quickshell".source = ../../../assets/submodule/dotfiles/quickshell;
   # QuickShell for things like sidebar.
   programs.quickshell = {
     enable = true;
@@ -41,8 +30,6 @@ in
       enable = true; # if you prefer starting from your compositor
       target = "graphical-session.target";
     };
-    activeConfig = "../../../assets/submodule/dotfiles/quickshell/main/shell.qml";
-    configs = all-configs;
   };
 
   # additional packages
