@@ -15,6 +15,9 @@
   home.packages =
     with pkgs;
     [
+      # sending stuff
+      magic-wormhole
+      # Media Player
       mpv
       # Terminal Spotify Player
       ncspot
