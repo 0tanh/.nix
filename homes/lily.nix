@@ -13,6 +13,8 @@
     ../modules/nixos/home/combos/audio-work.nix
     ../modules/nixos/home/combos/dev-work.nix
     ../modules/nixos/home/combos/minimal.nix
+    # The current desktop environment
+    ../modules/nixos/home/combos/mango-quickshell.nix
     # Standard modules composed for this home manager.
     ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
@@ -24,7 +26,6 @@
     ../modules/nixos/home/godot.nix
     ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
-    ../modules/nixos/home/mango-quickshell.nix
     ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/packages.nix
     ../modules/nixos/home/pet.nix

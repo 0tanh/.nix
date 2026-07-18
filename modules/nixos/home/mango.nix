@@ -6,38 +6,12 @@
   ...
 }:
 let
-  all-configs = {
-    modules = ../../../assets/submodule/dotfiles/quickshell/modules;
-    overview = ../../../assets/submodule/dotfiles/quickshell/overview;
-    services = ../../../assets/submodule/dotfiles/quickshell/services;
-    main = ../../../assets/submodule/dotfiles/quickshell/main;
-  };
-  qs-path = {
-
-  };
 in
 {
   imports = [
     inputs.mango.hmModules.mango
   ];
 
-  # Link to ~/.config/quickshell/ from dotfiles/quickshell
-  xdg.configFile."quickshell".source = ../../../assets/submodule/dotfiles/quickshell;
-  # QuickShell for things like sidebar.
-  programs.quickshell = {
-    enable = true;
-    systemd = {
-      enable = true; # if you prefer starting from your compositor
-      target = "graphical-session.target";
-    };
-  };
-  # Add a shell alias to switch a prototype ta mutable file
-  programs.zsh.shellAliases = {
-    # switch running quickshell to a devlopemnt-ersion
-    qs-dev = "echo 'Doing QuickShellDev'";
-    # backup a running qs-dev version to my dotfiles repo
-    qsd-back = "echo 'Backing up to dotfiles'";
-  };
   # additional packages
   home.packages = with pkgs; [
     # screenshots
@@ -96,10 +70,8 @@ in
       # xwayland on xdg dbus activation
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 
-      exec-once=qs
-
       # set up wallpaper
-      exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/SPLINTER_Wallpaper_Cut.png
+      # exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/res/img/stairs-green.jpg
 
       # start the desktop shell
       # exec-once=${inputs.caelestia-shell.packages."x86_64-linux".default}/bin/caelestia-shell
@@ -287,4 +259,6 @@ in
       # mmsg -d disable_monitor,DP-1
     '';
   };
+
+  # additional configuration
 }
