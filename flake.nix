@@ -291,7 +291,7 @@
             { programs.nix-index-database.comma.enable = true; }
             { programs.nix-ld.enable = true; }
             nixos-hardware.nixosModules.common-cpu-amd
-            nixos-hardware.nixosModules.common-gpu-nvidia-kepler
+            # nixos-hardware.nixosModules.common-gpu-nvidia-kepler
             nixos-hardware.nixosModules.common-pc-ssd
             sops-nix.nixosModules.sops
           ];
