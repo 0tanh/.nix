@@ -2,15 +2,8 @@
   inputs,
   pkgs,
   config,
-  lib,
-  helpers,
-  host,
   ...
 }:
-let
-  opts = config.opts;
-  vars = config.opts.vars.${host};
-in
 {
   # Set your time zone.
   time.timeZone = "Africa/Johannesburg";
@@ -34,8 +27,8 @@ in
   # the name of the machine.
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
-    variant = "mac";
+    layout = "za";
+    variant = "";
   };
 
   # Select internationalisation properties.
