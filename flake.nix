@@ -160,6 +160,8 @@
         pkgs.nixfmt-rfc-style
       );
 
+      inputs.self.submodules = true;
+
       nixosConfigurations = {
         # Provides the NixOS system configuration as an output of the flake.
         # Evaluated by nixos-rebuild when generating a new system configuration.

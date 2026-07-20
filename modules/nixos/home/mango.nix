@@ -10,7 +10,6 @@ in
 {
   imports = [
     inputs.mango.hmModules.mango
-    inputs.caelestia-shell.homeManagerModules.default
   ];
 
   # additional packages
@@ -58,27 +57,6 @@ in
     early_exit=false
     fill_shape=false
   '';
-
-  programs.caelestia = {
-    enable = true;
-    systemd = {
-      enable = true; # if you prefer starting from your compositor
-      target = "graphical-session.target";
-      environment = [ ];
-    };
-    settings = {
-      bar = {
-        status.showBattery = true;
-      };
-      paths.wallpaperDir = "~/Images";
-    };
-    cli = {
-      enable = true; # Also add caelestia-cli to path
-      settings = {
-        theme.enableGtk = false;
-      };
-    };
-  };
 
   wayland.windowManager.mango = {
     enable = true;

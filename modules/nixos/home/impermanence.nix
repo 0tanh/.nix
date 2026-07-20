@@ -47,6 +47,7 @@
       ".config/figma-linux"
       ".config/kitty"
       ".config/mango"
+      ".config/ncspot"
       ".config/REAPER"
       ".config/spicetify"
       ".config/tmux"

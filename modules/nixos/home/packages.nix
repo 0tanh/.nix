@@ -15,14 +15,20 @@
   home.packages =
     with pkgs;
     [
+      # sending stuff
+      magic-wormhole
+      # Media Player
       mpv
       # Terminal Spotify Player
       ncspot
+      p7zip
       python314
       telegram-desktop
       rclone
       swaybg
       vlc
+      unrar
+      webcamoid
     ]
 
     # these packages are from a stable version of
