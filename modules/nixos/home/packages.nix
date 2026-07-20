@@ -21,12 +21,13 @@
       mpv
       # Terminal Spotify Player
       ncspot
+      p7zip
       python314
       telegram-desktop
       rclone
       swaybg
       vlc
-
+      unrar
       webcamoid
     ]
 
