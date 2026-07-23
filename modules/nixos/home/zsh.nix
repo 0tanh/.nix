@@ -60,17 +60,17 @@
           sha256 = "0za4aiwwrlawnia4f29msk822rj9bgcygw6a8a6iikiwzjjz0g91";
         };
       }
-      {
-        name = "tinted-shell";
-        file = "base16-shell.plugin.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "tinted-theming";
-          repo = "tinted-shell";
-          rev = "main";
-          hash = "sha256-Z+QUeeKZP7sDP0SGlBi7zdvjhIMJPCBBnPXeznMQpMQ=";
-
-        };
-      }
+      # {
+      #  name = "tinted-shell";
+      # file = "base16-shell.plugin.zsh";
+      # src = pkgs.fetchFromGitHub {
+      #  owner = "tinted-theming";
+      # repo = "tinted-shell";
+      #  rev = "main";
+      # hash = "KyPUAWRrpvg/LPxkVMwDC3IdKhVfpDar3/A0PcVeQcY=";
+      #
+      #      ## };
+      # }
     ];
 
     oh-my-zsh = {
