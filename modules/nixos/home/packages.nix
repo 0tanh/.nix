@@ -15,6 +15,12 @@
   home.packages =
     with pkgs;
     [
+      goofcord
+      #TODO move nicotine, mpv, vlc, and ncspot to the same combo
+      # Soulseek Client
+      nicotine-plus
+      # Space monitering
+      ncdu
       # sending stuff
       magic-wormhole
       # Media Player
