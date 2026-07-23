@@ -5,4 +5,4 @@ x 2026-06-16 2026-06-06 subtler configuration of stlix +ricing @ricing
 2026-06-08 add base 24 +ricing @ricing
 (B) configure caelestia-shell +ricing
 (A) set-up nixvim so that I don't need all these jank ass workarounds
-(B) define more idiomatic package setup for config (e.g. heavy, dev, art etc)
+x 2026-07-23 2026-07-23 define more idiomatic package setup for config (e.g. heavy, dev, art etc)

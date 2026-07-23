@@ -66,9 +66,14 @@
 
       # .local/state
       ".local/state/nvim"
+
+      ".wine-ableton"
+
+      "Music/Ableton"
     ];
     files = [
       ".config/zsh/.zsh_history"
+      "todo.txt"
       # profile pic
       # ".face"
     ];

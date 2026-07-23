@@ -28,6 +28,7 @@
       swaybg
       vlc
       unrar
+      unzip
       webcamoid
     ]
 
