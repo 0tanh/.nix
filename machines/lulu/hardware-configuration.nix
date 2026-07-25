@@ -60,7 +60,20 @@
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   # https://github.com/NixOS/nixos-hardware/blob/master/common/gpu/nvidia/default.nix
-  services.xserver.videoDrivers = lib.mkDefault [ "nvidia" ];
+  services.xserver.videoDrivers = [
+    # fallback driver
+    "fbdev"
+    # Make Default Fallback explicit
+    "modesetting"
+    # Open Source Graphics Driver
+    "nouveau"
+  ];
+  #[  ];
+  ## Does Not Work On GTX650
+  # lib.mkDefault [
+  # "nvidia"
+  # ];
+
   # https://github.com/NixOS/nixos-hardware/blob/master/common/gpu/nvidia/kepler/default.nix
   hardware.nvidia.open = false;
 }
