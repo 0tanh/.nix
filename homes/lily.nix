@@ -13,8 +13,6 @@
     ../modules/nixos/home/combos/audio-work.nix
     ../modules/nixos/home/combos/dev-work.nix
     ../modules/nixos/home/combos/minimal.nix
-    # The current desktop environment
-    ../modules/nixos/home/combos/mango-quickshell.nix
     # Standard modules composed for this home manager.
     ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
@@ -36,6 +34,10 @@
     ../modules/nixos/home/xdg.nix
     ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
+  ]
+  # Desktop Environment
+  ++ [
+    ../modules/nixos/home/desktop-env/mango-quickshell.nix
   ];
 
   # Prevents inkscape from being recompiled from source when stylix config changes
