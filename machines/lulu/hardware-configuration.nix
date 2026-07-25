@@ -59,32 +59,8 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  # Support NVIDIA GeForce GTX 650
-  # load proprietary nvidia kernel modules for wayland and x11
+  # https://github.com/NixOS/nixos-hardware/blob/master/common/gpu/nvidia/default.nix
   services.xserver.videoDrivers = lib.mkDefault [ "nvidia" ];
-  # https://nixos.wiki/wiki/Nvidia
-  hardware.nvidia = {
-    # GTX 650 too old for nouveau
-    open = false;
-    # NVIDIA GeForce GTX 650 supported by driver 470.xx
-    # https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/
-    # https://github.com/NixOS/nixpkgs/blob/0bb7750e6a12f4f945714cd9316b1f8cb9d48a53/pkgs/os-specific/linux/nvidia-x11/default.nix#L178
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
-    # enables loading kernel modules with modeset=1
-    modesetting.enable = true;
-
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
-    # of just the bare essentials.
-    powerManagement.enable = false;
-
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
-
-    # Enable the Nvidia settings menu,
-    # accessible via `nvidia-settings`.
-    nvidiaSettings = true;
-  };
+  # https://github.com/NixOS/nixos-hardware/blob/master/common/gpu/nvidia/kepler/default.nix
+  hardware.nvidia.open = false;
 }
