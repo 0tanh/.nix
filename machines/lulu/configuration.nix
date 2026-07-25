@@ -10,6 +10,8 @@
 }:
 
 {
+  # TODO see if this fixes stale rendering bug
+  # boot.kernelParams = [ "nouveau.config=NvMSI=0" ];
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
     grub = {
@@ -33,7 +35,9 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
   # console = {

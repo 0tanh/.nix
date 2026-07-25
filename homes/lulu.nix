@@ -24,7 +24,6 @@
     # ../modules/nixos/home/godot.nix
     # ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
-    ../modules/nixos/home/mango.nix
     # ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/packages.nix
     # ../modules/nixos/home/pet.nix
@@ -35,8 +34,11 @@
     ../modules/nixos/home/xdg.nix
     ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
+  ]
+  # Desktop Environment
+  ++ [
+    ../modules/nixos/home/combos/mango-quickshell.nix
   ];
-
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "betty";
@@ -54,4 +56,10 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # This fixes issues with mango if it is loaded
+  wayland.windowManager.mango.extraConfig = ''
+    # Use legacy Direct Rendering Manager DRM
+    env=WLR_DRM_NO_ATOMIC,1
+  '';
 }
