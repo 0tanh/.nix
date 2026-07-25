@@ -10,6 +10,8 @@
 }:
 
 {
+  # TODO see if this fixes stale rendering bug
+  # boot.kernelParams = [ "nouveau.config=NvMSI=0" ];
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
     grub = {
@@ -33,7 +35,9 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
   # console = {
@@ -48,6 +52,9 @@
   # don't require sudo passwd as 'wheel' group
   security.sudo.wheelNeedsPassword = false;
 
+  services.tailscale = {
+    enable = true;
+  };
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -63,10 +70,11 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+  services.pipewire = {
+    #   enable = true;
+    pulse.enable = true;
+    wireplumber.enable = true;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
@@ -95,7 +103,16 @@
   #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #   wget
   # ];
+  environment.sessionVariables = {
+    # Forces Firefox to use the Wayland engine natively
+    MOZ_ENABLE_WAYLAND = "1";
 
+    # Tells GTK apps (like Firefox/Chrome) to request screen capture via XDG Portals
+    GTK_USE_PORTAL = "1";
+
+    # Forces Chromium, Chrome, and Electron apps to run natively on Wayland
+    NIXOS_OZONE_WL = "1";
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -138,5 +155,25 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "26.05"; # Did you read the comment?
+  # Experiment to allow screensharing
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    # TODO move these to dedicated packages per window manger
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk # Necessary for the app file-pickers and visual dialogues
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-hyprland
+    ];
+    config = {
+      common = {
+        # Fall back to GTK if wlr doesn't handle a specific portal request
+        default = [
+          "wlr"
+          "gtk"
+        ];
+      };
+    };
+  };
 
 }

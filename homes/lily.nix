@@ -37,6 +37,10 @@
     ../modules/nixos/home/xdg.nix
     ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
+  ]
+  # Desktop Environment
+  ++ [
+    ../modules/nixos/home/desktop-env/mango-quickshell.nix
   ];
 
   # Prevents inkscape from being recompiled from source when stylix config changes
