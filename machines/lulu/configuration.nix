@@ -16,7 +16,7 @@
       enable = true;
       device = "nodev";
       efiSupport = true;
-      zfsSupport = true;
+      # zfsSupport = true;
     };
     efi = {
       canTouchEfiVariables = true;
@@ -24,8 +24,8 @@
     };
   };
 
-  networking.hostName = "lily"; # Define your hostname
-  networking.hostId = "96521e59"; # run `head -c 8 /etc/machine-id` to get this
+  networking.hostName = "lulu"; # Define your hostname
+  networking.hostId = "7e615444"; # run `head -c 8 /etc/machine-id` to get this
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
@@ -137,6 +137,6 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "26.05"; # Did you read the comment?
 
 }

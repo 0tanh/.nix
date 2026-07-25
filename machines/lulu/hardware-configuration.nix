@@ -16,51 +16,48 @@
 
   boot.initrd.availableKernelModules = [
     "xhci_pci"
-    "nvme"
-    "usbhid"
+    "ahci"
     "usb_storage"
+    "usbhid"
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [
-    "kvm-intel"
-    "wl"
-  ];
-  boot.extraModulePackages = [ pkgs.linuxKernel.packages.linux_6_18.broadcom_sta ];
-  boot.zfs.forceImportRoot = false;
+  boot.kernelModules = [ ];
+  boot.extraModulePackages = [ ];
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowBroken = true;
-    permittedInsecurePackages = [
-      "broadcom-sta-6.30.223.271-59-6.18.33" # NOTE this is from the specific wifi driver of lily. will not be needed on other machines
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/a76fd4b9-8f65-4098-9f65-0012afd3a6a6";
+    fsType = "btrfs";
+  };
+
+  fileSystems."/home" = {
+    device = "/dev/disk/by-uuid/a76fd4b9-8f65-4098-9f65-0012afd3a6a6";
+    fsType = "btrfs";
+    options = [ "subvol=home" ];
+  };
+
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-uuid/a76fd4b9-8f65-4098-9f65-0012afd3a6a6";
+    fsType = "btrfs";
+    options = [ "subvol=nix" ];
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/313A-B618";
+    fsType = "vfat";
+    options = [
+      "fmask=0077"
+      "dmask=0077"
     ];
   };
 
-  # fileSystems."/" =
-  #   { device = "/dev/disk/by-uuid/f71e1167-07e0-45c7-8013-72decf385604";
-  #     fsType = "ext4";
-  #   };
-  #
-  # fileSystems."/boot" =
-  #   { device = "/dev/disk/by-uuid/5F66-17ED";
-  #     fsType = "vfat";
-  #     options = [ "fmask=0022" "dmask=0022" ];
-  #   };
-  #
-  # swapDevices =
-  #   [ { device = "/dev/disk/by-uuid/673a76b4-9ecb-435b-8e24-84a3036f1ae8"; }
-  #   ];
-
-  fileSystems = {
-    "/home" = {
-      neededForBoot = true;
-    };
-    "/persist" = {
-      neededForBoot = true;
-    };
-  };
+  swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  # https://github.com/NixOS/nixos-hardware/blob/master/common/gpu/nvidia/default.nix
+  services.xserver.videoDrivers = lib.mkDefault [ "nvidia" ];
+  # https://github.com/NixOS/nixos-hardware/blob/master/common/gpu/nvidia/kepler/default.nix
+  hardware.nvidia.open = false;
 }
