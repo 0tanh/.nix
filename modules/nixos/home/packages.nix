@@ -25,8 +25,6 @@
       magic-wormhole
       # Media Player
       mpv
-      # Terminal Spotify Player
-      ncspot
       p7zip
       python314
       telegram-desktop
@@ -34,7 +32,9 @@
       swaybg
       vlc
       unrar
+      unzip
       webcamoid
+      yt-dlp
     ]
 
     # these packages are from a stable version of
