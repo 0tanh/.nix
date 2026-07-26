@@ -75,7 +75,7 @@
 
     oh-my-zsh = {
       enable = true;
-      theme = "darkblood";
+      theme = "alanpeabody";
       plugins = [
         "eza"
         "fzf"
