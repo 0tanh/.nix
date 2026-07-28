@@ -13,8 +13,16 @@
     ../puredata.nix
   ];
   home.packages = with pkgs; [
+    # Modular Synth like environment
     bespokesynth
+    # Moudlar paid DAW
     bitwig-studio
+    # Pure functional DSP programming language
     faust2
+    # Audio rerouting
+    pipewire.jack
+    qpwgraph
+    # install vst3 and clap plugins on Linux
+    yabridgectl
   ];
 }

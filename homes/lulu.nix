@@ -61,5 +61,8 @@
   wayland.windowManager.mango.extraConfig = ''
     # Use legacy Direct Rendering Manager DRM
     env=WLR_DRM_NO_ATOMIC,1
+    # Moniter rules for 2 bad moniters
+    monitorrule=name:VGA-1,width:1366,height:768,refresh:59.62,x:1024,y:0
+    monitorrule=name:HDMI-A-1,width:1024,height:768,refresh:59.92,x:0,y:0
   '';
 }
