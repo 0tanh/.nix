@@ -14,7 +14,7 @@ let
     "noauto"
     "nofail"
   ];
-  shareFelineFyiIPv4 = "10.223.227.14"; # Update this with latest zerotier remote IP.
+  shareFelineFyiIPv4 = "10.223.227.243"; # Update this with latest zerotier remote IP.
 in
 {
   environment.systemPackages = with pkgs; [
