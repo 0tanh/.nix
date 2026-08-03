@@ -45,6 +45,12 @@
         command = "git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git fetch && git for-each-ref --format='%(refname:short)' refs/heads | xargs git branch -D";
         description = "Fix a git bare worktree's refs.";
       }
+      {
+        command = ''
+          git config credential.helper '!f() { sleep 1; echo \"username=''${GIT_USER}\"; echo \"password=''${GIT_PASSWORD}\"; }; f'
+        '';
+        description = "Set up a local credential helper for git to use the GIT_USER and GIT_PASSWORD env variables for auth.";
+      }
     ];
   };
 }
