@@ -6,20 +6,15 @@
   ...
 }:
 let
-  all-configs = {
-    modules = ../../../assets/submodule/dotfiles/quickshell/modules;
-    overview = ../../../assets/submodule/dotfiles/quickshell/overview;
-    services = ../../../assets/submodule/dotfiles/quickshell/services;
-    main = ../../../assets/submodule/dotfiles/quickshell/main;
-  };
-  qs-path = {
-
-  };
+  quickshell-source = "${inputs.dotfiles}/quickshell";
 in
 {
   # Configuration for writing a quickshell rice on nix
   # Link to ~/.config/quickshell/ from dotfiles/quickshell
-  xdg.configFile."quickshell".source = ../../../assets/submodule/dotfiles/quickshell;
+  # NOTE: this would be one way to do this, but statically linked dotfiles are a pain in the ass.
+  # instead, i recommend symlinking with a post-build script as seen in modules/nixos/home/dotfiles
+  # xdg.configFile."quickshell".source = quickshell-source;
+
   # QuickShell for things like sidebar.
   programs.quickshell = {
     enable = true;
