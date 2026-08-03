@@ -29,7 +29,7 @@
   time.timeZone = "Africa/Johannesburg";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_ZA.UTF-8";
+  # i18n.defaultLocale = "en_ZA.UTF-8";
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
