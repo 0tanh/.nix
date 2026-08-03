@@ -12,20 +12,29 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.zfs.forceImportRoot = false;
+ #fileSystems."/" =
+ #  { device = "/dev/disk/by-uuid/186d70b0-cef6-4543-b118-2a689112ffab";
+ #    fsType = "xfs";
+ #  };
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/186d70b0-cef6-4543-b118-2a689112ffab";
-      fsType = "xfs";
+ #fileSystems."/boot" =
+ #  { device = "/dev/disk/by-uuid/FE8A-E437";
+ #    fsType = "vfat";
+ #    options = [ "fmask=0077" "dmask=0077" ];
+ #  };
+
+  fileSystems = {
+    "/home" = {
+      neededForBoot = true;
     };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/FE8A-E437";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
+    "/persist" = {
+      neededForBoot = true;
     };
-
+  };
   swapDevices = [ ];
 
+  security.rtkit.enable = true; # Enables real-time scheduling priority
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
