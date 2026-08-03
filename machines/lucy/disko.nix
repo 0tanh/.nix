@@ -2,7 +2,7 @@
   disko.devices = {
     disk = {
       root = {
-        type = "disk"; 
+        type = "disk";
         # TODO get this ID
         device = "/dev/disk/by-id/nvme-HFM512GD3GX013N-SKhynix_FYB6N009010406768";
         content = {
