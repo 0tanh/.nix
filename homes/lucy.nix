@@ -16,8 +16,8 @@
     # Standard modules composed for this home manager.
     # ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
-    ../modules/nixos/home/dotfiles.nix
-    ../modules/nixos/home/firefox.nix
+    # ../modules/nixos/home/dotfiles.nix
+    # ../modules/nixos/home/firefox.nix
     ../modules/nixos/home/fuzzel.nix
     # ../modules/nixos/home/ghostty.nix
     ../modules/nixos/home/git.nix
@@ -32,13 +32,13 @@
     ../modules/nixos/home/tmux.nix
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
-    ../modules/nixos/home/zen-browser.nix
+    # ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
-  ]
-  # Desktop Environment
-  ++ [
-    ../modules/nixos/home/desktop-env/mango-quickshell.nix
   ];
+  # Desktop Environment
+  # ++ [
+  #   ../modules/nixos/home/desktop-env/.nix
+  # ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "betty";
