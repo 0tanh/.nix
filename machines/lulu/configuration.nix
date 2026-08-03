@@ -28,7 +28,6 @@
 
   networking.hostName = "lulu"; # Define your hostname
   networking.hostId = "7e615444"; # run `head -c 8 /etc/machine-id` to get this
-
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
@@ -48,6 +47,17 @@
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
+  ## TODO MOVE THIS OUTTA HERE
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      wayland
+      alsa-lib
+      stdenv.cc.cc
+      zlib
+      openssl
+    ];
+  };
 
   # don't require sudo passwd as 'wheel' group
   security.sudo.wheelNeedsPassword = false;

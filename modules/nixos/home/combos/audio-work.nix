@@ -22,6 +22,7 @@
     # Audio rerouting
     pipewire.jack
     qpwgraph
+    wineWowPackages.stable
     # install vst3 and clap plugins on Linux
     yabridgectl
   ];
