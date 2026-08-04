@@ -41,7 +41,7 @@ in
     networkmanagerapplet
 
     yazi
-    kitty
+    ghostty
   ];
 
   # screenshot image editor config
@@ -71,8 +71,8 @@ in
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 
       # set up wallpaper
-      # exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/res/img/stairs-green.jpg
-
+      exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/aoi.jpg -m center
+      
       # start the desktop shell
       # exec-once=${inputs.caelestia-shell.packages."x86_64-linux".default}/bin/caelestia-shell
 
@@ -81,7 +81,7 @@ in
       exec-once=blueman-applet
 
       # spawn terminal
-      exec-once=kitty
+      exec-once=ghostty
 
       # spawn apps
       # exec-once=zen
@@ -91,9 +91,9 @@ in
       # keybindings #
       ###############
       bind=SUPER,Q,killclient
-      bind=SUPER,C,spawn,kitty
-      bind=SUPER,F,spawn,kitty yazi
-      bind=SUPER,F,spawn,kitty nvim
+      bind=SUPER,C,spawn,ghostty
+      bind=SUPER,F,spawn,ghostty yazi
+      bind=SUPER,F,spawn,ghostty nvim
       bind=SUPER,space,spawn,fuzzel
       bind=SUPER,V,togglefloating
       bind=SUPER,S,spawn_shell,grim -g "$(slurp -w 0)" - | wl-copy
@@ -102,8 +102,8 @@ in
       bind=SUPER+CTRL+SHIFT,Q,quit
 
       # macros
-      bind=SUPER+CTRL+ALT+SHIFT,1,spawn,kitty rip url "$(wl-paste)"
-      bind=SUPER+CTRL+ALT+SHIFT,2,spawn,kitty rip search deezer track "$(wl-paste)"
+      bind=SUPER+CTRL+ALT+SHIFT,1,spawn,ghostty rip url "$(wl-paste)"
+      bind=SUPER+CTRL+ALT+SHIFT,2,spawn,ghostty rip search deezer track "$(wl-paste)"
 
       # change focus
       bind=SUPER,Left,focusdir,left
@@ -244,7 +244,7 @@ in
       # window rules #
       ################
       # windowrule=Parameter:Value,Parameter:Value,appid:Regex,title:Regex
-      # windowrule=appid:kitty,isfloating:1,width:2308,height:1923,tags:2,monitor:DP-3,isterm:1
+      # windowrule=appid:ghostty,isfloating:1,width:2308,height:1923,tags:2,monitor:DP-3,isterm:1
       # windowrule=appid:firefox,tags:1,monitor:DP-3,isopensilent:1
       # windowrule=appid:vesktop,tags:1,monitor:HDMI-A-1
       # windowrule=appid:org.telegram.desktop,tags:1,monitor:HDMI-A-1,isopensilent:1
