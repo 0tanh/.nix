@@ -14,6 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "lucy"; # Define your hostname.
+  networking.hostId = "7d37dfd2";
   networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -78,15 +79,19 @@
       "networkmanager"
       "wheel"
     ];
-    packages = with pkgs; [
-      kdePackages.kate
-      #  thunderbird
-    ];
-  };
 
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDJfCNULFgoC3qx8H0xYWT8WHz+TuElEP0LsaN4lOtAl uncia@feline.fyi"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKAQVc01hfBZfPMJ+Au+ivpZFV5oww95bMyRPLX6xYkt 0tanh@git.feline.fyi"
+    ];
+    packages = with pkgs; [
+      neovim
+    ];
+    shell = pkgs.zsh;
+  };
   # Install firefox.
   programs.firefox.enable = true;
-
+  programs.zsh.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
