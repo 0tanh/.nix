@@ -72,7 +72,7 @@ in
 
       # set up wallpaper
       exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/aoi.jpg -m center
-      
+
       # start the desktop shell
       # exec-once=${inputs.caelestia-shell.packages."x86_64-linux".default}/bin/caelestia-shell
 
