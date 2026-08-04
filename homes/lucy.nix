@@ -12,7 +12,7 @@
     # ../modules/nixos/home/combos/art-work.nix
     # ../modules/nixos/home/combos/audio-work.nix
     # ../modules/nixos/home/combos/dev-work.nix
-    # ../modules/nixos/home/combos/minimal.nix
+     ../modules/nixos/home/combos/minimal.nix
     # Standard modules composed for this home manager.
     # ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
@@ -22,11 +22,11 @@
     # ../modules/nixos/home/ghostty.nix
     ../modules/nixos/home/git.nix
     # ../modules/nixos/home/godot.nix
-    # ../modules/nixos/home/impermanence.nix
+    ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
     # ../modules/nixos/home/neovim.nix
-    # ../modules/nixos/home/packages.nix
-    # ../modules/nixos/home/pet.nix
+     ../modules/nixos/home/packages.nix
+     ../modules/nixos/home/pet.nix
     # ../modules/nixos/home/spicetify.nix
     ../modules/nixos/home/ssh.nix
     ../modules/nixos/home/tmux.nix
@@ -34,11 +34,11 @@
     ../modules/nixos/home/xdg.nix
     # ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
-  ];
+  ]
   # Desktop Environment
-  # ++ [
-  #   ../modules/nixos/home/desktop-env/.nix
-  # ];
+   ++ [
+     ../modules/nixos/home/desktop-env/mango-quickshell.nix
+   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "betty";
