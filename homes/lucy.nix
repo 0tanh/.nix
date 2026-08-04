@@ -14,12 +14,12 @@
     # ../modules/nixos/home/combos/dev-work.nix
      ../modules/nixos/home/combos/minimal.nix
     # Standard modules composed for this home manager.
-    # ../modules/nixos/home/devenv.nix
+    ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
-    # ../modules/nixos/home/dotfiles.nix
-    # ../modules/nixos/home/firefox.nix
+    ../modules/nixos/home/dotfiles.nix
+    ../modules/nixos/home/firefox.nix
     ../modules/nixos/home/fuzzel.nix
-    # ../modules/nixos/home/ghostty.nix
+    ../modules/nixos/home/ghostty.nix
     ../modules/nixos/home/git.nix
     # ../modules/nixos/home/godot.nix
     ../modules/nixos/home/impermanence.nix
@@ -32,7 +32,7 @@
     ../modules/nixos/home/tmux.nix
     ../modules/nixos/home/vars.nix
     ../modules/nixos/home/xdg.nix
-    # ../modules/nixos/home/zen-browser.nix
+    ../modules/nixos/home/zen-browser.nix
     ../modules/nixos/home/zsh.nix
   ]
   # Desktop Environment
