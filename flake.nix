@@ -161,7 +161,14 @@
       );
 
       inputs.self.submodules = true;
-
+      # Enable binary caching
+      # https://cache.forall.systems/
+      nixConfig = {
+        extra-substituters = [ "https://cache.forall.systems" ];
+        extra-trusted-public-keys = [
+          "cache.forall.systems:5PmD7QO4MSF8YgyRZtkSGXRDo96H3bybIf2SsQh8ScI="
+        ];
+      };
       nixosConfigurations = {
         # Provides the NixOS system configuration as an output of the flake.
         # Evaluated by nixos-rebuild when generating a new system configuration.
