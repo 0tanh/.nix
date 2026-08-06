@@ -24,6 +24,8 @@
       kdePackages.kdenlive
       # Drawing
       krita
+
+      pureref
     ]
 
     ++ (with pkgs.stable; [
