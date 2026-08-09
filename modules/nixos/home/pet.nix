@@ -47,7 +47,7 @@
       }
       {
         command = ''
-          git config credential.helper '!f() { sleep 1; echo \"username=''${GIT_USER}\"; echo \"password=''${GIT_PASSWORD}\"; }; f'
+          git config credential.helper '!f() { sleep 1; echo "username=''${GIT_USER}"; echo "password=''${GIT_PASSWORD}"; }; f'
         '';
         description = "Set up a local credential helper for git to use the GIT_USER and GIT_PASSWORD env variables for auth.";
       }
