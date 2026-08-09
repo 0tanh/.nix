@@ -24,6 +24,7 @@
     qpwgraph
 
     vital
+    #vital-vst
     wineWowPackages.stable
     # install vst3 and clap plugins on Linux
     yabridgectl

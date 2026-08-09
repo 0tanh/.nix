@@ -30,6 +30,8 @@
   #    fsType = "xfs";
   #  };
 
+  # Enable touchscreen inputs
+  services.iptsd.enable = true;
   #fileSystems."/boot" =
   #  { device = "/dev/disk/by-uuid/FE8A-E437";
   #    fsType = "vfat";

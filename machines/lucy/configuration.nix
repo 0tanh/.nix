@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "lucy"; # Define your hostname.
-  networking.hostId = "7d37dfd2";
+  networking.hostId = "7d37dfd2"; # run `head -c 8 /etc/machine-id` to get this
   networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -55,6 +55,7 @@
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  security.sudo.wheelNeedsPassword = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
