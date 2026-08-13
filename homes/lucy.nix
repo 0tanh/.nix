@@ -57,6 +57,15 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "zen.desktop";
+      "x-scheme-handler/https" = "zen.desktop";
+    };
+  };
+
   # This fixes issues with mango if it is loaded
   # wayland.windowManager.mango.extraConfig = ''
   # # Use legacy Direct Rendering Manager DRM
