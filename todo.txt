@@ -16,3 +16,4 @@ x 2026-07-28 2026-06-06 configure bottles for ditherboy +binaries
 (B) set up yabridge ctl with windows @util @music
 (B) set up permanent Windows Mount on Lulu @workflow +util
 (B) wine ditherboy cfg for lulu
+(A) set-up access for localhosted backup
