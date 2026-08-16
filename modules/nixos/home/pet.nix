@@ -30,6 +30,10 @@
         command = "export SSH_TO_AGE_PASSPHRASE='password' && nix run nixpkgs#ssh-to-age -- -private-key -i ~/.ssh/uncia.id_ed25519 > ~/.config/sops/age/keys.txt";
       }
       {
+        description = "Look for the process that killed you last time";
+        command = "sudo dmesg -T | grep -i -B 7 'oom|killed|out of memory";
+      }
+      {
         description = "Derive a public age key from the private age key";
         command = "nix shell nixpkgs#age -c age-keygen -y ~/.config/sops/age/keys.txt";
       }
