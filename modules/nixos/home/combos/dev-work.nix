@@ -14,8 +14,13 @@
   home.packages = with pkgs; [
     # Docker for running docker daemons
     docker
+
+    gnumake
     # Intellij IDEA for JVM work
     jetbrains.idea
+
+    maven
+    javaPackages.compiler.openjdk25
     # VS Code for more focused editing e.g. of bigger projects e.g. Webbed Sites
     vscode.fhs
     # Offline documentation
