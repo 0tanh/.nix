@@ -46,6 +46,7 @@
       ".config/inkscape"
       ".config/figma-linux"
       ".config/kitty"
+      ".config/goofcord"
       ".config/mango"
       ".config/ncspot"
       ".config/REAPER"
