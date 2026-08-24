@@ -27,7 +27,7 @@
     # ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/packages.nix
     ../modules/nixos/home/pet.nix
-    # ../modules/nixos/home/spicetify.nix
+    ../modules/nixos/home/spicetify.nix
     ../modules/nixos/home/ssh.nix
     ../modules/nixos/home/tmux.nix
     ../modules/nixos/home/vars.nix
