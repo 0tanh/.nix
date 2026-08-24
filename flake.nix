@@ -435,6 +435,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # A scrollable tiling window manager with touchscreen support
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Persist & link data into your ephemeral root at boot time
     impermanence = {
       url = "github:nix-community/impermanence";

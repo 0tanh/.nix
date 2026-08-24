@@ -20,6 +20,7 @@
       "Documents"
       "Videos"
       "Windows"
+      ".wine-ableton"
 
       {
         directory = ".gnupg";
@@ -54,7 +55,7 @@
       ".config/tmux"
       ".config/zen"
       ".config/zsh"
-      ".config/JetBrains/"
+      ".config/JetBrains"
 
       # Discord
       ".config/vesktop"
