@@ -15,6 +15,13 @@ in
   # instead, i recommend symlinking with a post-build script as seen in modules/nixos/home/dotfiles
   # xdg.configFile."quickshell".source = quickshell-source;
 
+  home.packages = with pkgs; [
+    # Volume control
+    pavucontrol
+    # brightness control
+    brightnessctl
+  ];
+
   # QuickShell for things like sidebar.
   programs.quickshell = {
     enable = true;
