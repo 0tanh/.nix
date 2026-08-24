@@ -27,6 +27,7 @@
       mpv
       p7zip
       python314
+      qbittorrent
       telegram-desktop
       rclone
       swaybg
