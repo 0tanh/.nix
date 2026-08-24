@@ -154,7 +154,7 @@
       grep = "rg";
       find = "fd";
       vim = "nvim";
-      man = "tldr";
+      # man = "tldr";
       tree = "broot";
 
       # replacements

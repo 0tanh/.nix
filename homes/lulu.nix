@@ -12,6 +12,7 @@
     ../modules/nixos/home/combos/art-work.nix
     ../modules/nixos/home/combos/audio-work.nix
     ../modules/nixos/home/combos/dev-work.nix
+    ../modules/nixos/home/combos/network-and-security.nix
     ../modules/nixos/home/combos/minimal.nix
     # Standard modules composed for this home manager.
     ../modules/nixos/home/devenv.nix
