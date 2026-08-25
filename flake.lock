@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "ableton-linux": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787610592,
+        "narHash": "sha256-jUIOb/ldEDXNh/BhaOvZ7Qt/h3Ptz27W7XYPw88FtNc=",
+        "owner": "shibco",
+        "repo": "ableton-linux",
+        "rev": "787198cd774b88befc1e76bedb86ff7036a2b6d4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "shibco",
+        "repo": "ableton-linux",
+        "type": "github"
+      }
+    },
     "affinity-nix": {
       "inputs": {
         "corefonts": "corefonts",
@@ -997,6 +1017,7 @@
     },
     "root": {
       "inputs": {
+        "ableton-linux": "ableton-linux",
         "affinity-nix": "affinity-nix",
         "caelestia-shell": "caelestia-shell",
         "disko": "disko",

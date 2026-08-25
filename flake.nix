@@ -411,6 +411,12 @@
     # but I encourage you to check them out and enable if they seem cool. Just don't get too excited or things will start to take
     # a very long time to evaluate without beefier hardware (this much is already quite a lot so far).
 
+    # Ableton Live on Linux
+    ableton-linux = {
+      url = "github:shibco/ableton-linux";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Affinity Image Editor running through Wine Bottles
     affinity-nix = {
       url = "github:mrshmllow/affinity-nix";
