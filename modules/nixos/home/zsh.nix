@@ -6,6 +6,7 @@
 }:
 let
   til-location = "~/Code/Websites/0tanh";
+  todo = "~/todo";
 in
 {
   # additional packages
