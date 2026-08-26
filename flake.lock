@@ -1038,6 +1038,7 @@
         "sops-nix": "sops-nix",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
+        "todo": "todo",
         "zen-browser": "zen-browser"
       }
     },
@@ -1279,6 +1280,18 @@
         "owner": "tinted-theming",
         "repo": "base16-zed",
         "type": "github"
+      }
+    },
+    "todo": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-WfU4YVGg3E5R+1dQmQ+SnbzeZojfXhu65YQhOVxFu84=",
+        "type": "file",
+        "url": "https://git.feline.fyi/0tanh/todo.git"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://git.feline.fyi/0tanh/todo.git"
       }
     },
     "treefmt-nix": {

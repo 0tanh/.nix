@@ -514,6 +514,11 @@
     # We will use git+ssh (ssh-agent based) authentication to download git contents from private git repos.
     # This is where we can store additional data such as dotfiles or secrets for referencing elsewhere.
 
+    todo = {
+      url = "https://git.feline.fyi/0tanh/todo.git";
+      flake = false;
+    };
+
     # Private SOPS secrets repository
     secrets = {
       url = "git+ssh://git@github.com/0tanh/nix-secrets.git?ref=main&shallow=1";
