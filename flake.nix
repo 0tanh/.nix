@@ -2,10 +2,11 @@
   description = "Betty's Personal NixOS Configuration";
 
   outputs =
-    {
+    inputs@{
       self,
       nixpkgs,
       disko,
+      flake-parts,
       home-manager,
       impermanence,
       nix-index-database,
@@ -15,7 +16,8 @@
       sops-nix,
       zen-browser,
       ...
-    }@inputs:
+    }:
+
     let
       inherit (self) outputs;
 
@@ -102,288 +104,308 @@
           };
         };
     in
-    {
-      # Shorthand for overlays (the output) = overlays (the 'let' variable) ;
-      overlays = overlaySet;
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      top@{
+        config,
+        withSystem,
+        moduleWithSystem,
+        ...
+      }:
+      {
+        # Original Flake logic
+        ######################
+        flake = {
+          # Shorthand for overlays (the output) = overlays (the 'let' variable) ;
+          overlays = overlaySet;
 
-      # Provides flake-wide tests to run on evaluation and in devshell
-      # Usage: nix flake check
-      checks = forAllSystems (system: {
-        pre-commit-check = pre-commit-hooks.lib.${system}.run {
-          src = ./.;
-          hooks = {
-            nixfmt-rfc-style.enable = true;
-          };
-        };
-      });
+          # Provides flake-wide tests to run on evaluation and in devshell
+          # Usage: nix flake check
+          checks = forAllSystems (system: {
+            pre-commit-check = pre-commit-hooks.lib.${system}.run {
+              src = ./.;
+              hooks = {
+                nixfmt-rfc-style.enable = true;
+              };
+            };
+          });
 
-      # Activate a temporary shell environment with extra packages and settings
-      # Can be auto-activated using nix-direnv, or loaded from the flake remotely using nix+git
-      # Usage (anywhere within the flake): nix develop
-      devShells = forAllSystems (
-        system:
-        let
-          pkgs = mkPkgs system;
-        in
-        {
-          default = pkgs.mkShell {
-            # Inherit the flake's own checks shellHook to load on shell activation
-            inherit (self.checks.${system}.pre-commit-check) shellHook;
-            # Environment variables
-            EDITOR = "nvim";
-            GIT_USER = "0tanh";
-            GIT_PASSWORD = "0cba0873c6e66acf1319ca6657e53d14c5529862";
-            NIX_CONFIG = ''
-              	      access-tokens = github.com=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 
+          # Activate a temporary shell environment with extra packages and settings
+          # Can be auto-activated using nix-direnv, or loaded from the flake remotely using nix+git
+          # Usage (anywhere within the flake): nix develop
+          devShells = forAllSystems (
+            system:
+            let
+              pkgs = mkPkgs system;
+            in
+            {
+              default = pkgs.mkShell {
+                # Inherit the flake's own checks shellHook to load on shell activation
+                inherit (self.checks.${system}.pre-commit-check) shellHook;
+                # Environment variables
+                EDITOR = "nvim";
+                GIT_USER = "0tanh";
+                GIT_PASSWORD = "0cba0873c6e66acf1319ca6657e53d14c5529862";
+                NIX_CONFIG = ''
+                  access-tokens = github.com=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 
 
-              	      experimental-features = nix-command flakes
-              	    '';
-            # Include packages to be available in the shell env
-            packages = with pkgs; [
-              curl
-              git
-              lazygit
-              magic-wormhole
-              nh
-              neovim
+                  experimental-features = nix-command flakes
+                '';
+                # Include packages to be available in the shell env
+                packages = with pkgs; [
+                  curl
+                  git
+                  lazygit
+                  magic-wormhole
+                  nh
+                  neovim
+                ];
+              };
+            }
+          );
+
+          # Flake formatter. RFC style is modern, maintained and clean
+          formatter = forAllSystems (
+            system:
+            let
+              pkgs = mkPkgs system;
+            in
+            pkgs.nixfmt-rfc-style
+          );
+
+          inputs.self.submodules = true;
+          # Enable binary caching
+          # https://cache.forall.systems/
+          nixConfig = {
+            extra-substituters = [ "https://cache.forall.systems" ];
+            extra-trusted-public-keys = [
+              "cache.forall.systems:5PmD7QO4MSF8YgyRZtkSGXRDo96H3bybIf2SsQh8ScI="
             ];
           };
-        }
-      );
+          nixosConfigurations = {
+            # Provides the NixOS system configuration as an output of the flake.
+            # Evaluated by nixos-rebuild when generating a new system configuration.
+            # mkSystem provides a common interface to build any architecture,
+            # updated with a set of modules specific for each machine.
+            #
+            # See update syntax: https://nix.dev/manual/nix/2.34/language/operators#update
+            #
+            # forAllSystems : (listOf str) systems
+            #  ... mkNixosConfig : (str) system (str) hostname (listOf module) modules -> (attrSet) nixosSystem
 
-      # Flake formatter. RFC style is modern, maintained and clean
-      formatter = forAllSystems (
-        system:
-        let
-          pkgs = mkPkgs system;
-        in
-        pkgs.nixfmt-rfc-style
-      );
+            # lily = forAllSystems (
+            #   system:
+            #   mkNixosConfig system "lily" [
+            #     # Additional optional system modules
+            #     # ./modules/nixos/system/...
+            #
+            #     # Input nixos modules
+            #     disko.nixosModules.disko
+            #     nixos-hardware.nixosModules.apple-macbook-air-7
+            #   ]
+            # );
 
-      inputs.self.submodules = true;
-      # Enable binary caching
-      # https://cache.forall.systems/
-      nixConfig = {
-        extra-substituters = [ "https://cache.forall.systems" ];
-        extra-trusted-public-keys = [
-          "cache.forall.systems:5PmD7QO4MSF8YgyRZtkSGXRDo96H3bybIf2SsQh8ScI="
+            # TODO: Fix the above and use it instead of the below
+            lily = nixpkgs.lib.nixosSystem {
+              modules = [
+                # Include all machine-specific configuration
+                # Each folder in ./machines corresponds to a physical host.
+                # These should be generated by an initial nixos install (nixos-generate-config --root /mnt),
+                # and stored in the ./machines/<hostname>/ directory,
+                # along with a default.nix that loads all files in that directory.
+                ./machines/lily
+
+                # Include the Home-Manager configuration for the machine
+                # Each file in ./homes corresponds to a physical host.
+                # The file should be <hostname>.nix
+                # This way the Home-Manager configuration may differ per machine,
+                # typically only requiring importing different sets of home modules.
+                home-manager.nixosModules.home-manager
+                {
+                  home-manager = {
+                    backupFileExtension = "hm-backup";
+                    extraSpecialArgs = { inherit inputs; };
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                    users.betty = ./homes/lily.nix;
+                  };
+                }
+
+                # Include shared common system modules
+                ./modules/nixos/system/common
+
+                # Static module included to pull in overlays so that the configuration's pkgs
+                # are actually modified as expected
+                {
+                  nixpkgs.overlays = overlays;
+                }
+
+                # Additional optional system modules
+                ./modules/nixos/system/firefox.nix
+                ./modules/nixos/system/greetd.nix
+                ./modules/nixos/system/impermanance.nix
+                ./modules/nixos/system/mango.nix
+                ./modules/nixos/system/stylix.nix
+                ./modules/nixos/system/sops.nix
+                ./modules/nixos/system/tailscale.nix
+                ./modules/nixos/system/virtualization.nix
+
+                # Input nixos modules
+                disko.nixosModules.disko
+                nix-index-database.nixosModules.nix-index
+                { programs.nix-index-database.comma.enable = true; }
+                { programs.nix-ld.enable = true; }
+                nixos-hardware.nixosModules.apple-macbook-air-7
+                sops-nix.nixosModules.sops
+              ];
+              specialArgs = {
+                inherit inputs outputs;
+                lib = lib "x86_64-linux";
+              };
+            };
+
+            # TODO: Fix the above and use it instead of the below
+            lucy = nixpkgs.lib.nixosSystem {
+              modules = [
+                # Include all machine-specific configuration
+                # Each folder in ./machines corresponds to a physical host.
+                # These should be generated by an initial nixos install (nixos-generate-config --root /mnt),
+                # and stored in the ./machines/<hostname>/ directory,
+                # along with a default.nix that loads all files in that directory.
+                ./machines/lucy
+
+                # Include the Home-Manager configuration for the machine
+                # Each file in ./homes corresponds to a physical host.
+                # The file should be <hostname>.nix
+                # This way the Home-Manager configuration may differ per machine,
+                # typically only requiring importing different sets of home modules.
+                home-manager.nixosModules.home-manager
+                {
+                  home-manager = {
+                    backupFileExtension = "hm-backup";
+                    extraSpecialArgs = { inherit inputs; };
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                    users.betty = ./homes/lucy.nix;
+                  };
+                }
+
+                # Include shared common system modules
+                ./modules/nixos/system/common
+
+                # Static module included to pull in overlays so that the configuration's pkgs
+                # are actually modified as expected
+                {
+                  nixpkgs.overlays = overlays;
+                }
+
+                # Additional optional system modules
+                ./modules/nixos/system/firefox.nix
+                ./modules/nixos/system/greetd.nix
+                ./modules/nixos/system/impermanance.nix
+                ./modules/nixos/system/mango.nix
+                ./modules/nixos/system/tailscale.nix
+                ./modules/nixos/system/stylix.nix
+                ./modules/nixos/system/sops.nix
+                ./modules/nixos/system/virtualization.nix
+
+                # Input nixos modules
+                disko.nixosModules.disko
+                nix-index-database.nixosModules.nix-index
+                { programs.nix-index-database.comma.enable = true; }
+                { programs.nix-ld.enable = true; }
+                # Hardware config prebuilt optimisations for microsoft surface
+                nixos-hardware.nixosModules.microsoft-surface-pro-intel
+                sops-nix.nixosModules.sops
+              ];
+              specialArgs = {
+                inherit inputs outputs;
+                lib = lib "x86_64-linux";
+              };
+            };
+
+            # TODO: Fix the above and use it instead of the below
+            lulu = nixpkgs.lib.nixosSystem {
+              modules = [
+                # Include all machine-specific configuration
+                # Each folder in ./machines corresponds to a physical host.
+                # These should be generated by an initial nixos install (nixos-generate-config --root /mnt),
+                # and stored in the ./machines/<hostname>/ directory,
+                # along with a default.nix that loads all files in that directory.
+                ./machines/lulu
+
+                # Include the Home-Manager configuration for the machine
+                # Each file in ./homes corresponds to a physical host.
+                # The file should be <hostname>.nix
+                # This way the Home-Manager configuration may differ per machine,
+                # typically only requiring importing different sets of home modules.
+                home-manager.nixosModules.home-manager
+                {
+                  home-manager = {
+                    backupFileExtension = "hm-backup";
+                    extraSpecialArgs = { inherit inputs; };
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                    users.betty = ./homes/lulu.nix;
+                  };
+                }
+
+                # Include shared common system modules
+                ./modules/nixos/system/common
+
+                # Static module included to pull in overlays so that the configuration's pkgs
+                # are actually modified as expected
+                {
+                  nixpkgs.overlays = overlays;
+                }
+
+                # Additional optional system modules
+                ./modules/nixos/system/firefox.nix
+                ./modules/nixos/system/greetd.nix
+                # ./modules/nixos/system/impermanance.nix
+                ./modules/nixos/system/mango.nix
+                ./modules/nixos/system/samba.nix
+                ./modules/nixos/system/sops.nix
+                # ./modules/nixos/system/stylix.nix
+                # ./modules/nixos/system/virtualization.nix
+                ./modules/nixos/system/tailscale.nix
+
+                # Input nixos modules
+                disko.nixosModules.disko
+                nix-index-database.nixosModules.nix-index
+                { programs.nix-index-database.comma.enable = true; }
+                { programs.nix-ld.enable = true; }
+                nixos-hardware.nixosModules.common-cpu-amd
+                # nixos-hardware.nixosModules.common-gpu-nvidia-kepler
+                nixos-hardware.nixosModules.common-pc-ssd
+                sops-nix.nixosModules.sops
+              ];
+              specialArgs = {
+                inherit inputs outputs;
+                lib = lib "x86_64-linux";
+              };
+            };
+          };
+
+          packages = forAllSystems (
+            system:
+            let
+              pkgs = mkPkgs system;
+            in
+            (import ./pkgs {
+              inherit pkgs inputs;
+            })
+          );
+        };
+        ######################
+        # Original flake above
+        systems = [
+          "x86_64-linux"
         ];
-      };
-      nixosConfigurations = {
-        # Provides the NixOS system configuration as an output of the flake.
-        # Evaluated by nixos-rebuild when generating a new system configuration.
-        # mkSystem provides a common interface to build any architecture,
-        # updated with a set of modules specific for each machine.
-        #
-        # See update syntax: https://nix.dev/manual/nix/2.34/language/operators#update
-        #
-        # forAllSystems : (listOf str) systems
-        #  ... mkNixosConfig : (str) system (str) hostname (listOf module) modules -> (attrSet) nixosSystem
 
-        # lily = forAllSystems (
-        #   system:
-        #   mkNixosConfig system "lily" [
-        #     # Additional optional system modules
-        #     # ./modules/nixos/system/...
-        #
-        #     # Input nixos modules
-        #     disko.nixosModules.disko
-        #     nixos-hardware.nixosModules.apple-macbook-air-7
-        #   ]
-        # );
+        perSystem = { config, pkgs, ... }: { };
 
-        # TODO: Fix the above and use it instead of the below
-        lily = nixpkgs.lib.nixosSystem {
-          modules = [
-            # Include all machine-specific configuration
-            # Each folder in ./machines corresponds to a physical host.
-            # These should be generated by an initial nixos install (nixos-generate-config --root /mnt),
-            # and stored in the ./machines/<hostname>/ directory,
-            # along with a default.nix that loads all files in that directory.
-            ./machines/lily
-
-            # Include the Home-Manager configuration for the machine
-            # Each file in ./homes corresponds to a physical host.
-            # The file should be <hostname>.nix
-            # This way the Home-Manager configuration may differ per machine,
-            # typically only requiring importing different sets of home modules.
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                backupFileExtension = "hm-backup";
-                extraSpecialArgs = { inherit inputs; };
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.betty = ./homes/lily.nix;
-              };
-            }
-
-            # Include shared common system modules
-            ./modules/nixos/system/common
-
-            # Static module included to pull in overlays so that the configuration's pkgs
-            # are actually modified as expected
-            {
-              nixpkgs.overlays = overlays;
-            }
-
-            # Additional optional system modules
-            ./modules/nixos/system/firefox.nix
-            ./modules/nixos/system/greetd.nix
-            ./modules/nixos/system/impermanance.nix
-            ./modules/nixos/system/mango.nix
-            ./modules/nixos/system/stylix.nix
-            ./modules/nixos/system/sops.nix
-            ./modules/nixos/system/tailscale.nix
-            ./modules/nixos/system/virtualization.nix
-
-            # Input nixos modules
-            disko.nixosModules.disko
-            nix-index-database.nixosModules.nix-index
-            { programs.nix-index-database.comma.enable = true; }
-            { programs.nix-ld.enable = true; }
-            nixos-hardware.nixosModules.apple-macbook-air-7
-            sops-nix.nixosModules.sops
-          ];
-          specialArgs = {
-            inherit inputs outputs;
-            lib = lib "x86_64-linux";
-          };
-        };
-
-        # TODO: Fix the above and use it instead of the below
-        lucy = nixpkgs.lib.nixosSystem {
-          modules = [
-            # Include all machine-specific configuration
-            # Each folder in ./machines corresponds to a physical host.
-            # These should be generated by an initial nixos install (nixos-generate-config --root /mnt),
-            # and stored in the ./machines/<hostname>/ directory,
-            # along with a default.nix that loads all files in that directory.
-            ./machines/lucy
-
-            # Include the Home-Manager configuration for the machine
-            # Each file in ./homes corresponds to a physical host.
-            # The file should be <hostname>.nix
-            # This way the Home-Manager configuration may differ per machine,
-            # typically only requiring importing different sets of home modules.
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                backupFileExtension = "hm-backup";
-                extraSpecialArgs = { inherit inputs; };
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.betty = ./homes/lucy.nix;
-              };
-            }
-
-            # Include shared common system modules
-            ./modules/nixos/system/common
-
-            # Static module included to pull in overlays so that the configuration's pkgs
-            # are actually modified as expected
-            {
-              nixpkgs.overlays = overlays;
-            }
-
-            # Additional optional system modules
-            ./modules/nixos/system/firefox.nix
-            ./modules/nixos/system/greetd.nix
-            ./modules/nixos/system/impermanance.nix
-            ./modules/nixos/system/mango.nix
-            ./modules/nixos/system/tailscale.nix
-            ./modules/nixos/system/stylix.nix
-            ./modules/nixos/system/sops.nix
-            ./modules/nixos/system/virtualization.nix
-
-            # Input nixos modules
-            disko.nixosModules.disko
-            nix-index-database.nixosModules.nix-index
-            { programs.nix-index-database.comma.enable = true; }
-            { programs.nix-ld.enable = true; }
-            # Hardware config prebuilt optimisations for microsoft surface
-            nixos-hardware.nixosModules.microsoft-surface-pro-intel
-            sops-nix.nixosModules.sops
-          ];
-          specialArgs = {
-            inherit inputs outputs;
-            lib = lib "x86_64-linux";
-          };
-        };
-
-        # TODO: Fix the above and use it instead of the below
-        lulu = nixpkgs.lib.nixosSystem {
-          modules = [
-            # Include all machine-specific configuration
-            # Each folder in ./machines corresponds to a physical host.
-            # These should be generated by an initial nixos install (nixos-generate-config --root /mnt),
-            # and stored in the ./machines/<hostname>/ directory,
-            # along with a default.nix that loads all files in that directory.
-            ./machines/lulu
-
-            # Include the Home-Manager configuration for the machine
-            # Each file in ./homes corresponds to a physical host.
-            # The file should be <hostname>.nix
-            # This way the Home-Manager configuration may differ per machine,
-            # typically only requiring importing different sets of home modules.
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                backupFileExtension = "hm-backup";
-                extraSpecialArgs = { inherit inputs; };
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.betty = ./homes/lulu.nix;
-              };
-            }
-
-            # Include shared common system modules
-            ./modules/nixos/system/common
-
-            # Static module included to pull in overlays so that the configuration's pkgs
-            # are actually modified as expected
-            {
-              nixpkgs.overlays = overlays;
-            }
-
-            # Additional optional system modules
-            ./modules/nixos/system/firefox.nix
-            ./modules/nixos/system/greetd.nix
-            # ./modules/nixos/system/impermanance.nix
-            ./modules/nixos/system/mango.nix
-            ./modules/nixos/system/samba.nix
-            ./modules/nixos/system/sops.nix
-            # ./modules/nixos/system/stylix.nix
-            # ./modules/nixos/system/virtualization.nix
-            ./modules/nixos/system/tailscale.nix
-
-            # Input nixos modules
-            disko.nixosModules.disko
-            nix-index-database.nixosModules.nix-index
-            { programs.nix-index-database.comma.enable = true; }
-            { programs.nix-ld.enable = true; }
-            nixos-hardware.nixosModules.common-cpu-amd
-            # nixos-hardware.nixosModules.common-gpu-nvidia-kepler
-            nixos-hardware.nixosModules.common-pc-ssd
-            sops-nix.nixosModules.sops
-          ];
-          specialArgs = {
-            inherit inputs outputs;
-            lib = lib "x86_64-linux";
-          };
-        };
-      };
-
-      packages = forAllSystems (
-        system:
-        let
-          pkgs = mkPkgs system;
-        in
-        (import ./pkgs {
-          inherit pkgs inputs;
-        })
-      );
-    };
+      }
+    );
 
   inputs = {
     ## PACKAGE CHANNELS ##
@@ -414,7 +436,6 @@
     # Ableton Live on Linux
     ableton-linux = {
       url = "github:shibco/ableton-linux";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Affinity Image Editor running through Wine Bottles
@@ -433,6 +454,11 @@
     disko = {
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Framework for using flakes
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
     };
 
     # Manage your user's $HOME in addition to the system
@@ -504,6 +530,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # My todo-list
+    todo = {
+      url = "https://git.feline.fyi/0tanh/todo.git";
+      flake = false;
+    };
+
     # Browser based on firefox that I like a lot
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
@@ -513,11 +545,6 @@
     ## PRIVATE INPUTS
     # We will use git+ssh (ssh-agent based) authentication to download git contents from private git repos.
     # This is where we can store additional data such as dotfiles or secrets for referencing elsewhere.
-
-    todo = {
-      url = "https://git.feline.fyi/0tanh/todo.git";
-      flake = false;
-    };
 
     # Private SOPS secrets repository
     secrets = {
@@ -532,5 +559,4 @@
     };
 
   };
-
 }
