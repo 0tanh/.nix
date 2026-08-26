@@ -12,9 +12,11 @@ x 2026-08-17 2026-08-17 set up quickshell scripting
 (B) set up auto windows mount +util @workflow
 (B) set up yabridge +musicnix
 (B) set up nix weather +util @struc
-(A) goofcord on lily @util @workflow
+x 2026-08-26 2026-08-26 goofcord on lily @util @workflow
 (B) set up yabridge ctl with windows @util @music
 (B) set up permanent Windows Mount on Lulu @workflow +util
 (B) wine ditherboy cfg for lulu
 (A) set-up access for localhosted backup
 (B) animated neofetch
+(B) write Kavtuum/GTK theme
+(A) Update quickshell for sound and brightness
