@@ -200,7 +200,7 @@ in
 
       # Betty specific utils;
       til = "cd ${til-location} && nvim TIL && cd -";
-      todo = "cd ${todo} && tuxedo && cd -";
+      todo = "cd ${todo} && tuxedo && git add todo.txt && git commit -m \"\$(tail -n 1 todo.txt)\" && git push && cd -";
     };
 
     initContent = ''
