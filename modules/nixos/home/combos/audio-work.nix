@@ -11,6 +11,7 @@
   imports = [
     ../reaper.nix
     ../puredata.nix
+    ../ableton.nix
   ];
   home.packages = with pkgs; [
     # Modular Synth like environment
@@ -25,7 +26,7 @@
 
     vital
     #vital-vst
-    wineWowPackages.stable
+    # wineWowPackages.stable
     # install vst3 and clap plugins on Linux
     yabridgectl
   ];
