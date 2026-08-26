@@ -4,6 +4,9 @@
   pkgs,
   ...
 }:
+let
+  til-location = "~/Code/Websites/0tanh";
+in
 {
   # additional packages
   home.packages = with pkgs; [
@@ -25,7 +28,6 @@
     tldr
     zoxide
   ];
-
   programs.zsh = {
     enable = true;
     dotDir = "/home/betty/.config/zsh";
@@ -194,6 +196,10 @@
 
       # safety first...
       reboot = "${pkgs.confirm-reboot}/bin/confirm-reboot";
+
+      # Betty specific utils;
+      til = "cd ${til-location} && nvim TIL && cd -";
+      todo = "cd ${todo} && tuxedo && cd -";
     };
 
     initContent = ''
