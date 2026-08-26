@@ -9,15 +9,13 @@
   # This module imports more heavy-weight dev-work modules e.g. IDEs
   # I would like to be able to configure my neovim to work more but eh.
   imports = [
-
+    ../jetbrains.nix
   ];
   home.packages = with pkgs; [
     # Docker for running docker daemons
     docker
 
     gnumake
-    # Intellij IDEA for JVM work
-    jetbrains.idea
 
     maven
     javaPackages.compiler.openjdk25
@@ -26,4 +24,5 @@
     # Offline documentation
     zeal
   ];
+
 }
