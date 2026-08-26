@@ -21,6 +21,7 @@
       "Videos"
       "Windows"
       ".wine-ableton"
+      "todo"
 
       {
         directory = ".gnupg";
@@ -63,6 +64,7 @@
       # .local/share
       ".local/share/direnv"
       ".local/share/nvim"
+      "./local/share/JetBrains"
       ".local/share/TelegramDesktop"
       ".local/share/Zeal"
       ".local/share/zoxide"
