@@ -83,4 +83,3 @@
     exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/purple-lake.png &
   '';
 }
-}
