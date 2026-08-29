@@ -68,6 +68,11 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+  # Janky kde add
+  services = {
+    desktopManager.plasma6.enable = true;
+    displayManager.plasma-login-manager.enable = true;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
