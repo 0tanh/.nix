@@ -60,6 +60,9 @@
 
   # This fixes issues with mango if it is loaded
   wayland.windowManager.mango.extraConfig = ''
+    # set up wallpaper
+    exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/aoi.jpg -m center
+    
     # Use legacy Direct Rendering Manager DRM
     env=WLR_DRM_NO_ATOMIC,1
     # Moniter rules for 2 bad moniters
