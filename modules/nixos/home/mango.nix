@@ -71,7 +71,7 @@ in
       exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 
       # set up wallpaper
-      exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/aoi.jpg -m center
+      # exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/aoi.jpg -m center
 
       # start the desktop shell
       # exec-once=${inputs.caelestia-shell.packages."x86_64-linux".default}/bin/caelestia-shell
