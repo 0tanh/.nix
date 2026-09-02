@@ -6,7 +6,6 @@
   ...
 }:
 {
-
   programs.pet = {
     enable = true;
     settings = {
@@ -24,6 +23,12 @@
       {
         description = "Convert all M4A files to MP3 files";
         command = "for file in ./**/*.m4a; do; ffmpeg -i \"$file\" -b:a 320k \"$file.mp3\"; done";
+      }
+      {
+        command = ''
+          sudo patchelf --set-interpreter "''$(fd 'ld-linux-x86-64.so.2' /nix/store | grep glibc-2.42-67/lib | head -n1)" ./ivyz;
+        '';
+        description = "Patch a glic dll for ivyz";
       }
       {
         description = "Generate age key from a private SSH key";
@@ -51,6 +56,7 @@
       }
       {
         command = ''
+          feline-patup
           git config credential.helper '!f() { sleep 1; echo "username=''${GIT_USER}"; echo "password=''${GIT_PASSWORD}"; }; f'
         '';
         description = "Set up a local credential helper for git to use the GIT_USER and GIT_PASSWORD env variables for auth.";
