@@ -17,6 +17,7 @@
     [
       goofcord
       #TODO move nicotine, mpv, vlc, and ncspot to the same combo
+      klipper
       # Soulseek Client
       nicotine-plus
       # Space monitering
@@ -36,6 +37,7 @@
       unzip
       webcamoid
       yt-dlp
+
     ]
 
     # these packages are from a stable version of
