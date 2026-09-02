@@ -17,6 +17,8 @@
 
     gnumake
 
+    patchelf
+
     maven
     javaPackages.compiler.openjdk25
     # VS Code for more focused editing e.g. of bigger projects e.g. Webbed Sites
