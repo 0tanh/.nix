@@ -301,7 +301,9 @@
                 # Additional optional system modules
                 ./modules/nixos/system/firefox.nix
                 ./modules/nixos/system/greetd.nix
+                ./modules/nixos/system/icecast.nix
                 ./modules/nixos/system/impermanance.nix
+                ./modules/nixos/system/kde.nix
                 ./modules/nixos/system/mango.nix
                 ./modules/nixos/system/tailscale.nix
                 ./modules/nixos/system/stylix.nix
