@@ -77,6 +77,7 @@
       "wheel"
     ];
 
+    hashedPasswordFile = config.sops.secrets."hashedPasswords/betty".path;
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDJfCNULFgoC3qx8H0xYWT8WHz+TuElEP0LsaN4lOtAl uncia@feline.fyi"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKAQVc01hfBZfPMJ+Au+ivpZFV5oww95bMyRPLX6xYkt 0tanh@git.feline.fyi"
