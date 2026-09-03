@@ -10,7 +10,7 @@ x 2026-08-17 2026-08-17 define more idiomatic package setup for config (e.g. hea
 x 2026-08-17 2026-08-17 set up quickshell scripting
 (B) configure niri +ricing @ricing
 (B) set up auto windows mount +util @workflow
-(B) set up yabridge +musicnix
+x 2026-09-02 2026-09-02 set up yabridge +musicnix
 (B) set up nix weather +util @struc
 x 2026-08-26 2026-08-26 goofcord on lily @util @workflow
 (B) set up yabridge ctl with windows @util @music
