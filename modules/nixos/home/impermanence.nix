@@ -56,7 +56,6 @@
       ".config/tmux"
       ".config/zen"
       ".config/zsh"
-      ".config/JetBrains"
 
       # Discord
       ".config/vesktop"
