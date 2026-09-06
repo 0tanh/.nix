@@ -25,7 +25,8 @@
     vscode.fhs
     # Offline documentation
     zeal
-    zed
+    #VS Code-alike. mostly used for GLSL syntax highlighting
+    zed-editor
   ];
 
 }
