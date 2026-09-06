@@ -19,6 +19,7 @@
     # Moudlar paid DAW
     bitwig-studio
     # Pure functional DSP programming language
+    mixxx
     faust2
     # Audio rerouting
     pipewire.jack
