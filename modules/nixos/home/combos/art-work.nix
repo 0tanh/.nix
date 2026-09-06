@@ -13,6 +13,7 @@
     ../figma.nix
     ../blender.nix
     ../obs.nix
+    ../lutris.nix
   ];
 
   home.packages =
@@ -24,7 +25,7 @@
       kdePackages.kdenlive
       # Drawing
       krita
-
+      # Reference pinboard
       pureref
     ]
 

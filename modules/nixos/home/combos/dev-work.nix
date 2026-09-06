@@ -25,6 +25,7 @@
     vscode.fhs
     # Offline documentation
     zeal
+    zed
   ];
 
 }

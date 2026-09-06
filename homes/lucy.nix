@@ -11,7 +11,7 @@
 
     # Desktop Environment
     [
-      ../modules/nixos/home/desktop-env/mango-quickshell.nix
+      # ../modules/nixos/home/desktop-env/mango-quickshell.nix
     ]
     ++
     # Other modules
@@ -78,8 +78,9 @@
   # monitorrule=name:VGA-1,width:1366,height:768,refresh:59.62,x:1024,y:0
   # monitorrule=name:HDMI-A-1,width:1024,height:768,refresh:59.92,x:0,y:0
   #'';
-
-  wayland.windowManager.mango.extraConfig = ''
-    exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/purple-lake.png &
-  '';
+  /**
+    wayland.windowManager.mango.extraConfig = ''
+      exec-once=${pkgs.swaybg}/bin/swaybg -i ~/.nix/assets/img/purple-lake.png &
+    '';
+  */
 }

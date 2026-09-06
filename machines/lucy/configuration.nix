@@ -50,6 +50,12 @@
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
+
+  security.pki.certificates = map builtins.toString [
+    ../../assets/codesignctl.pem
+    ../../assets/timestampctl.pem
+  ];
+
   security.rtkit.enable = true;
   security.sudo.wheelNeedsPassword = false;
   services.pipewire = {
