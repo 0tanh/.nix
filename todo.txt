@@ -20,3 +20,6 @@ x 2026-08-26 2026-08-26 goofcord on lily @util @workflow
 (B) animated neofetch
 (B) write Kavtuum/GTK theme
 (A) Update quickshell for sound and brightness
+(B) Add OSC PR for Mixxx
+(C) Set-up TiXL as a flake
+(C) set up Ditherboy as a flake
