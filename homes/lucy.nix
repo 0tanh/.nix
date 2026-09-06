@@ -11,7 +11,7 @@
 
     # Desktop Environment
     [
-      # ../modules/nixos/home/desktop-env/mango-quickshell.nix
+      ../modules/nixos/home/desktop-env/mango-quickshell.nix
     ]
     ++
     # Other modules
