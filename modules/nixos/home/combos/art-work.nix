@@ -10,10 +10,11 @@
   # e.g. Image Editors, 3D graphics, Vector Graphics, as well as video recording utilities
 
   imports = [
-    ../figma.nix
     ../blender.nix
-    ../obs.nix
+    ../figma.nix
+    ../kodelife.nix
     ../lutris.nix
+    ../obs.nix
   ];
 
   home.packages =

@@ -11,6 +11,7 @@
   imports = [
     ../ableton.nix
     ../osc-control.nix
+    ../protokol.nix
     ../puredata.nix
     ../reaper.nix
   ];

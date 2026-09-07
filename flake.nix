@@ -480,6 +480,9 @@
       url = "github:nix-community/impermanence";
     };
 
+    # KodeLife Shader Editor
+    kodelife.url = "github:0tanh/KodeLife-nix";
+
     # Modern, featureful, lightweight wayland compositor
     mango = {
       url = "github:DreamMaoMao/mango";
@@ -519,6 +522,9 @@
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Protokol Midi and OSC message moniter
+    protokol.url = "github:0tanh/Protokol-nix";
 
     # Spicetify - customisable spotify
     spicetify-nix = {
