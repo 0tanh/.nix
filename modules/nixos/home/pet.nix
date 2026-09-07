@@ -23,6 +23,7 @@
       {
         description = "Convert all M4A files to MP3 files";
         command = "for file in ./**/*.m4a; do; ffmpeg -i \"$file\" -b:a 320k \"$file.mp3\"; done";
+        tag = [ "convert" ];
       }
       {
         command = ''
@@ -59,6 +60,17 @@
           git config credential.helper '!f() { sleep 1; echo "username=''${GIT_USER}"; echo "password=''${GIT_PASSWORD}"; }; f'
         '';
         description = "Set up a local credential helper for git to use the GIT_USER and GIT_PASSWORD env variables for auth.";
+      }
+      {
+        command = "";
+        description = "Take a .wav render and render it as a compressed mp3 in my Renders folder";
+        tag = [ "convert" ];
+      }
+      {
+        command = ''echo "<world> <world>s" '';
+        description = "Take a .mp4 and compress it to be shared on discord and socials";
+        tag = [ "convert" ];
+
       }
     ];
   };
