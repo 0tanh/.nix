@@ -18,6 +18,7 @@
       "Music"
       "Pictures"
       "Documents"
+      "Games"
       "Videos"
       "Windows"
       ".wine-ableton"
@@ -48,7 +49,6 @@
       ".config/inkscape"
       ".config/figma-linux"
       ".config/JetBrains"
-      ".config/lutris"
       ".config/kitty"
       ".config/goofcord"
       ".config/mango"
@@ -65,13 +65,19 @@
 
       # .local/share
       ".local/share/direnv"
-      ".local/share/lutris"
       ".local/share/nvim"
       ".local/share/JetBrains"
-      ".local/share/Steam"
       ".local/share/TelegramDesktop"
       ".local/share/Zeal"
       ".local/share/zoxide"
+
+      /**
+        # Lutris & Steam
+        ".local/share/Steam"
+        ".local/share/lutris"
+        ".config/lutris"
+        ".steam"
+      */
 
       # .local/state
       ".local/state/nvim"

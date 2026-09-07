@@ -1,0 +1,588 @@
+betty@lucy ~$ lutris
+2026-09-07 05:08:40,881: Starting Lutris 0.5.22
+2026-09-07 05:08:40,894: Running migration: mess_to_mame
+2026-09-07 05:08:40,894: Running migration: migrate_hidden_ids
+2026-09-07 05:08:40,895: Running migration: migrate_steam_appids
+2026-09-07 05:08:40,896: Running migration: retrieve_discord_appids
+2026-09-07 05:08:40,897: Updating Games Discord APP ID's
+2026-09-07 05:08:40,897: Running migration: migrate_sortname
+2026-09-07 05:08:40,898: Adding blank sortname field to database
+2026-09-07 05:08:40,898: Running migration: migrate_hidden_category
+2026-09-07 05:08:40,898: Moving hidden games to the '.hidden' category
+2026-09-07 05:08:40,899: Running migration: migrate_ge_proton
+2026-09-07 05:08:40,900: Running migration: migrate_banners_back
+2026-09-07 05:08:40,900: Running migration: migrate_proton_to_wine_dir
+2026-09-07 05:08:40,902: ['/usr/bin/vulkaninfo', '--summary'] command failed: [Errno 2] No such file or directory: '/usr/bin/vulkaninfo'
+2026-09-07 05:08:41,079: "card1" is Intel Corporation Alder Lake-UP3 GT2 [Iris Xe Graphics] (8086:46a8 1414:0074 i915) Driver 26.1.2
+WARNING: running xrandr against an Xwayland server. See the xrandr man page for details.
+2026-09-07 05:08:42,547: Non existent path: /home/betty/.local/share/lutris/runtime/umu-games
+
+7-Zip [64] 17.05 : Copyright (c) 1999-2021 Igor Pavlov : 2017-08-28
+p7zip Version 17.05 (locale=C.UTF-8,Utf16=on,HugeFiles=on,64 bits,12 CPUs x64)
+
+Scanning the drive for archives:
+1 file, 8484 bytes (9 KiB)
+
+Extracting archive: /home/betty/.local/share/lutris/runtime/umu-games.json.xz
+--
+Path = /home/betty/.local/share/lutris/runtime/umu-games.json.xz
+Type = xz
+Physical Size = 8484
+Method = LZMA2:23 CRC64
+Streams = 1
+Blocks = 1
+
+Everything is Ok
+
+Size:       47755
+Compressed: 8484
+2026-09-07 05:08:43,589: Non existent path: /home/betty/.local/share/lutris/runtime/umu
+2026-09-07 05:08:50,130: Failed to get 'hicolor/symbolic/apps/amiga-1200-symbolic.svg': [Errno 17] File exists: '/home/betty/.local/share/lutris/runtime/icons/hicolor/symbolic/apps'
+2026-09-07 05:08:56,802: Non existent path: /home/betty/.local/share/lutris/runtime/winetricks
+2026-09-07 05:08:58,875: Non existent path: /home/betty/.local/share/lutris/runtime/battleye_runtime
+2026-09-07 05:08:59,376: Non existent path: /home/betty/.local/share/lutris/runtime/eac_runtime
+2026-09-07 05:09:12,086: Non existent path: /home/betty/.local/share/lutris/runtime/innoextract-1.9-linux
+2026-09-07 05:09:13,065: Non existent path: /home/betty/.local/share/lutris/runtime/p7zip
+2026-09-07 05:09:13,559: Non existent path: /home/betty/.local/share/lutris/runtime/gamecontrollerdb
+2026-09-07 05:09:14,115: Non existent path: /home/betty/.local/share/lutris/runtime/network-tools
+2026-09-07 05:09:18,762: Non existent path: /home/betty/.local/share/lutris/runtime/Ubuntu-18.04-i686
+2026-09-07 05:09:23,951: Non existent path: /home/betty/.local/share/lutris/runtime/Ubuntu-18.04-x86_64
+2026-09-07 05:09:24,674: Non existent path: /home/betty/.local/share/lutris/runtime/dxvk-cache-tool
+WARNING: running xrandr against an Xwayland server. See the xrandr man page for details.
+2026-09-07 05:09:53,047: Runner wine needs to be installed
+2026-09-07 05:11:23,995: All files available
+2026-09-07 05:11:23,995: All files are available, continuing install
+2026-09-07 05:11:23,996: Launching installer commands
+2026-09-07 05:11:24,009: Creating a win64 prefix in /home/betty/Tixl
+2026-09-07 05:11:24,009: Winepath: /home/betty/.local/share/lutris/runtime/umu/umu-run
+lutris-wrapper: /home/betty/.local/share/lutris/runtime/umu/umu-run
+Started initial process 5835 from /home/betty/.local/share/lutris/runtime/umu/umu-run createprefix
+Start monitoring process.
+INFO: umu-launcher version 1.4.4 (3.13.13 (main, Apr  7 2026, 18:19:01) [GCC 15.2.0])
+INFO: Downloading GE-Proton11-6-x86_64.sha512sum...
+INFO: Downloading GE-Proton11-6-x86_64.tar.gz...
+2026-09-07 05:11:54,535: Wine prefix creation is taking longer than expected...
+INFO: GE-Proton11-6-x86_64.tar.gz: SHA512 is OK
+INFO: Extracting GE-Proton11-6-x86_64.tar.gz...
+INFO: /home/betty/.cache/umu/tmpfahd_710/GE-Proton11-6-x86_64 -> /home/betty/.local/share/Steam/compatibilitytools.d
+INFO: Using GE-Proton11-6-x86_64
+CRITICAL: steamrt4 validation failed
+CRITICAL: Could not find steamrt4_platform_* in '/home/betty/.local/share/umu/steamrt4'
+INFO: Setting up Unified Launcher for Windows Games on Linux...
+INFO: Downloading steamrt4 (4.0.20260805.254769), please wait...
+INFO: SteamLinuxRuntime_4.tar.xz: SHA256 is OK
+INFO: Verifying integrity of steamrt4_platform_4.0.20260805.254769...
+/nix/store/52m671wlvp3jhfy6blcy8g83yhy80cn7-libproxy-0.5.12/lib/libproxy/libpxbackend-1.0.so: undefined symbol: g_strv_builder_unref
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiolibproxy.so
+/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognomeproxy.so: undefined symbol: g_task_set_name
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognomeproxy.so
+/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognutls.so: undefined symbol: g_source_set_static_name
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognutls.so
+/nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules/libdconfsettings.so: undefined symbol: g_assertion_message_cmpint
+Failed to load module: /nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules/libdconfsettings.so
+INFO: steamrt4_platform_4.0.20260805.254769: mtree is OK
+INFO: Using steamrt4 (latest)
+INFO: Running 'GE-Proton11-6-x86_64' using runtime 'steamrt4'
+INFO: Running 'steamrt4' using runtime 'host'
+pressure-vessel-wrap[6840]: W: Unable to determine architecture of provider / ldconfig: Error reading "(null)" ELF header: invalid `Elf' handle
+pressure-vessel-wrap[6840]: W: Using libGLX_mesa.so.0 from provider system for some but not all architectures! Will take /usr/share/drirc.d from provider.
+/nix/store/52m671wlvp3jhfy6blcy8g83yhy80cn7-libproxy-0.5.12/lib/libproxy/libpxbackend-1.0.so: undefined symbol: g_strv_builder_unref
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiolibproxy.so
+/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognomeproxy.so: undefined symbol: g_task_set_name
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognomeproxy.so
+/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognutls.so: undefined symbol: g_source_set_static_name
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognutls.so
+/nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules/libdconfsettings.so: undefined symbol: g_assertion_message_cmpint
+Failed to load module: /nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules/libdconfsettings.so
+ProtonFixes[6933] WARN: Skipping fix execution. We are probably running a unit test.
+Proton: Upgrading prefix from None to GE-Proton11-6 (/home/betty/Tixl/)
+2026-09-07 05:12:47,064: win64 Prefix created in /home/betty/Tixl
+Proton: Error: unable to use parent for game drive, path
+ProtonFixes[6933] WARN: Skipping fix execution. We are probably running a unit test.
+Proton: Error: unable to use parent for game drive, path
+Proton: Executable is inside wine prefix, launching normally.
+lutris-wrapper: /home/betty/.local/share/lutris/runtime/umu/umu-run
+Started initial process 6965 from /home/betty/.local/share/lutris/runtime/umu/umu-run /home/betty/Downloads/Tixl-v4.2.1.exe
+Start monitoring process.
+fsync: up and running.
+[umu.__main__:78] DEBUG: SHELL=/nix/store/4wvhzvwmv2rnwgcg0sadhs769hky28xk-zsh-5.9.1/bin/zsh
+[umu.__main__:78] DEBUG: LSCOLORS=Gxfxcxdxbxegedabagacad
+[umu.__main__:78] DEBUG: __ETC_PROFILE_DONE=1
+[umu.__main__:78] DEBUG: FLOAX_TITLE=FloaX: C-M-s 󰘕   C-M-b 󰁌   C-M-f 󰊓   C-M-r 󰑓   C-M-e 󱂬   C-M-d 
+[umu.__main__:78] DEBUG: COLORTERM=truecolor
+[umu.__main__:78] DEBUG: __HM_SESS_VARS_SOURCED=1
+[umu.__main__:78] DEBUG: XDG_CONFIG_DIRS=/nix/store/fxa56pw4gp2rdbbcgv73lk91zzwr68yx-stylix-kde-config:/home/betty/.config/kdedefaults:/etc/xdg:/home/betty/.nix-profile/etc/xdg:/nix/profile/etc/xdg:/home/betty/.local/state/nix/profile/etc/xdg:/etc/profiles/per-user/betty/etc/xdg:/nix/var/nix/profiles/default/etc/xdg:/run/current-system/sw/etc/xdg
+[umu.__main__:78] DEBUG: LESS=-R
+[umu.__main__:78] DEBUG: NIX_LD_LIBRARY_PATH=/run/current-system/sw/share/nix-ld/lib
+[umu.__main__:78] DEBUG: TERM_PROGRAM_VERSION=3.6a
+[umu.__main__:78] DEBUG: TMUX=/run/user/1000/tmux-1000/default,4117,0
+[umu.__main__:78] DEBUG: PKG_CONFIG_PATH=/usr/lib/pkgconfig
+[umu.__main__:78] DEBUG: LC_ADDRESS=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: SYSTEMD_XKB_DIRECTORY=/etc/X11/xkb
+[umu.__main__:78] DEBUG: XDG_BIN_HOME=/home/betty/.local/bin
+[umu.__main__:78] DEBUG: LC_NAME=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: SSH_AUTH_SOCK=/home/betty/.ssh/agent/s.Z6kIUuZJKM.agent.rX9cu696be
+[umu.__main__:78] DEBUG: XDG_DATA_HOME=/home/betty/.local/share
+[umu.__main__:78] DEBUG: XDG_CONFIG_HOME=/home/betty/.config
+[umu.__main__:78] DEBUG: XCURSOR_PATH=/home/betty/.icons:/home/betty/.local/share/icons:/home/betty/.nix-profile/share/icons:/home/betty/.nix-profile/share/pixmaps:/nix/profile/share/icons:/nix/profile/share/pixmaps:/home/betty/.local/state/nix/profile/share/icons:/home/betty/.local/state/nix/profile/share/pixmaps:/etc/profiles/per-user/betty/share/icons:/etc/profiles/per-user/betty/share/pixmaps:/nix/var/nix/profiles/default/share/icons:/nix/var/nix/profiles/default/share/pixmaps:/run/current-system/sw/share/icons:/run/current-system/sw/share/pixmaps
+[umu.__main__:78] DEBUG: LOCALE_ARCHIVE_2_27=/nix/store/3d42apscfm1mqn3jdpgs46c27ns11khj-glibc-locales-2.42-61/lib/locale/locale-archive
+[umu.__main__:78] DEBUG: FLOAX_BORDER_COLOR=magenta
+[umu.__main__:78] DEBUG: LC_MONETARY=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: SSH_AGENT_PID=4111
+[umu.__main__:78] DEBUG: GDK_PIXBUF_MODULE_FILE=/nix/store/91lgsf2dixa2mni74pvy3k6rxp2m32dr-librsvg-2.62.1/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+[umu.__main__:78] DEBUG: ELECTRON_OZONE_PLATFORM_HINT=x11
+[umu.__main__:78] DEBUG: KITTY_PID=3875
+[umu.__main__:78] DEBUG: XCURSOR_SIZE=48
+[umu.__main__:78] DEBUG: GPG_TTY=/dev/pts/1
+[umu.__main__:78] DEBUG: EDITOR=nvim
+[umu.__main__:78] DEBUG: GST_PLUGIN_SYSTEM_PATH_1_0=/nix/store/fb72xprb07hl85k32vm50y4x2pi4rczd-gst-libav-1.26.11/lib/gstreamer-1.0:/nix/store/cir3h9xbdp643q7l8l04s1zzrs69f39w-gst-plugins-bad-1.26.11/lib/gstreamer-1.0:/nix/store/cjbqbfl31swnpik6wv2ic0ksxpb8r9x9-gstreamer-1.26.11/lib/gstreamer-1.0:/nix/store/pp3qyi30q80wr8fganm9x1r0ax19066z-gst-plugins-base-1.26.11/lib/gstreamer-1.0:/nix/store/250qxwnb9ky20dgaxlmlp6s2il5xycbk-gst-plugins-good-1.26.11/lib/gstreamer-1.0:/nix/store/qx0wjwy6kcqz652yhpcgxjmdr79lfb9b-gst-plugins-ugly-1.26.11/lib/gstreamer-1.0:/usr/lib/gstreamer-1.0:/usr/lib32/gstreamer-1.0
+[umu.__main__:78] DEBUG: FLOAX_CHANGE_PATH=true
+[umu.__main__:78] DEBUG: XDG_SEAT=seat0
+[umu.__main__:78] DEBUG: PWD=/home/betty
+[umu.__main__:78] DEBUG: NIX_PROFILES=/run/current-system/sw /nix/var/nix/profiles/default /etc/profiles/per-user/betty /home/betty/.local/state/nix/profile /nix/profile /home/betty/.nix-profile
+[umu.__main__:78] DEBUG: FLOAX_WIDTH=80%
+[umu.__main__:78] DEBUG: LOGNAME=betty
+[umu.__main__:78] DEBUG: QT_QPA_PLATFORMTHEME=kde
+[umu.__main__:78] DEBUG: XDG_SESSION_TYPE=wayland
+[umu.__main__:78] DEBUG: CUPS_DATADIR=/nix/store/1wqi20649q1j67a9q1l0k5izpqrvv8l5-cups-progs/share/cups
+[umu.__main__:78] DEBUG: NIX_PATH=nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels
+[umu.__main__:78] DEBUG: NIXPKGS_CONFIG=/etc/nix/nixpkgs-config.nix
+[umu.__main__:78] DEBUG: KITTY_PUBLIC_KEY=1:Lgde+-*bM27}+N4Y4fYL9wQHp^rkE)1zt8AQX3I|
+[umu.__main__:78] DEBUG: FZF_DEFAULT_COMMAND=fd --type f --hidden --exclude .git
+[umu.__main__:78] DEBUG: QT_STYLE_OVERRIDE=breeze
+[umu.__main__:78] DEBUG: GTK2_RC_FILES=/home/betty/.gtkrc-2.0
+[umu.__main__:78] DEBUG: HOME=/home/betty
+[umu.__main__:78] DEBUG: SSH_ASKPASS=/nix/store/2qfrkpxqld520zd9g9ksbcf1d8csw8wz-ksshaskpass-6.6.5/bin/ksshaskpass
+[umu.__main__:78] DEBUG: LANG=C.UTF-8
+[umu.__main__:78] DEBUG: LC_PAPER=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: TMUX_TMPDIR=/run/user/1000
+[umu.__main__:78] DEBUG: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:
+[umu.__main__:78] DEBUG: _JAVA_AWT_WM_NONREPARENTING=1
+[umu.__main__:78] DEBUG: XDG_CURRENT_DESKTOP=mango
+[umu.__main__:78] DEBUG: WAYLAND_DISPLAY=wayland-0
+[umu.__main__:78] DEBUG: GIO_EXTRA_MODULES=/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules:/nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules
+[umu.__main__:78] DEBUG: KITTY_WINDOW_ID=1
+[umu.__main__:78] DEBUG: MANGO_INSTANCE_SIGNATURE=/run/user/1000/mango-3499.sock
+[umu.__main__:78] DEBUG: XDG_CACHE_HOME=/home/betty/.cache
+[umu.__main__:78] DEBUG: NIX_USER_PROFILE_DIR=/nix/var/nix/profiles/per-user/betty
+[umu.__main__:78] DEBUG: INFOPATH=/home/betty/.nix-profile/info:/home/betty/.nix-profile/share/info:/nix/profile/info:/nix/profile/share/info:/home/betty/.local/state/nix/profile/info:/home/betty/.local/state/nix/profile/share/info:/etc/profiles/per-user/betty/info:/etc/profiles/per-user/betty/share/info:/nix/var/nix/profiles/default/info:/nix/var/nix/profiles/default/share/info:/run/current-system/sw/info:/run/current-system/sw/share/info
+[umu.__main__:78] DEBUG: LC_IDENTIFICATION=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: TERM=tmux-256color
+[umu.__main__:78] DEBUG: TERMINFO=/nix/store/9gz32i5i065wpyfkq8qlsfhs9y2gg2qh-kitty-0.47.2/lib/kitty/terminfo
+[umu.__main__:78] DEBUG: GTK_PATH=/home/betty/.nix-profile/lib/gtk-2.0:/home/betty/.nix-profile/lib/gtk-3.0:/home/betty/.nix-profile/lib/gtk-4.0:/nix/profile/lib/gtk-2.0:/nix/profile/lib/gtk-3.0:/nix/profile/lib/gtk-4.0:/home/betty/.local/state/nix/profile/lib/gtk-2.0:/home/betty/.local/state/nix/profile/lib/gtk-3.0:/home/betty/.local/state/nix/profile/lib/gtk-4.0:/etc/profiles/per-user/betty/lib/gtk-2.0:/etc/profiles/per-user/betty/lib/gtk-3.0:/etc/profiles/per-user/betty/lib/gtk-4.0:/nix/var/nix/profiles/default/lib/gtk-2.0:/nix/var/nix/profiles/default/lib/gtk-3.0:/nix/var/nix/profiles/default/lib/gtk-4.0:/run/current-system/sw/lib/gtk-2.0:/run/current-system/sw/lib/gtk-3.0:/run/current-system/sw/lib/gtk-4.0
+[umu.__main__:78] DEBUG: ACLOCAL_PATH=/usr/share/aclocal
+[umu.__main__:78] DEBUG: ZDOTDIR=/home/betty/.config/zsh
+[umu.__main__:78] DEBUG: USER=betty
+[umu.__main__:78] DEBUG: TMUX_PANE=%0
+[umu.__main__:78] DEBUG: SOPS_AGE_KEY_FILE=/etc/sops/age/keys.txt
+[umu.__main__:78] DEBUG: FLOAX_HEIGHT=80%
+[umu.__main__:78] DEBUG: TZDIR=/etc/zoneinfo
+[umu.__main__:78] DEBUG: NIX_LD=/run/current-system/sw/share/nix-ld/lib/ld.so
+[umu.__main__:78] DEBUG: NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+[umu.__main__:78] DEBUG: DISPLAY=:0
+[umu.__main__:78] DEBUG: NIX_CFLAGS_LINK=-L/usr/lib -L/usr/lib32
+[umu.__main__:78] DEBUG: SHLVL=2
+[umu.__main__:78] DEBUG: PAGER=less
+[umu.__main__:78] DEBUG: __HM_ZSH_SESS_VARS_SOURCED=1
+[umu.__main__:78] DEBUG: NIX_CFLAGS_COMPILE=-idirafter /usr/include
+[umu.__main__:78] DEBUG: LC_TELEPHONE=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: QTWEBKIT_PLUGIN_PATH=/home/betty/.nix-profile/lib/mozilla/plugins/:/nix/profile/lib/mozilla/plugins/:/home/betty/.local/state/nix/profile/lib/mozilla/plugins/:/etc/profiles/per-user/betty/lib/mozilla/plugins/:/nix/var/nix/profiles/default/lib/mozilla/plugins/:/run/current-system/sw/lib/mozilla/plugins/
+[umu.__main__:78] DEBUG: LC_MEASUREMENT=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: __NIXOS_SET_ENVIRONMENT_DONE=1
+[umu.__main__:78] DEBUG: XDG_VTNR=1
+[umu.__main__:78] DEBUG: XDG_SESSION_ID=2
+[umu.__main__:78] DEBUG: LOCALE_ARCHIVE=/run/current-system/sw/lib/locale/locale-archive
+[umu.__main__:78] DEBUG: LESSKEYIN_SYSTEM=/nix/store/4f0jni3ax3b23i95fgr30i3y10iz07hg-lessconfig
+[umu.__main__:78] DEBUG: QML2_IMPORT_PATH=/etc/profiles/per-user/betty/lib/qt-5.15.18/qml:/etc/profiles/per-user/betty/lib/qt-6/qml:/home/betty/.nix-profile/lib/qt-5.15.18/qml:/home/betty/.nix-profile/lib/qt-6/qml:/nix/profile/lib/qt-5.15.18/qml:/nix/profile/lib/qt-6/qml:/home/betty/.local/state/nix/profile/lib/qt-5.15.18/qml:/home/betty/.local/state/nix/profile/lib/qt-6/qml:/etc/profiles/per-user/betty/lib/qt-5.15.18/qml:/etc/profiles/per-user/betty/lib/qt-6/qml:/nix/var/nix/profiles/default/lib/qt-5.15.18/qml:/nix/var/nix/profiles/default/lib/qt-6/qml:/run/current-system/sw/lib/qt-5.15.18/qml:/run/current-system/sw/lib/qt-6/qml
+[umu.__main__:78] DEBUG: TERMINFO_DIRS=/home/betty/.nix-profile/share/terminfo:/nix/profile/share/terminfo:/home/betty/.local/state/nix/profile/share/terminfo:/etc/profiles/per-user/betty/share/terminfo:/nix/var/nix/profiles/default/share/terminfo:/run/current-system/sw/share/terminfo
+[umu.__main__:78] DEBUG: XDG_STATE_HOME=/home/betty/.local/state
+[umu.__main__:78] DEBUG: LD_LIBRARY_PATH=/lib:/lib32:/nix/store/p1f881g5hgakqag26rlbzbxhzw9gmjnx-glibc-2.42-61/lib:/run/opengl-driver/lib:/lib64:/usr/lib32:/usr/lib64:/home/betty/.local/share/lutris/runtime/Ubuntu-18.04-i686:/home/betty/.local/share/lutris/runtime/steam/i386/lib/i386-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/i386/lib:/home/betty/.local/share/lutris/runtime/steam/i386/usr/lib/i386-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/i386/usr/lib:/home/betty/.local/share/lutris/runtime/Ubuntu-18.04-x86_64:/home/betty/.local/share/lutris/runtime/steam/amd64/lib/x86_64-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/amd64/lib:/home/betty/.local/share/lutris/runtime/steam/amd64/usr/lib/x86_64-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/amd64/usr/lib:/nix/store/8ig4nr6gag11m16wy9icgmqssiybwynb-pipewire-1.6.5-jack/lib
+[umu.__main__:78] DEBUG: XDG_RUNTIME_DIR=/run/user/1000
+[umu.__main__:78] DEBUG: KITTY_LISTEN_ON=unix:/tmp/kitty-3875
+[umu.__main__:78] DEBUG: PS1=lutris-0.5.22-fhsenv:\u@\h:\w\$
+[umu.__main__:78] DEBUG: NIX_XDG_DESKTOP_PORTAL_DIR=/run/current-system/sw/share/xdg-desktop-portal/portals
+[umu.__main__:78] DEBUG: DOCKER_HOST=unix:///run/user/1000/docker.sock
+[umu.__main__:78] DEBUG: LC_TIME=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: FLOAX_TEXT_COLOR=blue
+[umu.__main__:78] DEBUG: XDG_DATA_DIRS=/nix/store/75vf645azcd7mf0lf69g47sasig0071j-lutris-unwrapped-0.5.22/share:/nix/store/k8a44404day9i86sxkjm0gq5ymlvyh06-gsettings-desktop-schemas-50.1/share/gsettings-schemas/gsettings-desktop-schemas-50.1:/nix/store/v7fvwaf6j1hwvb9dmwfa97nzmrlshqai-gtk+3-3.24.52/share/gsettings-schemas/gtk+3-3.24.52:/nix/store/4v2hnjjm7a7bkl6za4zv0ydam0x420gq-desktops/share:/home/betty/.nix-profile/share:/nix/profile/share:/home/betty/.local/state/nix/profile/share:/etc/profiles/per-user/betty/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share:/run/opengl-driver/share:/run/opengl-driver-32/share:/usr/local/share:/usr/share
+[umu.__main__:78] DEBUG: LIBEXEC_PATH=/home/betty/.nix-profile/libexec:/nix/profile/libexec:/home/betty/.local/state/nix/profile/libexec:/etc/profiles/per-user/betty/libexec:/nix/var/nix/profiles/default/libexec:/run/current-system/sw/libexec
+[umu.__main__:78] DEBUG: PATH=/nix/store/79jyxa0vx6lb7v3xw5jnvvp0pd73nx3y-xrandr-1.5.4/bin:/nix/store/k0mncnynr1dljv26jabaagyd3fspkzc8-pciutils-3.15.0/bin:/nix/store/w738nckzga49xzwgxqpvjk0bgrgnh3bk-psmisc-23.7/bin:/nix/store/vrq7lw83z69diw23m0m7d6ld5kwfp9q8-mesa-demos-9.0.0/bin:/nix/store/pq7kd4gdh4ll73d83mlwhhzbjdl6fvl9-vulkan-tools-1.4.341.0/bin:/nix/store/4wvhj1qsjgs6zdip59qc6z0xir9m0m56-pulseaudio-17.0/bin:/nix/store/874z39yy2bkg0dh47wqwffsfifdpp9lr-p7zip-17.06/bin:/nix/store/fjaqa1hsg0zyh01h5wrnr2xg0al2s0yc-xgamma-1.0.8/bin:/nix/store/vrh47mxn12jr7dsc5gjvd4hdjyw45l0v-libstrangle-unstable-202202022/bin:/nix/store/h8y7pvqnwkgbcrnl2jz04c7p5infd6kn-fluidsynth-2.5.3/bin:/nix/store/zq01g37d2016xivsdnsr1bbxn2hl797w-xorg-server-21.1.23/bin:/nix/store/q0j3j0q03awij28m8zf9xml6z1v3wapy-setxkbmap-1.3.4/bin:/nix/store/zp4yffmk461cs10pp8sm8y9jk235nwf5-xkbcomp-1.5.0/bin:/nix/store/zca0hp2i6c5yxbaxpl6x76mxc2b0aiqm-util-linux-2.42-bin/bin:/nix/store/60m4rxhg2fldqaak400c0lry96ijrzqn-python3-3.13.13/bin:/nix/store/75vf645azcd7mf0lf69g47sasig0071j-lutris-unwrapped-0.5.22/bin:/nix/store/mrg3xf0c4hmc5zg3swsjxa5hzklsrlww-python3.13-distro-1.9.0/bin:/nix/store/vf8f56sv2r46ws294fa6a1fmr7rhfwaq-gobject-introspection-wrapped-1.86.0-dev/bin:/nix/store/q9ksx8c79jfj1cawwwzmpq3qapvpvab7-glib-2.88.1-dev/bin:/nix/store/rb8rna9gkhs0ybl6z2p904myslh8llg8-gettext-1.0/bin:/nix/store/flq8wn4dikbhn2nmqac31zbpv0lkii2w-glib-2.88.1-bin/bin:/nix/store/4zv7hxkwpv4r83fdh9jmwn1649z6wazl-python3.13-charset-normalizer-3.4.7/bin:/run/wrappers/bin:/usr/bin:/usr/sbin:/run/wrappers/bin:/home/betty/.nix-profile/bin:/nix/profile/bin:/home/betty/.local/state/nix/profile/bin:/etc/profiles/per-user/betty/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/nix/store/9gz32i5i065wpyfkq8qlsfhs9y2gg2qh-kitty-0.47.2/bin:/nix/store/vwalk1kcnb5mr5c5c8100a96r9kgq4g2-imagemagick-7.1.2-23/bin:/nix/store/gi6n3gp7z0d1j4f2zpc7rwygjj45zgm4-ncurses-6.6-dev/bin:/home/betty/.config/zsh/plugins/fast-syntax-highlighting:/home/betty/.config/zsh/plugins/zsh-nix-shell
+[umu.__main__:78] DEBUG: DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+[umu.__main__:78] DEBUG: NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+[umu.__main__:78] DEBUG: KPACKAGE_DEP_RESOLVERS_PATH=/nix/store/k56gqiajp60jrxcnv4i2k06d5wqhxpcr-frameworkintegration-6.26.0/libexec/kf6/kpackagehandlers
+[umu.__main__:78] DEBUG: QT_PLUGIN_PATH=/etc/profiles/per-user/betty/lib/qt-5.15.18/plugins:/etc/profiles/per-user/betty/lib/qt-6/plugins:/home/betty/.nix-profile/lib/qt-5.15.18/plugins:/home/betty/.nix-profile/lib/qt-6/plugins:/nix/profile/lib/qt-5.15.18/plugins:/nix/profile/lib/qt-6/plugins:/home/betty/.local/state/nix/profile/lib/qt-5.15.18/plugins:/home/betty/.local/state/nix/profile/lib/qt-6/plugins:/etc/profiles/per-user/betty/lib/qt-5.15.18/plugins:/etc/profiles/per-user/betty/lib/qt-6/plugins:/nix/var/nix/profiles/default/lib/qt-5.15.18/plugins:/nix/var/nix/profiles/default/lib/qt-6/plugins:/run/current-system/sw/lib/qt-5.15.18/plugins:/run/current-system/sw/lib/qt-6/plugins
+[umu.__main__:78] DEBUG: KITTY_INSTALLATION_DIR=/nix/store/9gz32i5i065wpyfkq8qlsfhs9y2gg2qh-kitty-0.47.2/lib/kitty
+[umu.__main__:78] DEBUG: LC_NUMERIC=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: OLDPWD=/home/betty
+[umu.__main__:78] DEBUG: NIX_LDFLAGS=-L/usr/lib -L/usr/lib32
+[umu.__main__:78] DEBUG: TERM_PROGRAM=tmux
+[umu.__main__:78] DEBUG: PYTHONNOUSERSITE=true
+[umu.__main__:78] DEBUG: APPIMAGE_EXTRACT_AND_RUN=1
+[umu.__main__:78] DEBUG: GI_TYPELIB_PATH=/nix/store/jlyahda14aya375lv7k9fsin2zk90nxz-glib-2.88.1/lib/girepository-1.0:/nix/store/b438mw58nvpkw6hr6p3i8q303psz2dcj-gobject-introspection-1.86.0/lib/girepository-1.0:/nix/store/5d5gq4hcclz3mwikka3ykh924p610bdr-gdk-pixbuf-2.44.6/lib/girepository-1.0:/nix/store/91lgsf2dixa2mni74pvy3k6rxp2m32dr-librsvg-2.62.1/lib/girepository-1.0:/nix/store/s3knizlhir254y56l6kdd85dq8pm8xb1-at-spi2-core-2.60.1/lib/girepository-1.0:/nix/store/k8a44404day9i86sxkjm0gq5ymlvyh06-gsettings-desktop-schemas-50.1/lib/girepository-1.0:/nix/store/bd9nkv00cbnj19zc61rlqyrjvnlmq73j-harfbuzz-13.2.1/lib/girepository-1.0:/nix/store/2bnyj2q5if7xpbhsmw0ylxj9bwj98daf-pango-1.57.1/lib/girepository-1.0:/nix/store/v7fvwaf6j1hwvb9dmwfa97nzmrlshqai-gtk+3-3.24.52/lib/girepository-1.0:/nix/store/bgmv4ynr3sdksgq4m7pjbh36jbf42lnd-gnome-desktop-44.5/lib/girepository-1.0:/nix/store/l8x85xcfsgi94hxxv868id2j8n5lg74p-libnotify-0.8.8/lib/girepository-1.0:/nix/store/5w6gshmzlzzhqr6zdpaqy9c47h9phzrj-libsoup-3.6.6/lib/girepository-1.0:/nix/store/f9zsbigij2k503m6s2yqhw9pqyzhcd68-webkitgtk-2.52.4+abi=4.1/lib/girepository-1.0:/nix/store/cir3h9xbdp643q7l8l04s1zzrs69f39w-gst-plugins-bad-1.26.11/lib/girepository-1.0:/nix/store/cjbqbfl31swnpik6wv2ic0ksxpb8r9x9-gstreamer-1.26.11/lib/girepository-1.0:/nix/store/pp3qyi30q80wr8fganm9x1r0ax19066z-gst-plugins-base-1.26.11/lib/girepository-1.0:/nix/store/bgd2ymp22f21ca5w9lzhi3ss80l9rnn9-gobject-introspection-wrapped-1.86.0/lib/girepository-1.0
+[umu.__main__:78] DEBUG: WEBKIT_DISABLE_DMABUF_RENDERER=1
+[umu.__main__:78] DEBUG: PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+[umu.__main__:78] DEBUG: __GL_SHADER_DISK_CACHE=1
+[umu.__main__:78] DEBUG: __GL_SHADER_DISK_CACHE_PATH=/home/betty/.cache/lutris/shaders/wine
+[umu.__main__:78] DEBUG: WINEDEBUG=-all
+[umu.__main__:78] DEBUG: DXVK_LOG_LEVEL=error
+[umu.__main__:78] DEBUG: UMU_LOG=1
+[umu.__main__:78] DEBUG: WINEARCH=win64
+[umu.__main__:78] DEBUG: PROTONPATH=GE-Proton
+[umu.__main__:78] DEBUG: WINE=/home/betty/.local/share/lutris/runtime/umu/umu-run
+[umu.__main__:78] DEBUG: WINEPREFIX=/home/betty/Tixl
+[umu.__main__:78] DEBUG: WINEESYNC=1
+[umu.__main__:78] DEBUG: WINEFSYNC=1
+[umu.__main__:78] DEBUG: WINE_FULLSCREEN_FSR=1
+[umu.__main__:78] DEBUG: DXVK_NVAPIHACK=0
+[umu.__main__:78] DEBUG: DXVK_ENABLE_NVAPI=1
+[umu.__main__:78] DEBUG: PROTON_BATTLEYE_RUNTIME=/home/betty/.local/share/lutris/runtime/battleye_runtime
+[umu.__main__:78] DEBUG: PROTON_EAC_RUNTIME=/home/betty/.local/share/lutris/runtime/eac_runtime
+[umu.__main__:78] DEBUG: PROTON_DXVK_D3D8=1
+[umu.__main__:78] DEBUG: WINEDLLOVERRIDES=d3d10core,d3d11,d3d12,d3d12core,d3d8,d3d9,d3dcompiler_33,d3dcompiler_34,d3dcompiler_35,d3dcompiler_36,d3dcompiler_37,d3dcompiler_38,d3dcompiler_39,d3dcompiler_40,d3dcompiler_41,d3dcompiler_42,d3dcompiler_43,d3dcompiler_46,d3dcompiler_47,d3dx10,d3dx10_33,d3dx10_34,d3dx10_35,d3dx10_36,d3dx10_37,d3dx10_38,d3dx10_39,d3dx10_40,d3dx10_41,d3dx10_42,d3dx10_43,d3dx11_42,d3dx11_43,d3dx9_24,d3dx9_25,d3dx9_26,d3dx9_27,d3dx9_28,d3dx9_29,d3dx9_30,d3dx9_31,d3dx9_32,d3dx9_33,d3dx9_34,d3dx9_35,d3dx9_36,d3dx9_37,d3dx9_38,d3dx9_39,d3dx9_40,d3dx9_41,d3dx9_42,d3dx9_43,dxgi,nvapi,nvapi64,nvofapi64=n;winemenubuilder=
+[umu.__main__:78] DEBUG: LC_ALL=
+[umu.__main__:78] DEBUG: LUTRIS_GAME_UUID=d7f34b7e-bfa4-4b85-83e0-c805c0977b0f
+[umu.umu_run:864] INFO: umu-launcher version 1.4.4 (3.13.13 (main, Apr  7 2026, 18:19:01) [GCC 15.2.0])
+[umu.umu_run:137] INFO: No GAMEID set, using umu-default
+[umu.umu_proton:90] DEBUG: Sending request to 'api.github.com'...
+Application could not be started, or no application associated with the specified file.
+ShellExecuteEx failed: File not found.
+
+Monitored process exited.
+Initial process has exited (return code: 256)
+All processes have quit
+Exit with return code 256
+[umu.umu_proton:658] DEBUG: PROTONPATH not *-Latest, skipping
+[umu.umu_proton:541] INFO: GE-Proton is up to date
+[umu.umu_run:791] DEBUG: PROTONPATH set, resolving its required runtime
+[umu.umu_run:969] DEBUG: Connecting to '1.1.1.1'...
+[umu.umu_runtime:266] DEBUG: Local: /home/betty/.local/share/umu/steamrt4
+[umu.umu_runtime:279] DEBUG: Sending request to 'https://repo.steampowered.com/steamrt4/images/latest-public-beta.txt' for 'latest-public-beta.txt'...
+[umu.umu_runtime:322] DEBUG: Existing install detected
+[umu.umu_runtime:323] DEBUG: Using container runtime 'steamrt4' aka 'steamrt4'
+[umu.umu_runtime:324] DEBUG: Checking updates for 'steamrt4'...
+[umu.umu_runtime:471] DEBUG: Acquiring file lock '/home/betty/.local/share/umu/umu.lock'...
+[umu.umu_runtime:473] DEBUG: Acquired file lock '/home/betty/.local/share/umu/umu.lock'
+[umu.umu_runtime:481] DEBUG: Released file lock '/home/betty/.local/share/umu/umu.lock'
+[umu.umu_runtime:378] INFO: steamrt4 is up to date
+[umu.umu_run:1036] DEBUG: WINEPREFIX=/home/betty/Tixl
+[umu.umu_run:1036] DEBUG: GAMEID=umu-default
+[umu.umu_run:1036] DEBUG: PROTON_CRASH_REPORT_DIR=/tmp/umu_crashreports
+[umu.umu_run:1036] DEBUG: PROTONPATH=/home/betty/.local/share/Steam/compatibilitytools.d/GE-Proton11-6-x86_64
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_APP_ID=8993149cad76f6934f1926f74b2445f3
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_TOOL_PATHS=/home/betty/.local/share/Steam/compatibilitytools.d/GE-Proton11-6-x86_64:/home/betty/.local/share/umu/steamrt4
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_LIBRARY_PATHS=/home
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_MOUNTS=/home/betty/.local/share/Steam/compatibilitytools.d/GE-Proton11-6-x86_64:/home/betty/.local/share/umu/steamrt4
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_INSTALL_PATH=/home/betty/Downloads
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_CLIENT_INSTALL_PATH=
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_DATA_PATH=/home/betty/Tixl
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_SHADER_PATH=/home/betty/Tixl/shadercache
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_LAUNCHER_SERVICE=
+[umu.umu_run:1036] DEBUG: FONTCONFIG_PATH=
+[umu.umu_run:1036] DEBUG: EXE=/home/betty/Downloads/Tixl-v4.2.1.exe
+[umu.umu_run:1036] DEBUG: SteamAppId=default
+[umu.umu_run:1036] DEBUG: SteamGameId=default
+[umu.umu_run:1036] DEBUG: STEAM_RUNTIME_LIBRARY_PATH=/lib64:/home/betty/.local/share/lutris/runtime/steam/amd64/lib:/usr/lib32:/lib32:/home/betty/.local/share/lutris/runtime/steam/i386/lib:/home/betty/.local/share/lutris/runtime/steam/i386/lib/i386-linux-gnu:/home/betty/.local/share/lutris/runtime/Ubuntu-18.04-x86_64:/usr/lib64:/home/betty/.local/share/lutris/runtime/Ubuntu-18.04-i686:/nix/store/02xwxhknad7wmfp6vyzxb2mygcp9cl8s-graphics-drivers/lib:/home/betty/.local/share/lutris/runtime/steam/i386/usr/lib/i386-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/i386/usr/lib:/home/betty/.local/share/lutris/runtime/steam/amd64/usr/lib/x86_64-linux-gnu:/run/opengl-driver/lib:/home/betty/.local/share/lutris/runtime/steam/amd64/lib/x86_64-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/amd64/usr/lib:/lib:/nix/store/8ig4nr6gag11m16wy9icgmqssiybwynb-pipewire-1.6.5-jack/lib:/home/betty/Downloads:/nix/store/p1f881g5hgakqag26rlbzbxhzw9gmjnx-glibc-2.42-61/lib
+[umu.umu_run:1036] DEBUG: STORE=
+[umu.umu_run:1036] DEBUG: PROTON_VERB=waitforexitandrun
+[umu.umu_run:1036] DEBUG: UMU_ID=umu-default
+[umu.umu_run:1036] DEBUG: UMU_ZENITY=
+[umu.umu_run:1036] DEBUG: UMU_NO_RUNTIME=
+[umu.umu_run:1036] DEBUG: UMU_RUNTIME_UPDATE=
+[umu.umu_run:1036] DEBUG: UMU_NO_PROTON=
+[umu.umu_run:1036] DEBUG: UMU_CONTAINER_NSENTER=
+[umu.umu_run:1036] DEBUG: RUNTIMEPATH=/home/betty/.local/share/umu/steamrt4
+[umu.umu_run:1036] DEBUG: UMU_STEAM_GAME_ID=
+[umu.umu_run:1036] DEBUG: UMU_INVOCATION_ID=c1a87d46412b4a02a2a25d4e44982646
+[umu.umu_runtime:657] INFO: Running 'GE-Proton11-6-x86_64' using runtime 'steamrt4'
+[umu.umu_runtime:657] INFO: Running 'steamrt4' using runtime 'host'
+[umu.umu_run:1047] DEBUG: ('/home/betty/.local/share/umu/steamrt4/umu', '--verb=waitforexitandrun', '--', '/home/betty/.local/share/umu/umu-shim', '/home/betty/.local/share/Steam/compatibilitytools.d/GE-Proton11-6-x86_64/proton', 'waitforexitandrun', '/home/betty/Downloads/Tixl-v4.2.1.exe')
+[umu.umu_run:736] DEBUG: prctl exited with status: 0
+pressure-vessel-wrap[7052]: W: Unable to determine architecture of provider / ldconfig: Error reading "(null)" ELF header: invalid `Elf' handle
+pressure-vessel-wrap[7052]: W: Using libGLX_mesa.so.0 from provider system for some but not all architectures! Will take /usr/share/drirc.d from provider.
+/nix/store/52m671wlvp3jhfy6blcy8g83yhy80cn7-libproxy-0.5.12/lib/libproxy/libpxbackend-1.0.so: undefined symbol: g_strv_builder_unref
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiolibproxy.so
+/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognomeproxy.so: undefined symbol: g_task_set_name
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognomeproxy.so
+/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognutls.so: undefined symbol: g_source_set_static_name
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognutls.so
+/nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules/libdconfsettings.so: undefined symbol: g_assertion_message_cmpint
+Failed to load module: /nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules/libdconfsettings.so
+ProtonFixes[7149] INFO: Running protonfixes on "GE-Proton11-6", build at 2026-08-28 21:12:12+00:00.
+ProtonFixes[7149] INFO: Running checks
+ProtonFixes[7149] INFO: All checks successful
+ProtonFixes[7149] WARN: Game title not found in CSV
+ProtonFixes[7149] INFO: Non-steam game UNKNOWN (umu-default)
+ProtonFixes[7149] INFO: No store specified, using UMU database
+ProtonFixes[7149] INFO: Using early stage global defaults for UNKNOWN (umu-default)
+ProtonFixes[7149] INFO: Non-steam game UNKNOWN (umu-default)
+ProtonFixes[7149] INFO: No store specified, using UMU database
+ProtonFixes[7149] INFO: No early stage global protonfix found for UNKNOWN (umu-default)
+Proton: Error: unable to use parent for game drive, path /home
+ProtonFixes[7149] INFO: Running protonfixes on "GE-Proton11-6", build at 2026-08-28 21:12:12+00:00.
+ProtonFixes[7149] INFO: Running checks
+ProtonFixes[7149] INFO: All checks successful
+ProtonFixes[7149] INFO: Non-steam game UNKNOWN (umu-default)
+ProtonFixes[7149] INFO: No store specified, using UMU database
+ProtonFixes[7149] INFO: Using main stage global defaults for UNKNOWN (umu-default)
+ProtonFixes[7149] INFO: Non-steam game UNKNOWN (umu-default)
+ProtonFixes[7149] INFO: No store specified, using UMU database
+ProtonFixes[7149] INFO: No main stage global protonfix found for UNKNOWN (umu-default)
+Proton: /home/betty/Downloads/Tixl-v4.2.1.exe
+Proton: Executable is a unix path, launching with 'umu.exe'.
+fsync: up and running.
+[umu.umu_run:744] DEBUG: Child 7052 exited with wait status: 0
+Monitored process exited.
+Initial process has exited (return code: 0)
+All processes have quit
+Exit with return code 0
+2026-09-07 05:16:16,200: Couldn't find a Windows executable in /home/betty/Tixl
+2026-09-07 05:16:16,220: No path found in LutrisConfig(level=game, game_config_id=tixl-setup-1788750976, runner=wine)
+2026-09-07 05:16:16,220: No path for tixl (wine)
+2026-09-07 05:27:58,386: The game doesn't have an executable
+2026-09-07 05:27:58,388: tixl (wine) has encountered an error: This game has no executable set. The install process didn't finish properly.
+Traceback (most recent call last):
+  File "/nix/store/75vf645azcd7mf0lf69g47sasig0071j-lutris-unwrapped-0.5.22/lib/python3.13/site-packages/lutris/exception_backstops.py", line 35, in wrapper
+    result = function(*args, **kwargs)
+  File "/nix/store/75vf645azcd7mf0lf69g47sasig0071j-lutris-unwrapped-0.5.22/lib/python3.13/site-packages/lutris/game.py", line 687, in configure_game
+    gameplay_info = self.get_gameplay_info(launch_ui_delegate)
+  File "/nix/store/75vf645azcd7mf0lf69g47sasig0071j-lutris-unwrapped-0.5.22/lib/python3.13/site-packages/lutris/game.py", line 626, in get_gameplay_info
+    gameplay_info = self.runner.play()  # type: ignore[attr-defined]
+  File "/nix/store/75vf645azcd7mf0lf69g47sasig0071j-lutris-unwrapped-0.5.22/lib/python3.13/site-packages/lutris/runners/wine.py", line 1336, in play
+    raise MissingGameExecutableError(filename=game_exe)
+lutris.exceptions.MissingGameExecutableError: This game has no executable set. The install process didn't finish properly.
+2026-09-07 05:27:58,392: The game has run for a very short time, did it crash?
+2026-09-07 05:27:58,400: No path found in LutrisConfig(level=game, game_config_id=tixl-setup-1788750976, runner=wine)
+2026-09-07 05:27:58,400: No path for tixl (wine)
+WARNING: running xrandr against an Xwayland server. See the xrandr man page for details.
+WARNING: running xrandr against an Xwayland server. See the xrandr man page for details.
+lutris-wrapper: tixl
+Started initial process 14141 from /home/betty/.local/share/lutris/runtime/umu/umu-run /home/betty/Tixl/drive_c/TiXL/TiXL 4.2.1/TiXL.exe
+Start monitoring process.
+[umu.__main__:78] DEBUG: SHELL=/nix/store/4wvhzvwmv2rnwgcg0sadhs769hky28xk-zsh-5.9.1/bin/zsh
+[umu.__main__:78] DEBUG: LSCOLORS=Gxfxcxdxbxegedabagacad
+[umu.__main__:78] DEBUG: __ETC_PROFILE_DONE=1
+[umu.__main__:78] DEBUG: FLOAX_TITLE=FloaX: C-M-s 󰘕   C-M-b 󰁌   C-M-f 󰊓   C-M-r 󰑓   C-M-e 󱂬   C-M-d 
+[umu.__main__:78] DEBUG: COLORTERM=truecolor
+[umu.__main__:78] DEBUG: __HM_SESS_VARS_SOURCED=1
+[umu.__main__:78] DEBUG: XDG_CONFIG_DIRS=/nix/store/fxa56pw4gp2rdbbcgv73lk91zzwr68yx-stylix-kde-config:/home/betty/.config/kdedefaults:/etc/xdg:/home/betty/.nix-profile/etc/xdg:/nix/profile/etc/xdg:/home/betty/.local/state/nix/profile/etc/xdg:/etc/profiles/per-user/betty/etc/xdg:/nix/var/nix/profiles/default/etc/xdg:/run/current-system/sw/etc/xdg
+[umu.__main__:78] DEBUG: LESS=-R
+[umu.__main__:78] DEBUG: NIX_LD_LIBRARY_PATH=/run/current-system/sw/share/nix-ld/lib
+[umu.__main__:78] DEBUG: TERM_PROGRAM_VERSION=3.6a
+[umu.__main__:78] DEBUG: TMUX=/run/user/1000/tmux-1000/default,4117,0
+[umu.__main__:78] DEBUG: PKG_CONFIG_PATH=/usr/lib/pkgconfig
+[umu.__main__:78] DEBUG: LC_ADDRESS=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: SYSTEMD_XKB_DIRECTORY=/etc/X11/xkb
+[umu.__main__:78] DEBUG: XDG_BIN_HOME=/home/betty/.local/bin
+[umu.__main__:78] DEBUG: LC_NAME=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: SSH_AUTH_SOCK=/home/betty/.ssh/agent/s.Z6kIUuZJKM.agent.rX9cu696be
+[umu.__main__:78] DEBUG: XDG_DATA_HOME=/home/betty/.local/share
+[umu.__main__:78] DEBUG: XDG_CONFIG_HOME=/home/betty/.config
+[umu.__main__:78] DEBUG: XCURSOR_PATH=/home/betty/.icons:/home/betty/.local/share/icons:/home/betty/.nix-profile/share/icons:/home/betty/.nix-profile/share/pixmaps:/nix/profile/share/icons:/nix/profile/share/pixmaps:/home/betty/.local/state/nix/profile/share/icons:/home/betty/.local/state/nix/profile/share/pixmaps:/etc/profiles/per-user/betty/share/icons:/etc/profiles/per-user/betty/share/pixmaps:/nix/var/nix/profiles/default/share/icons:/nix/var/nix/profiles/default/share/pixmaps:/run/current-system/sw/share/icons:/run/current-system/sw/share/pixmaps
+[umu.__main__:78] DEBUG: LOCALE_ARCHIVE_2_27=/nix/store/3d42apscfm1mqn3jdpgs46c27ns11khj-glibc-locales-2.42-61/lib/locale/locale-archive
+[umu.__main__:78] DEBUG: FLOAX_BORDER_COLOR=magenta
+[umu.__main__:78] DEBUG: LC_MONETARY=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: SSH_AGENT_PID=4111
+[umu.__main__:78] DEBUG: GDK_PIXBUF_MODULE_FILE=/nix/store/91lgsf2dixa2mni74pvy3k6rxp2m32dr-librsvg-2.62.1/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+[umu.__main__:78] DEBUG: ELECTRON_OZONE_PLATFORM_HINT=x11
+[umu.__main__:78] DEBUG: KITTY_PID=3875
+[umu.__main__:78] DEBUG: XCURSOR_SIZE=48
+[umu.__main__:78] DEBUG: GPG_TTY=/dev/pts/1
+[umu.__main__:78] DEBUG: EDITOR=nvim
+[umu.__main__:78] DEBUG: GST_PLUGIN_SYSTEM_PATH_1_0=/nix/store/fb72xprb07hl85k32vm50y4x2pi4rczd-gst-libav-1.26.11/lib/gstreamer-1.0:/nix/store/cir3h9xbdp643q7l8l04s1zzrs69f39w-gst-plugins-bad-1.26.11/lib/gstreamer-1.0:/nix/store/cjbqbfl31swnpik6wv2ic0ksxpb8r9x9-gstreamer-1.26.11/lib/gstreamer-1.0:/nix/store/pp3qyi30q80wr8fganm9x1r0ax19066z-gst-plugins-base-1.26.11/lib/gstreamer-1.0:/nix/store/250qxwnb9ky20dgaxlmlp6s2il5xycbk-gst-plugins-good-1.26.11/lib/gstreamer-1.0:/nix/store/qx0wjwy6kcqz652yhpcgxjmdr79lfb9b-gst-plugins-ugly-1.26.11/lib/gstreamer-1.0:/usr/lib/gstreamer-1.0:/usr/lib32/gstreamer-1.0
+[umu.__main__:78] DEBUG: FLOAX_CHANGE_PATH=true
+[umu.__main__:78] DEBUG: XDG_SEAT=seat0
+[umu.__main__:78] DEBUG: PWD=/home/betty
+[umu.__main__:78] DEBUG: NIX_PROFILES=/run/current-system/sw /nix/var/nix/profiles/default /etc/profiles/per-user/betty /home/betty/.local/state/nix/profile /nix/profile /home/betty/.nix-profile
+[umu.__main__:78] DEBUG: FLOAX_WIDTH=80%
+[umu.__main__:78] DEBUG: LOGNAME=betty
+[umu.__main__:78] DEBUG: QT_QPA_PLATFORMTHEME=kde
+[umu.__main__:78] DEBUG: XDG_SESSION_TYPE=wayland
+[umu.__main__:78] DEBUG: CUPS_DATADIR=/nix/store/1wqi20649q1j67a9q1l0k5izpqrvv8l5-cups-progs/share/cups
+[umu.__main__:78] DEBUG: NIX_PATH=nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels
+[umu.__main__:78] DEBUG: NIXPKGS_CONFIG=/etc/nix/nixpkgs-config.nix
+[umu.__main__:78] DEBUG: KITTY_PUBLIC_KEY=1:Lgde+-*bM27}+N4Y4fYL9wQHp^rkE)1zt8AQX3I|
+[umu.__main__:78] DEBUG: FZF_DEFAULT_COMMAND=fd --type f --hidden --exclude .git
+[umu.__main__:78] DEBUG: QT_STYLE_OVERRIDE=breeze
+[umu.__main__:78] DEBUG: GTK2_RC_FILES=/home/betty/.gtkrc-2.0
+[umu.__main__:78] DEBUG: HOME=/home/betty
+[umu.__main__:78] DEBUG: SSH_ASKPASS=/nix/store/2qfrkpxqld520zd9g9ksbcf1d8csw8wz-ksshaskpass-6.6.5/bin/ksshaskpass
+[umu.__main__:78] DEBUG: LANG=C.UTF-8
+[umu.__main__:78] DEBUG: LC_PAPER=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: TMUX_TMPDIR=/run/user/1000
+[umu.__main__:78] DEBUG: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:
+[umu.__main__:78] DEBUG: _JAVA_AWT_WM_NONREPARENTING=1
+[umu.__main__:78] DEBUG: XDG_CURRENT_DESKTOP=mango
+[umu.__main__:78] DEBUG: WAYLAND_DISPLAY=wayland-0
+[umu.__main__:78] DEBUG: GIO_EXTRA_MODULES=/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules:/nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules
+[umu.__main__:78] DEBUG: KITTY_WINDOW_ID=1
+[umu.__main__:78] DEBUG: MANGO_INSTANCE_SIGNATURE=/run/user/1000/mango-3499.sock
+[umu.__main__:78] DEBUG: XDG_CACHE_HOME=/home/betty/.cache
+[umu.__main__:78] DEBUG: NIX_USER_PROFILE_DIR=/nix/var/nix/profiles/per-user/betty
+[umu.__main__:78] DEBUG: INFOPATH=/home/betty/.nix-profile/info:/home/betty/.nix-profile/share/info:/nix/profile/info:/nix/profile/share/info:/home/betty/.local/state/nix/profile/info:/home/betty/.local/state/nix/profile/share/info:/etc/profiles/per-user/betty/info:/etc/profiles/per-user/betty/share/info:/nix/var/nix/profiles/default/info:/nix/var/nix/profiles/default/share/info:/run/current-system/sw/info:/run/current-system/sw/share/info
+[umu.__main__:78] DEBUG: LC_IDENTIFICATION=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: TERM=tmux-256color
+[umu.__main__:78] DEBUG: TERMINFO=/nix/store/9gz32i5i065wpyfkq8qlsfhs9y2gg2qh-kitty-0.47.2/lib/kitty/terminfo
+[umu.__main__:78] DEBUG: GTK_PATH=/home/betty/.nix-profile/lib/gtk-2.0:/home/betty/.nix-profile/lib/gtk-3.0:/home/betty/.nix-profile/lib/gtk-4.0:/nix/profile/lib/gtk-2.0:/nix/profile/lib/gtk-3.0:/nix/profile/lib/gtk-4.0:/home/betty/.local/state/nix/profile/lib/gtk-2.0:/home/betty/.local/state/nix/profile/lib/gtk-3.0:/home/betty/.local/state/nix/profile/lib/gtk-4.0:/etc/profiles/per-user/betty/lib/gtk-2.0:/etc/profiles/per-user/betty/lib/gtk-3.0:/etc/profiles/per-user/betty/lib/gtk-4.0:/nix/var/nix/profiles/default/lib/gtk-2.0:/nix/var/nix/profiles/default/lib/gtk-3.0:/nix/var/nix/profiles/default/lib/gtk-4.0:/run/current-system/sw/lib/gtk-2.0:/run/current-system/sw/lib/gtk-3.0:/run/current-system/sw/lib/gtk-4.0
+[umu.__main__:78] DEBUG: ACLOCAL_PATH=/usr/share/aclocal
+[umu.__main__:78] DEBUG: ZDOTDIR=/home/betty/.config/zsh
+[umu.__main__:78] DEBUG: USER=betty
+[umu.__main__:78] DEBUG: TMUX_PANE=%0
+[umu.__main__:78] DEBUG: SOPS_AGE_KEY_FILE=/etc/sops/age/keys.txt
+[umu.__main__:78] DEBUG: FLOAX_HEIGHT=80%
+[umu.__main__:78] DEBUG: TZDIR=/etc/zoneinfo
+[umu.__main__:78] DEBUG: NIX_LD=/run/current-system/sw/share/nix-ld/lib/ld.so
+[umu.__main__:78] DEBUG: NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+[umu.__main__:78] DEBUG: DISPLAY=:0
+[umu.__main__:78] DEBUG: NIX_CFLAGS_LINK=-L/usr/lib -L/usr/lib32
+[umu.__main__:78] DEBUG: SHLVL=2
+[umu.__main__:78] DEBUG: PAGER=less
+[umu.__main__:78] DEBUG: __HM_ZSH_SESS_VARS_SOURCED=1
+[umu.__main__:78] DEBUG: NIX_CFLAGS_COMPILE=-idirafter /usr/include
+[umu.__main__:78] DEBUG: LC_TELEPHONE=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: QTWEBKIT_PLUGIN_PATH=/home/betty/.nix-profile/lib/mozilla/plugins/:/nix/profile/lib/mozilla/plugins/:/home/betty/.local/state/nix/profile/lib/mozilla/plugins/:/etc/profiles/per-user/betty/lib/mozilla/plugins/:/nix/var/nix/profiles/default/lib/mozilla/plugins/:/run/current-system/sw/lib/mozilla/plugins/
+[umu.__main__:78] DEBUG: LC_MEASUREMENT=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: __NIXOS_SET_ENVIRONMENT_DONE=1
+[umu.__main__:78] DEBUG: XDG_VTNR=1
+[umu.__main__:78] DEBUG: XDG_SESSION_ID=2
+[umu.__main__:78] DEBUG: LOCALE_ARCHIVE=/run/current-system/sw/lib/locale/locale-archive
+[umu.__main__:78] DEBUG: LESSKEYIN_SYSTEM=/nix/store/4f0jni3ax3b23i95fgr30i3y10iz07hg-lessconfig
+[umu.__main__:78] DEBUG: QML2_IMPORT_PATH=/etc/profiles/per-user/betty/lib/qt-5.15.18/qml:/etc/profiles/per-user/betty/lib/qt-6/qml:/home/betty/.nix-profile/lib/qt-5.15.18/qml:/home/betty/.nix-profile/lib/qt-6/qml:/nix/profile/lib/qt-5.15.18/qml:/nix/profile/lib/qt-6/qml:/home/betty/.local/state/nix/profile/lib/qt-5.15.18/qml:/home/betty/.local/state/nix/profile/lib/qt-6/qml:/etc/profiles/per-user/betty/lib/qt-5.15.18/qml:/etc/profiles/per-user/betty/lib/qt-6/qml:/nix/var/nix/profiles/default/lib/qt-5.15.18/qml:/nix/var/nix/profiles/default/lib/qt-6/qml:/run/current-system/sw/lib/qt-5.15.18/qml:/run/current-system/sw/lib/qt-6/qml
+[umu.__main__:78] DEBUG: TERMINFO_DIRS=/home/betty/.nix-profile/share/terminfo:/nix/profile/share/terminfo:/home/betty/.local/state/nix/profile/share/terminfo:/etc/profiles/per-user/betty/share/terminfo:/nix/var/nix/profiles/default/share/terminfo:/run/current-system/sw/share/terminfo
+[umu.__main__:78] DEBUG: XDG_STATE_HOME=/home/betty/.local/state
+[umu.__main__:78] DEBUG: LD_LIBRARY_PATH=/lib:/lib32:/nix/store/p1f881g5hgakqag26rlbzbxhzw9gmjnx-glibc-2.42-61/lib:/run/opengl-driver/lib:/lib64:/usr/lib32:/usr/lib64:/home/betty/.local/share/lutris/runtime/Ubuntu-18.04-i686:/home/betty/.local/share/lutris/runtime/steam/i386/lib/i386-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/i386/lib:/home/betty/.local/share/lutris/runtime/steam/i386/usr/lib/i386-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/i386/usr/lib:/home/betty/.local/share/lutris/runtime/Ubuntu-18.04-x86_64:/home/betty/.local/share/lutris/runtime/steam/amd64/lib/x86_64-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/amd64/lib:/home/betty/.local/share/lutris/runtime/steam/amd64/usr/lib/x86_64-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/amd64/usr/lib:/nix/store/8ig4nr6gag11m16wy9icgmqssiybwynb-pipewire-1.6.5-jack/lib
+[umu.__main__:78] DEBUG: XDG_RUNTIME_DIR=/run/user/1000
+[umu.__main__:78] DEBUG: KITTY_LISTEN_ON=unix:/tmp/kitty-3875
+[umu.__main__:78] DEBUG: PS1=lutris-0.5.22-fhsenv:\u@\h:\w\$
+[umu.__main__:78] DEBUG: NIX_XDG_DESKTOP_PORTAL_DIR=/run/current-system/sw/share/xdg-desktop-portal/portals
+[umu.__main__:78] DEBUG: DOCKER_HOST=unix:///run/user/1000/docker.sock
+[umu.__main__:78] DEBUG: LC_TIME=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: FLOAX_TEXT_COLOR=blue
+[umu.__main__:78] DEBUG: XDG_DATA_DIRS=/nix/store/75vf645azcd7mf0lf69g47sasig0071j-lutris-unwrapped-0.5.22/share:/nix/store/k8a44404day9i86sxkjm0gq5ymlvyh06-gsettings-desktop-schemas-50.1/share/gsettings-schemas/gsettings-desktop-schemas-50.1:/nix/store/v7fvwaf6j1hwvb9dmwfa97nzmrlshqai-gtk+3-3.24.52/share/gsettings-schemas/gtk+3-3.24.52:/nix/store/4v2hnjjm7a7bkl6za4zv0ydam0x420gq-desktops/share:/home/betty/.nix-profile/share:/nix/profile/share:/home/betty/.local/state/nix/profile/share:/etc/profiles/per-user/betty/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share:/run/opengl-driver/share:/run/opengl-driver-32/share:/usr/local/share:/usr/share
+[umu.__main__:78] DEBUG: LIBEXEC_PATH=/home/betty/.nix-profile/libexec:/nix/profile/libexec:/home/betty/.local/state/nix/profile/libexec:/etc/profiles/per-user/betty/libexec:/nix/var/nix/profiles/default/libexec:/run/current-system/sw/libexec
+[umu.__main__:78] DEBUG: PATH=/nix/store/79jyxa0vx6lb7v3xw5jnvvp0pd73nx3y-xrandr-1.5.4/bin:/nix/store/k0mncnynr1dljv26jabaagyd3fspkzc8-pciutils-3.15.0/bin:/nix/store/w738nckzga49xzwgxqpvjk0bgrgnh3bk-psmisc-23.7/bin:/nix/store/vrq7lw83z69diw23m0m7d6ld5kwfp9q8-mesa-demos-9.0.0/bin:/nix/store/pq7kd4gdh4ll73d83mlwhhzbjdl6fvl9-vulkan-tools-1.4.341.0/bin:/nix/store/4wvhj1qsjgs6zdip59qc6z0xir9m0m56-pulseaudio-17.0/bin:/nix/store/874z39yy2bkg0dh47wqwffsfifdpp9lr-p7zip-17.06/bin:/nix/store/fjaqa1hsg0zyh01h5wrnr2xg0al2s0yc-xgamma-1.0.8/bin:/nix/store/vrh47mxn12jr7dsc5gjvd4hdjyw45l0v-libstrangle-unstable-202202022/bin:/nix/store/h8y7pvqnwkgbcrnl2jz04c7p5infd6kn-fluidsynth-2.5.3/bin:/nix/store/zq01g37d2016xivsdnsr1bbxn2hl797w-xorg-server-21.1.23/bin:/nix/store/q0j3j0q03awij28m8zf9xml6z1v3wapy-setxkbmap-1.3.4/bin:/nix/store/zp4yffmk461cs10pp8sm8y9jk235nwf5-xkbcomp-1.5.0/bin:/nix/store/zca0hp2i6c5yxbaxpl6x76mxc2b0aiqm-util-linux-2.42-bin/bin:/nix/store/60m4rxhg2fldqaak400c0lry96ijrzqn-python3-3.13.13/bin:/nix/store/75vf645azcd7mf0lf69g47sasig0071j-lutris-unwrapped-0.5.22/bin:/nix/store/mrg3xf0c4hmc5zg3swsjxa5hzklsrlww-python3.13-distro-1.9.0/bin:/nix/store/vf8f56sv2r46ws294fa6a1fmr7rhfwaq-gobject-introspection-wrapped-1.86.0-dev/bin:/nix/store/q9ksx8c79jfj1cawwwzmpq3qapvpvab7-glib-2.88.1-dev/bin:/nix/store/rb8rna9gkhs0ybl6z2p904myslh8llg8-gettext-1.0/bin:/nix/store/flq8wn4dikbhn2nmqac31zbpv0lkii2w-glib-2.88.1-bin/bin:/nix/store/4zv7hxkwpv4r83fdh9jmwn1649z6wazl-python3.13-charset-normalizer-3.4.7/bin:/run/wrappers/bin:/usr/bin:/usr/sbin:/run/wrappers/bin:/home/betty/.nix-profile/bin:/nix/profile/bin:/home/betty/.local/state/nix/profile/bin:/etc/profiles/per-user/betty/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:/nix/store/9gz32i5i065wpyfkq8qlsfhs9y2gg2qh-kitty-0.47.2/bin:/nix/store/vwalk1kcnb5mr5c5c8100a96r9kgq4g2-imagemagick-7.1.2-23/bin:/nix/store/gi6n3gp7z0d1j4f2zpc7rwygjj45zgm4-ncurses-6.6-dev/bin:/home/betty/.config/zsh/plugins/fast-syntax-highlighting:/home/betty/.config/zsh/plugins/zsh-nix-shell
+[umu.__main__:78] DEBUG: DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+[umu.__main__:78] DEBUG: NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+[umu.__main__:78] DEBUG: KPACKAGE_DEP_RESOLVERS_PATH=/nix/store/k56gqiajp60jrxcnv4i2k06d5wqhxpcr-frameworkintegration-6.26.0/libexec/kf6/kpackagehandlers
+[umu.__main__:78] DEBUG: QT_PLUGIN_PATH=/etc/profiles/per-user/betty/lib/qt-5.15.18/plugins:/etc/profiles/per-user/betty/lib/qt-6/plugins:/home/betty/.nix-profile/lib/qt-5.15.18/plugins:/home/betty/.nix-profile/lib/qt-6/plugins:/nix/profile/lib/qt-5.15.18/plugins:/nix/profile/lib/qt-6/plugins:/home/betty/.local/state/nix/profile/lib/qt-5.15.18/plugins:/home/betty/.local/state/nix/profile/lib/qt-6/plugins:/etc/profiles/per-user/betty/lib/qt-5.15.18/plugins:/etc/profiles/per-user/betty/lib/qt-6/plugins:/nix/var/nix/profiles/default/lib/qt-5.15.18/plugins:/nix/var/nix/profiles/default/lib/qt-6/plugins:/run/current-system/sw/lib/qt-5.15.18/plugins:/run/current-system/sw/lib/qt-6/plugins
+[umu.__main__:78] DEBUG: KITTY_INSTALLATION_DIR=/nix/store/9gz32i5i065wpyfkq8qlsfhs9y2gg2qh-kitty-0.47.2/lib/kitty
+[umu.__main__:78] DEBUG: LC_NUMERIC=en_ZA.UTF-8
+[umu.__main__:78] DEBUG: OLDPWD=/home/betty
+[umu.__main__:78] DEBUG: NIX_LDFLAGS=-L/usr/lib -L/usr/lib32
+[umu.__main__:78] DEBUG: TERM_PROGRAM=tmux
+[umu.__main__:78] DEBUG: PYTHONNOUSERSITE=true
+[umu.__main__:78] DEBUG: APPIMAGE_EXTRACT_AND_RUN=1
+[umu.__main__:78] DEBUG: GI_TYPELIB_PATH=/nix/store/jlyahda14aya375lv7k9fsin2zk90nxz-glib-2.88.1/lib/girepository-1.0:/nix/store/b438mw58nvpkw6hr6p3i8q303psz2dcj-gobject-introspection-1.86.0/lib/girepository-1.0:/nix/store/5d5gq4hcclz3mwikka3ykh924p610bdr-gdk-pixbuf-2.44.6/lib/girepository-1.0:/nix/store/91lgsf2dixa2mni74pvy3k6rxp2m32dr-librsvg-2.62.1/lib/girepository-1.0:/nix/store/s3knizlhir254y56l6kdd85dq8pm8xb1-at-spi2-core-2.60.1/lib/girepository-1.0:/nix/store/k8a44404day9i86sxkjm0gq5ymlvyh06-gsettings-desktop-schemas-50.1/lib/girepository-1.0:/nix/store/bd9nkv00cbnj19zc61rlqyrjvnlmq73j-harfbuzz-13.2.1/lib/girepository-1.0:/nix/store/2bnyj2q5if7xpbhsmw0ylxj9bwj98daf-pango-1.57.1/lib/girepository-1.0:/nix/store/v7fvwaf6j1hwvb9dmwfa97nzmrlshqai-gtk+3-3.24.52/lib/girepository-1.0:/nix/store/bgmv4ynr3sdksgq4m7pjbh36jbf42lnd-gnome-desktop-44.5/lib/girepository-1.0:/nix/store/l8x85xcfsgi94hxxv868id2j8n5lg74p-libnotify-0.8.8/lib/girepository-1.0:/nix/store/5w6gshmzlzzhqr6zdpaqy9c47h9phzrj-libsoup-3.6.6/lib/girepository-1.0:/nix/store/f9zsbigij2k503m6s2yqhw9pqyzhcd68-webkitgtk-2.52.4+abi=4.1/lib/girepository-1.0:/nix/store/cir3h9xbdp643q7l8l04s1zzrs69f39w-gst-plugins-bad-1.26.11/lib/girepository-1.0:/nix/store/cjbqbfl31swnpik6wv2ic0ksxpb8r9x9-gstreamer-1.26.11/lib/girepository-1.0:/nix/store/pp3qyi30q80wr8fganm9x1r0ax19066z-gst-plugins-base-1.26.11/lib/girepository-1.0:/nix/store/bgd2ymp22f21ca5w9lzhi3ss80l9rnn9-gobject-introspection-wrapped-1.86.0/lib/girepository-1.0
+[umu.__main__:78] DEBUG: WEBKIT_DISABLE_DMABUF_RENDERER=1
+[umu.__main__:78] DEBUG: PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+[umu.__main__:78] DEBUG: __GL_SHADER_DISK_CACHE=1
+[umu.__main__:78] DEBUG: __GL_SHADER_DISK_CACHE_PATH=/home/betty/Tixl
+[umu.__main__:78] DEBUG: LC_ALL=
+[umu.__main__:78] DEBUG: WINEDEBUG=-all
+[umu.__main__:78] DEBUG: DXVK_LOG_LEVEL=error
+[umu.__main__:78] DEBUG: UMU_LOG=1
+[umu.__main__:78] DEBUG: WINEARCH=win64
+[umu.__main__:78] DEBUG: PROTONPATH=GE-Proton
+[umu.__main__:78] DEBUG: WINE=/home/betty/.local/share/lutris/runtime/umu/umu-run
+[umu.__main__:78] DEBUG: WINEPREFIX=/home/betty/Tixl
+[umu.__main__:78] DEBUG: WINEESYNC=1
+[umu.__main__:78] DEBUG: WINEFSYNC=1
+[umu.__main__:78] DEBUG: WINE_FULLSCREEN_FSR=1
+[umu.__main__:78] DEBUG: DXVK_NVAPIHACK=0
+[umu.__main__:78] DEBUG: DXVK_ENABLE_NVAPI=1
+[umu.__main__:78] DEBUG: PROTON_BATTLEYE_RUNTIME=/home/betty/.local/share/lutris/runtime/battleye_runtime
+[umu.__main__:78] DEBUG: PROTON_EAC_RUNTIME=/home/betty/.local/share/lutris/runtime/eac_runtime
+[umu.__main__:78] DEBUG: PROTON_DXVK_D3D8=1
+[umu.__main__:78] DEBUG: WINEDLLOVERRIDES=d3d10core,d3d11,d3d12,d3d12core,d3d8,d3d9,d3dcompiler_33,d3dcompiler_34,d3dcompiler_35,d3dcompiler_36,d3dcompiler_37,d3dcompiler_38,d3dcompiler_39,d3dcompiler_40,d3dcompiler_41,d3dcompiler_42,d3dcompiler_43,d3dcompiler_46,d3dcompiler_47,d3dx10,d3dx10_33,d3dx10_34,d3dx10_35,d3dx10_36,d3dx10_37,d3dx10_38,d3dx10_39,d3dx10_40,d3dx10_41,d3dx10_42,d3dx10_43,d3dx11_42,d3dx11_43,d3dx9_24,d3dx9_25,d3dx9_26,d3dx9_27,d3dx9_28,d3dx9_29,d3dx9_30,d3dx9_31,d3dx9_32,d3dx9_33,d3dx9_34,d3dx9_35,d3dx9_36,d3dx9_37,d3dx9_38,d3dx9_39,d3dx9_40,d3dx9_41,d3dx9_42,d3dx9_43,dxgi,nvapi,nvapi64,nvofapi64=n;winemenubuilder=
+[umu.__main__:78] DEBUG: WINE_LARGE_ADDRESS_AWARE=1
+[umu.__main__:78] DEBUG: GAME_NAME=tixl
+[umu.__main__:78] DEBUG: GAME_DIRECTORY=/home/betty/Tixl
+[umu.__main__:78] DEBUG: GAMEID=umu-default
+[umu.__main__:78] DEBUG: PROTON_VERB=waitforexitandrun
+[umu.__main__:78] DEBUG: LUTRIS_GAME_UUID=b6498bb0-04f1-4b35-ad21-64b4a7c706ba
+[umu.umu_run:864] INFO: umu-launcher version 1.4.4 (3.13.13 (main, Apr  7 2026, 18:19:01) [GCC 15.2.0])
+[umu.umu_proton:90] DEBUG: Sending request to 'api.github.com'...
+[umu.umu_proton:658] DEBUG: PROTONPATH not *-Latest, skipping
+[umu.umu_proton:541] INFO: GE-Proton is up to date
+[umu.umu_run:791] DEBUG: PROTONPATH set, resolving its required runtime
+[umu.umu_run:969] DEBUG: Connecting to '1.1.1.1'...
+[umu.umu_runtime:266] DEBUG: Local: /home/betty/.local/share/umu/steamrt4
+[umu.umu_runtime:279] DEBUG: Sending request to 'https://repo.steampowered.com/steamrt4/images/latest-public-beta.txt' for 'latest-public-beta.txt'...
+[umu.umu_runtime:322] DEBUG: Existing install detected
+[umu.umu_runtime:323] DEBUG: Using container runtime 'steamrt4' aka 'steamrt4'
+[umu.umu_runtime:324] DEBUG: Checking updates for 'steamrt4'...
+[umu.umu_runtime:471] DEBUG: Acquiring file lock '/home/betty/.local/share/umu/umu.lock'...
+[umu.umu_runtime:473] DEBUG: Acquired file lock '/home/betty/.local/share/umu/umu.lock'
+[umu.umu_runtime:481] DEBUG: Released file lock '/home/betty/.local/share/umu/umu.lock'
+[umu.umu_runtime:378] INFO: steamrt4 is up to date
+[umu.umu_run:1036] DEBUG: WINEPREFIX=/home/betty/Tixl
+[umu.umu_run:1036] DEBUG: GAMEID=umu-default
+[umu.umu_run:1036] DEBUG: PROTON_CRASH_REPORT_DIR=/tmp/umu_crashreports
+[umu.umu_run:1036] DEBUG: PROTONPATH=/home/betty/.local/share/Steam/compatibilitytools.d/GE-Proton11-6-x86_64
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_APP_ID=8993149cad76f6934f1926f74b2445f3
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_TOOL_PATHS=/home/betty/.local/share/Steam/compatibilitytools.d/GE-Proton11-6-x86_64:/home/betty/.local/share/umu/steamrt4
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_LIBRARY_PATHS=/home
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_MOUNTS=/home/betty/.local/share/Steam/compatibilitytools.d/GE-Proton11-6-x86_64:/home/betty/.local/share/umu/steamrt4
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_INSTALL_PATH=/home/betty/Tixl/drive_c/TiXL/TiXL 4.2.1
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_CLIENT_INSTALL_PATH=
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_DATA_PATH=/home/betty/Tixl
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_SHADER_PATH=/home/betty/Tixl/shadercache
+[umu.umu_run:1036] DEBUG: STEAM_COMPAT_LAUNCHER_SERVICE=
+[umu.umu_run:1036] DEBUG: FONTCONFIG_PATH=
+[umu.umu_run:1036] DEBUG: EXE=/home/betty/Tixl/drive_c/TiXL/TiXL 4.2.1/TiXL.exe
+[umu.umu_run:1036] DEBUG: SteamAppId=default
+[umu.umu_run:1036] DEBUG: SteamGameId=default
+[umu.umu_run:1036] DEBUG: STEAM_RUNTIME_LIBRARY_PATH=/lib64:/usr/lib32:/home/betty/.local/share/lutris/runtime/steam/i386/usr/lib/i386-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/i386/lib:/nix/store/8ig4nr6gag11m16wy9icgmqssiybwynb-pipewire-1.6.5-jack/lib:/home/betty/.local/share/lutris/runtime/steam/amd64/usr/lib/x86_64-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/i386/usr/lib:/nix/store/p1f881g5hgakqag26rlbzbxhzw9gmjnx-glibc-2.42-61/lib:/home/betty/.local/share/lutris/runtime/steam/i386/lib/i386-linux-gnu:/lib:/usr/lib64:/home/betty/.local/share/lutris/runtime/steam/amd64/usr/lib:/home/betty/Tixl/drive_c/TiXL/TiXL 4.2.1:/nix/store/02xwxhknad7wmfp6vyzxb2mygcp9cl8s-graphics-drivers/lib:/run/opengl-driver/lib:/lib32:/home/betty/.local/share/lutris/runtime/Ubuntu-18.04-x86_64:/home/betty/.local/share/lutris/runtime/Ubuntu-18.04-i686:/home/betty/.local/share/lutris/runtime/steam/amd64/lib/x86_64-linux-gnu:/home/betty/.local/share/lutris/runtime/steam/amd64/lib
+[umu.umu_run:1036] DEBUG: STORE=
+[umu.umu_run:1036] DEBUG: PROTON_VERB=waitforexitandrun
+[umu.umu_run:1036] DEBUG: UMU_ID=umu-default
+[umu.umu_run:1036] DEBUG: UMU_ZENITY=
+[umu.umu_run:1036] DEBUG: UMU_NO_RUNTIME=
+[umu.umu_run:1036] DEBUG: UMU_RUNTIME_UPDATE=
+[umu.umu_run:1036] DEBUG: UMU_NO_PROTON=
+[umu.umu_run:1036] DEBUG: UMU_CONTAINER_NSENTER=
+[umu.umu_run:1036] DEBUG: RUNTIMEPATH=/home/betty/.local/share/umu/steamrt4
+[umu.umu_run:1036] DEBUG: UMU_STEAM_GAME_ID=
+[umu.umu_run:1036] DEBUG: UMU_INVOCATION_ID=b8a570b5ad5d400192bb7e641689c5a4
+[umu.umu_runtime:657] INFO: Running 'GE-Proton11-6-x86_64' using runtime 'steamrt4'
+[umu.umu_runtime:657] INFO: Running 'steamrt4' using runtime 'host'
+[umu.umu_run:1047] DEBUG: ('/home/betty/.local/share/umu/steamrt4/umu', '--verb=waitforexitandrun', '--', '/home/betty/.local/share/umu/umu-shim', '/home/betty/.local/share/Steam/compatibilitytools.d/GE-Proton11-6-x86_64/proton', 'waitforexitandrun', '/home/betty/Tixl/drive_c/TiXL/TiXL 4.2.1/TiXL.exe')
+[umu.umu_run:736] DEBUG: prctl exited with status: 0
+pressure-vessel-wrap[14284]: W: Unable to determine architecture of provider / ldconfig: Error reading "(null)" ELF header: invalid `Elf' handle
+pressure-vessel-wrap[14284]: W: Using libGLX_mesa.so.0 from provider system for some but not all architectures! Will take /usr/share/drirc.d from provider.
+/nix/store/52m671wlvp3jhfy6blcy8g83yhy80cn7-libproxy-0.5.12/lib/libproxy/libpxbackend-1.0.so: undefined symbol: g_strv_builder_unref
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiolibproxy.so
+/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognomeproxy.so: undefined symbol: g_task_set_name
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognomeproxy.so
+/nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognutls.so: undefined symbol: g_source_set_static_name
+Failed to load module: /nix/store/4njrga1gsxii5w8s88ylyfs7nxak8mx3-glib-networking-2.80.1/lib/gio/modules/libgiognutls.so
+/nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules/libdconfsettings.so: undefined symbol: g_assertion_message_cmpint
+Failed to load module: /nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib/lib/gio/modules/libdconfsettings.so
+ProtonFixes[14372] INFO: Running protonfixes on "GE-Proton11-6", build at 2026-08-28 21:12:12+00:00.
+ProtonFixes[14372] INFO: Running checks
+ProtonFixes[14372] INFO: All checks successful
+ProtonFixes[14372] WARN: Game title not found in CSV
+ProtonFixes[14372] INFO: Non-steam game UNKNOWN (umu-default)
+ProtonFixes[14372] INFO: No store specified, using UMU database
+ProtonFixes[14372] INFO: Using early stage global defaults for UNKNOWN (umu-default)
+ProtonFixes[14372] INFO: Non-steam game UNKNOWN (umu-default)
+ProtonFixes[14372] INFO: No store specified, using UMU database
+ProtonFixes[14372] INFO: No early stage global protonfix found for UNKNOWN (umu-default)
+Proton: Error: unable to use parent for game drive, path /home
+ProtonFixes[14372] INFO: Running protonfixes on "GE-Proton11-6", build at 2026-08-28 21:12:12+00:00.
+ProtonFixes[14372] INFO: Running checks
+ProtonFixes[14372] INFO: All checks successful
+ProtonFixes[14372] INFO: Non-steam game UNKNOWN (umu-default)
+ProtonFixes[14372] INFO: No store specified, using UMU database
+ProtonFixes[14372] INFO: Using main stage global defaults for UNKNOWN (umu-default)
+ProtonFixes[14372] INFO: Non-steam game UNKNOWN (umu-default)
+ProtonFixes[14372] INFO: No store specified, using UMU database
+ProtonFixes[14372] INFO: No main stage global protonfix found for UNKNOWN (umu-default)
+Proton: /home/betty/Tixl/drive_c/TiXL/TiXL 4.2.1/TiXL.exe
+Proton: Executable is a unix path, launching with 'umu.exe'.
+fsync: up and running.
+[umu.umu_run:744] DEBUG: Child 14284 exited with wait status: 0
+Monitored process exited.
+Initial process has exited (return code: 0)
+All processes have quit
+Exit with return code 0
+2026-09-07 05:32:42,461: Shutting down Lutris
