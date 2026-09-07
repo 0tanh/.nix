@@ -507,6 +507,12 @@
     # Community-managed modular hardware configurations
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
+    # Vibe coded flake.nix to wrap an osc-control utility
+    osc-control = {
+      url = "github:0tanh/osc-utility";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Community sourced, pre-configured git pre-commit hooks
     # Runs useful tools on pre-commit to lint & check for errors before creating a commit
     pre-commit-hooks = {

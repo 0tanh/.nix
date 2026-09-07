@@ -1002,6 +1002,26 @@
         "type": "github"
       }
     },
+    "osc-control": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788743943,
+        "narHash": "sha256-iVZageKw732GI+60saZ6ll3g01euntSUSB7d7bSL8x8=",
+        "owner": "0tanh",
+        "repo": "osc-utility",
+        "rev": "084cf2f1aa2d57cd0a84397c980df5b25ce38d83",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0tanh",
+        "repo": "osc-utility",
+        "type": "github"
+      }
+    },
     "plugin-loader-src": {
       "flake": false,
       "locked": {
@@ -1081,6 +1101,7 @@
         "nixpkgs-bleeding": "nixpkgs-bleeding",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "nixvim": "nixvim",
+        "osc-control": "osc-control",
         "pre-commit-hooks": "pre-commit-hooks",
         "secrets": "secrets",
         "sops-nix": "sops-nix",
