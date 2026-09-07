@@ -79,6 +79,7 @@
     isNormalUser = true;
     description = "betty";
     extraGroups = [
+      "corectl" # required for fmmpeg loopback
       "networkmanager"
       "wheel"
     ];
