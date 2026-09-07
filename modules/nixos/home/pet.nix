@@ -62,7 +62,7 @@
         description = "Set up a local credential helper for git to use the GIT_USER and GIT_PASSWORD env variables for auth.";
       }
       {
-        command = "";
+        command = "ffmpeg -i <wavfile>.wav -b:a 128k <wavfile>_comp.mp3";
         description = "Take a .wav render and render it as a compressed mp3 in my Renders folder";
         tag = [ "convert" ];
       }
