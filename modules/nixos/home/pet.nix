@@ -21,6 +21,12 @@
 
     snippets = [
       {
+        description = "Compress a video to a target filesize in M";
+        command = "ffmpeg -i <file>.mp4 -c:v libx264 -b:v <size_in_M> -preset medium -c:a aac -b:a 128k <file>_<size_in_M>.mp4";
+
+        tag = [ "convert" ];
+      }
+      {
         description = "Convert all M4A files to MP3 files";
         command = "for file in ./**/*.m4a; do; ffmpeg -i \"$file\" -b:a 320k \"$file.mp3\"; done";
         tag = [ "convert" ];
@@ -67,7 +73,9 @@
         tag = [ "convert" ];
       }
       {
-        command = ''echo "<world> <world>s" '';
+        command = ''
+          ffmpeg -i <video>.mp4 -c:v libx264 -crf 38 -preset medium -c:a aac -b:a 128k -movflags +faststart <video>_small.mp4
+        '';
         description = "Take a .mp4 and compress it to be shared on discord and socials";
         tag = [ "convert" ];
 

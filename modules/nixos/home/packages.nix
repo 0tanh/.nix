@@ -15,6 +15,7 @@
   home.packages =
     with pkgs;
     [
+      ffmpeg
       goofcord
       #TODO move nicotine, mpv, vlc, and ncspot to the same combo
       klipper
