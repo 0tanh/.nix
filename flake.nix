@@ -309,7 +309,7 @@
                 ./modules/nixos/system/stylix.nix
                 ./modules/nixos/system/sops.nix
                 ./modules/nixos/system/virtualization.nix
-
+                ./modules/nixos/home/v4L2Loopback.nix
                 # Input nixos modules
                 disko.nixosModules.disko
                 nix-index-database.nixosModules.nix-index
