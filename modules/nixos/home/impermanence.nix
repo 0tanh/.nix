@@ -23,6 +23,7 @@
       "Windows"
       ".wine-ableton"
       "todo"
+      "TiXL"
 
       {
         directory = ".gnupg";
@@ -48,9 +49,9 @@
       ".config/celestia"
       ".config/inkscape"
       ".config/figma-linux"
+      ".config/goofcord"
       ".config/JetBrains"
       ".config/kitty"
-      ".config/goofcord"
       ".config/mango"
       ".config/ncspot"
       ".config/obs-studio"
@@ -71,13 +72,12 @@
       ".local/share/Zeal"
       ".local/share/zoxide"
 
-      /**
-        # Lutris & Steam
-        ".local/share/Steam"
-        ".local/share/lutris"
-        ".config/lutris"
-        ".steam"
-      */
+      # Lutris & Steam
+      ".local/share/Steam"
+      ".local/share/umu"
+      ".local/share/lutris"
+      ".config/lutris"
+      ".steam"
 
       # .local/state
       ".local/state/nvim"
