@@ -40,12 +40,13 @@
           pkgs = mkPkgs system;
           lib = nixpkgs.lib;
         }) nixpkgs.lib;
-
+      helpers = import ./lib { inherit nixpkgs lib; };
       # Useful helper to provide a list of system architectures you want an attrSet to be eval'able for
       # Wraps around genAttrs: https://noogle.dev/f/lib/genAttrs/
       # Provides systems as inputs to other functions
       forAllSystems = nixpkgs.lib.genAttrs [
         "x86_64-linux"
+
         # "aarch64-linux"
       ];
 
@@ -142,7 +143,7 @@
                 # Inherit the flake's own checks shellHook to load on shell activation
                 inherit (self.checks.${system}.pre-commit-check) shellHook;
                 # Environment variables
-                EDITOR = "nvim";
+                # EDITOR = "nvim";
                 GIT_USER = "0tanh";
                 GIT_PASSWORD = "0cba0873c6e66acf1319ca6657e53d14c5529862";
                 NIX_CONFIG = ''
@@ -157,7 +158,7 @@
                   lazygit
                   magic-wormhole
                   nh
-                  neovim
+                  # neovim
                 ];
               };
             }
@@ -469,12 +470,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # A scrollable tiling window manager with touchscreen support
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Persist & link data into your ephemeral root at boot time
     impermanence = {
       url = "github:nix-community/impermanence";
@@ -492,6 +487,12 @@
     # System utilities for music creation on nix (e.g. realtime audio optimisations)
     musnix = {
       url = "github:musnix/musnix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # A scrollable tiling window manager with touchscreen support
+    niri = {
+      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
