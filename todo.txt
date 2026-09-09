@@ -2,9 +2,9 @@ x 2026-06-16 2026-06-06 rebuild inkscape +binaries @chore
 x 2026-06-16 2026-06-06 subtler configuration of stlix +ricing @ricing
 x 2026-07-28 2026-06-06 configure bottles for ditherboy +binaries
 2026-06-08 add & configure kmp3.nix @chore
-2026-06-08 add base 24 +ricing @ricing
+x 2026-09-09 2026-06-08 add base 24 +ricing @ricing
 x 2026-08-17 2026-08-17 configure caelestia-shell +ricing
-(A) set-up nixvim so that I don't need all these jank ass workarounds
+x 2026-09-09 2026-09-09 set-up nixvim so that I don't need all these jank ass workarounds
 x 2026-08-17 2026-08-17 define more idiomatic package setup for config (e.g. heavy, dev, art etc)
 (A) Set up dedredic nix flake @struc
 x 2026-08-17 2026-08-17 set up quickshell scripting
