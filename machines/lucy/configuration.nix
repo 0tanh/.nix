@@ -90,7 +90,7 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKAQVc01hfBZfPMJ+Au+ivpZFV5oww95bMyRPLX6xYkt 0tanh@git.feline.fyi"
     ];
     packages = with pkgs; [
-      neovim
+      # neovim
     ];
     shell = pkgs.zsh;
   };

@@ -28,7 +28,7 @@ in
         '');
       })
       [
-        "nvim"
+        # "nvim"
         "quickshell"
       ]
   );

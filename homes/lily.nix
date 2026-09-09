@@ -24,7 +24,7 @@
     ../modules/nixos/home/godot.nix
     ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
-    ../modules/nixos/home/neovim.nix
+    # ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/packages.nix
     ../modules/nixos/home/pet.nix
     ../modules/nixos/home/spicetify.nix

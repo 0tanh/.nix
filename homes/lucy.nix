@@ -33,6 +33,8 @@
       ../modules/nixos/home/impermanence.nix
       ../modules/nixos/home/kitty.nix
       # ../modules/nixos/home/neovim.nix
+      ../modules/nixos/home/nixvim
+      ../modules/nixos/home/nixvim
       ../modules/nixos/home/packages.nix
       ../modules/nixos/home/pet.nix
       ../modules/nixos/home/spicetify.nix
