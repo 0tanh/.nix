@@ -505,7 +505,6 @@
     # Pure Nix Neovim configuration
     nixvim = {
       url = "github:nix-community/nixvim";
-      # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
     };
 
     # Community-managed modular hardware configurations
@@ -527,6 +526,7 @@
     # Protokol Midi and OSC message moniter
     protokol.url = "github:0tanh/Protokol-nix";
 
+    rabbits.url = ./assets/rabbits/flake.nix;
     # Spicetify - customisable spotify
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
