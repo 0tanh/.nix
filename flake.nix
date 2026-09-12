@@ -302,7 +302,6 @@
                 # Additional optional system modules
                 ./modules/nixos/system/firefox.nix
                 ./modules/nixos/system/greetd.nix
-                ./modules/nixos/system/icecast.nix
                 ./modules/nixos/system/impermanance.nix
                 ./modules/nixos/system/kde.nix
                 ./modules/nixos/system/mango.nix
@@ -310,7 +309,13 @@
                 ./modules/nixos/system/stylix.nix
                 ./modules/nixos/system/sops.nix
                 ./modules/nixos/system/virtualization.nix
+                # Loopback video for FFMPEG nonsense
+                # TODO move this to /system
                 ./modules/nixos/home/v4L2Loopback.nix
+
+                # Modules for radio setup
+                ./modules/nixos/system/radio/icecast.nix
+                ./modules/nixos/system/radio/darkice.nix
                 # Input nixos modules
                 disko.nixosModules.disko
                 nix-index-database.nixosModules.nix-index
@@ -526,7 +531,7 @@
     # Protokol Midi and OSC message moniter
     protokol.url = "github:0tanh/Protokol-nix";
 
-    rabbits.url = ./assets/rabbits/flake.nix;
+    rabbits.url = ./assets/rabbits;
     # Spicetify - customisable spotify
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
