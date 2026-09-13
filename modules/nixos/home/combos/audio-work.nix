@@ -20,6 +20,8 @@
     bespokesynth
     # Moudlar paid DAW
     bitwig-studio
+    # Modular patch environment
+    cardinal
     # Pure functional DSP programming language
     mixxx
     faust2
@@ -28,7 +30,6 @@
     qpwgraph
 
     vital
-    vcv-rack
     #vital-vst
     # wineWowPackages.stable
     # install vst3 and clap plugins on Linux
