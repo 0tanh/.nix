@@ -57,4 +57,8 @@
     enable = true;
     gpuOverclock.enable = true;
   };
+  # OpenGL support
+  hardware.graphics = {
+    enable = true;
+  };
 }

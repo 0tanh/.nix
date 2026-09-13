@@ -20,9 +20,14 @@
   # Source: https://github.com/mrshmllow/affinity-nix
   affinity-nix = inputs.affinity-nix.overlays.default;
 
+  nixgl = inputs.nixgl.overlay;
+
   # Inject "bleeding edge" packages from the lastest master version of the nixpkgs repo
   # To use, when referencing a pkg: pkgs.bleeding.pkgName
   bleeding-packages = final: prev: {
-    bleeding = import inputs.nixpkgs-bleeding { system = final.system; };
+    bleeding = import inputs.nixpkgs-bleeding {
+      system = final.system;
+      config.allowUnfree = true;
+    };
   };
 }

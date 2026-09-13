@@ -11,6 +11,7 @@
       impermanence,
       nix-index-database,
       nixos-hardware,
+      nixgl,
       pre-commit-hooks,
       stylix,
       sops-nix,
@@ -29,6 +30,7 @@
         overlaySet.affinity-nix
         overlaySet.bleeding-packages
         overlaySet.stable-packages
+        overlaySet.nixgl
       ];
 
       # Returns nixpkgs.lib including our own lib functions found in ./lib (default.nix)
@@ -57,6 +59,9 @@
         system:
         import nixpkgs {
           inherit system overlays;
+          config = {
+            allowUnfree = true;
+          };
         };
 
       # Takes a system architecture, hostname, and a list of modules,
@@ -428,6 +433,9 @@
 
     #This is the url of the most up to date branch of nixpkgs.
     nixpkgs-bleeding.url = "github:NixOS/nixpkgs/master";
+
+    # Compatibility with OpenGL programs on NixOS
+    nixgl.url = "github:nix-community/nixGL";
     ## PUBLIC INPUTS ##
     # Inputs are the package repositories of nix flakes.
     # Check out the many projects by nix-community or Mic92 on GitHub!
