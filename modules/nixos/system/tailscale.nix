@@ -1,7 +1,7 @@
 { inputs, config, ... }: {
 
   services.tailscale.enable = true;
-
+  services.tailscale.useRoutingFeatures = "client";
   networking.nftables.enable = true;
   networking.firewall = {
     enable = true;
