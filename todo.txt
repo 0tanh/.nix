@@ -24,3 +24,4 @@ x 2026-08-26 2026-08-26 goofcord on lily @util @workflow
 (C) Set-up TiXL as a flake
 (C) set up Ditherboy as a flake
 (D) write a flake for the 100 rabbits their c desktop app +for
+(A) set up syncthing across my puters
