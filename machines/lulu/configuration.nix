@@ -99,7 +99,7 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDJfCNULFgoC3qx8H0xYWT8WHz+TuElEP0LsaN4lOtAl uncia@feline.fyi"
     ];
     packages = with pkgs; [
-      neovim
+      # neovim
     ];
     shell = pkgs.zsh;
   };
