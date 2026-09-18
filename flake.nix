@@ -245,6 +245,8 @@
                   nixpkgs.overlays = overlays;
                 }
 
+                ./modules/nixos/system/hosting # All my self hosting needs
+
                 # Additional optional system modules
                 ./modules/nixos/system/firefox.nix
                 ./modules/nixos/system/greetd.nix
