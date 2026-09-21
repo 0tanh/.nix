@@ -176,8 +176,12 @@ in
       n = "cd ~/.nix";
       # dot = "cd ~/.nix/res/sub/dotfiles/";
       rebuild = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch '.?submodules=1'";
+
+      rehome = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh home switch '.?submodules=1'";
+
       update = "cd ~/.nix && treefmt ~/.nix && nix flake update secrets && nix flake update dotfiles && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch ~/.nix";
       drybuild = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os boot ~/.nix";
+      bsmall = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch --max-jobs 4 --cores 2'.?submodules=1'";
 
       # git
       ga = "git add";
