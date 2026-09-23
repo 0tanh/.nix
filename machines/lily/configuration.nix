@@ -10,6 +10,7 @@
 }:
 
 {
+  imports = [ ./networking.nix ];
   # Use the systemd-boot EFI boot loader.
   boot.loader = {
     grub = {
@@ -24,16 +25,12 @@
     };
   };
 
-  networking.hostName = "lily"; # Define your hostname
-  networking.hostId = "96521e59"; # run `head -c 8 /etc/machine-id` to get this
+  networking = {
 
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
+    hostName = "lily"; # Define your hostname
+    hostId = "96521e59"; # run `head -c 8 /etc/machine-id` to get this
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
+  };
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
   # console = {
