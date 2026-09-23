@@ -1,3 +1,6 @@
 { pkgs, inputs, ... }: {
-  imports = [ ./nginx.nix ];
+  imports = [
+    ./nginx.nix
+    ./caddydav
+  ];
 }
