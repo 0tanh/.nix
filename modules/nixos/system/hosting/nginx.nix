@@ -23,13 +23,15 @@ in
       "contents.0tanh.site" = {
         root = webdav-root;
         locations."/" = {
-          davMethods = [
-            /**
-              Only allow read based requests
-            */
-            "GET"
-            "HEAD"
-          ];
+          /**
+            davMethods = [
+
+               # Only allow read based requests
+
+              "GET"
+              "HEAD"
+            ];
+          */
           extraConfig = ''
             client_max_body_size 100M;
             auth_basic "Restricted";

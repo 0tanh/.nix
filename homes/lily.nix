@@ -9,8 +9,8 @@
 {
   imports = [
     # Combos are groups of related modules for easy set-up on a new machine, depending on need
-    ../modules/nixos/home/combos/art-work.nix
-    ../modules/nixos/home/combos/audio-work.nix
+    # ../modules/nixos/home/combos/art-work.nix
+    # ../modules/nixos/home/combos/audio-work.nix
     ../modules/nixos/home/combos/dev-work.nix
     ../modules/nixos/home/combos/minimal.nix
     # Standard modules composed for this home manager.
