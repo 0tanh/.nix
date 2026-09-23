@@ -181,7 +181,7 @@ in
 
       update = "cd ~/.nix && treefmt ~/.nix && nix flake update secrets && nix flake update dotfiles && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch ~/.nix";
       drybuild = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os boot ~/.nix";
-      bsmall = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch --max-jobs 4 --cores 2'.?submodules=1'";
+      bsmall = "cd ~/.nix && treefmt ~/.nix && ${pkgs.clean-problem-files}/bin/clean-problem-files && nh os switch --max-jobs 4 --cores 2 '.?submodules=1'";
 
       # git
       ga = "git add";
