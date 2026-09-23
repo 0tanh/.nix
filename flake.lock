@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1788050560,
-        "narHash": "sha256-3yBvcMnNEnlzZQkgENd4HP8dm+Bzy54gKgkeqJVU2Dw=",
+        "lastModified": 1790068051,
+        "narHash": "sha256-VZ/bnURQT0G2jTtOS/o1+WZYxZCOxtpPtLkwXDsYOmQ=",
         "owner": "shibco",
         "repo": "ableton-linux",
-        "rev": "c2092f702531712950649c4f957caff8203b2199",
+        "rev": "72a649290141b3e8cf0a254637eb45ce71ae28c9",
         "type": "github"
       },
       "original": {
