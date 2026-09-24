@@ -22,6 +22,8 @@
     [
       # Image editing
       affinity-v3
+      # fun drawing with other people :3
+      drawpile
       # Video Editing
       kdePackages.kdenlive
       # Drawing
