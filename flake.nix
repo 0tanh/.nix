@@ -313,6 +313,7 @@
                 ./modules/nixos/system/kde.nix
                 ./modules/nixos/system/mango.nix
                 ./modules/nixos/system/tailscale.nix
+                ./modules/nixos/system/steam.nix
                 ./modules/nixos/system/stylix.nix
                 ./modules/nixos/system/sops.nix
                 ./modules/nixos/system/virtualization.nix
@@ -380,7 +381,7 @@
                 ./modules/nixos/system/mango.nix
                 ./modules/nixos/system/samba.nix
                 ./modules/nixos/system/sops.nix
-                # ./modules/nixos/system/stylix.nix
+                ./modules/nixos/system/stylix.nix
                 # ./modules/nixos/system/virtualization.nix
                 ./modules/nixos/system/tailscale.nix
 
