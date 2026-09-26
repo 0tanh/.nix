@@ -70,8 +70,12 @@
       # a home-manager configuration for the given hostname,
       # as well as any additional modules passed to the builder function.
       mkNixosConfig =
-        system: hostname: extraModules:
+        hostname: system: extraModules:
         nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs outputs;
+            lib = lib system;
+          };
           modules = [
             # Include all machine-specific configuration
             # Each folder in ./machines corresponds to a physical host.
@@ -87,10 +91,12 @@
             # typically only requiring importing different sets of home modules.
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.betty = ./homes/${hostname}.nix;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                users.betty = ./homes/${hostname}.nix;
+              };
             }
 
             # Include shared common system modules
@@ -101,13 +107,17 @@
             {
               nixpkgs.overlays = overlays;
             }
+
+            # Standard modules that all systems will share
+            disko.nixosModules.disko
+            nix-index-database.nixosModules.nix-index
+            { programs.nix-index-database.comma.enable = true; }
+            { programs.nix-ld.enable = true; }
+            nixos-hardware.nixosModules.apple-macbook-air-7
+            sops-nix.nixosModules.sops
           ]
           # Always include any extra modules passed to the function
           ++ extraModules; # The ++ operator concatenates two lists
-          specialArgs = {
-            inherit inputs outputs;
-            lib = lib system;
-          };
         };
     in
     flake-parts.lib.mkFlake { inherit inputs; } (
@@ -152,7 +162,7 @@
                 GIT_USER = "0tanh";
                 GIT_PASSWORD = "0cba0873c6e66acf1319ca6657e53d14c5529862";
                 NIX_CONFIG = ''
-                  access-tokens = github.com=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 
+                  access-tokens = github.com=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
 
                   experimental-features = nix-command flakes
                 '';
@@ -188,6 +198,7 @@
             ];
           };
           nixosConfigurations = {
+
             # Provides the NixOS system configuration as an output of the flake.
             # Evaluated by nixos-rebuild when generating a new system configuration.
             # mkSystem provides a common interface to build any architecture,
