@@ -94,6 +94,7 @@ in
       bind=SUPER,C,spawn,kitty
       bind=SUPER,F,spawn,kitty yazi
       bind=SUPER,F,spawn,kitty nvim
+      bind=SUPER,B,spawn,zen
       bind=SUPER,space,spawn,fuzzel
       bind=SUPER,V,togglefloating
       bind=SUPER,S,spawn_shell,grim -g "$(slurp -w 0)" - | wl-copy
