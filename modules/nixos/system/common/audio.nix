@@ -22,4 +22,8 @@
     # no need to redefine it in your config for now)
     wireplumber.enable = true;
   };
+  # enable pulse audio for easier configuration of audio through scripting
+  environment.systemPackages = with pkgs; [
+    pulseaudio
+  ];
 }
