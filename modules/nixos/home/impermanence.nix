@@ -68,6 +68,7 @@
       ".local/share/direnv"
       ".local/share/nvim"
       ".local/share/JetBrains"
+      ".local/share/krita"
       ".local/share/TelegramDesktop"
       ".local/share/Zeal"
       ".local/share/zoxide"
