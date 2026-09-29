@@ -1,6 +1,6 @@
 {
-  config,
   lib,
+  config,
   pkgs,
   inputs,
   ...
@@ -14,18 +14,18 @@
     ../modules/nixos/home/combos/dev-work.nix
     ../modules/nixos/home/combos/network-and-security.nix
     ../modules/nixos/home/combos/minimal.nix
+  ]
+  ++ [
     # Standard modules composed for this home manager.
     ../modules/nixos/home/devenv.nix
     ../modules/nixos/home/direnv.nix
     ../modules/nixos/home/dotfiles.nix
     ../modules/nixos/home/firefox.nix
     ../modules/nixos/home/fuzzel.nix
-    # ../modules/nixos/home/ghostty.nix
     ../modules/nixos/home/git.nix
     ../modules/nixos/home/godot.nix
     # ../modules/nixos/home/impermanence.nix
     ../modules/nixos/home/kitty.nix
-    # ../modules/nixos/home/neovim.nix
     ../modules/nixos/home/nixvim
     ../modules/nixos/home/packages.nix
     ../modules/nixos/home/pet.nix
