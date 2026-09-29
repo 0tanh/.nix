@@ -7,6 +7,7 @@
 }:
 let
   tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
+  desktopEnv = "mango";
 in
 {
   config = {
@@ -14,11 +15,11 @@ in
       enable = true;
       settings = {
         initial_session = {
-          command = "mango";
+          command = desktopEnv;
           user = "betty";
         };
         default_session = {
-          command = "${tuigreet} --time --remember --cmd 'mango'";
+          command = "${tuigreet} --time --remember --cmd '${desktopEnv}'";
           user = "greeter";
         };
       };
