@@ -42,7 +42,6 @@
           pkgs = mkPkgs system;
           lib = nixpkgs.lib;
         }) nixpkgs.lib;
-      helpers = import ./lib { inherit nixpkgs lib; };
       # Useful helper to provide a list of system architectures you want an attrSet to be eval'able for
       # Wraps around genAttrs: https://noogle.dev/f/lib/genAttrs/
       # Provides systems as inputs to other functions
@@ -111,8 +110,12 @@
             # Standard modules that all systems will share
             disko.nixosModules.disko
             nix-index-database.nixosModules.nix-index
-            { programs.nix-index-database.comma.enable = true; }
-            { programs.nix-ld.enable = true; }
+            {
+              programs = {
+                nix-index-database.comma.enable = true;
+                nix-ld.enable = true;
+              };
+            }
             sops-nix.nixosModules.sops
           ]
           # Always include any extra modules passed to the function
@@ -232,6 +235,8 @@
                 ./modules/nixos/system/virtualization.nix
                 ./modules/nixos/system/v4L2Loopback.nix
                 # Modules for radio setup
+              ]
+              ++ [
                 ./modules/nixos/system/radio/icecast.nix
                 ./modules/nixos/system/radio/darkice.nix
                 ./modules/nixos/system/hosting
@@ -258,7 +263,8 @@
 
                 # Loopback video for FFMPEG nonsense
                 ./modules/nixos/system/v4L2Loopback.nix
-
+              ]
+              ++ [
                 # Modules for radio setup
                 ./modules/nixos/system/radio/icecast.nix
                 ./modules/nixos/system/radio/darkice.nix
@@ -271,12 +277,11 @@
 
             lulu = mkNixosConfig "lulu" "x86_64-linux" (
               [
-
                 nixos-hardware.nixosModules.common-cpu-amd
-                # nixos-hardware.nixosModules.common-gpu-nvidia-kepler
                 nixos-hardware.nixosModules.common-pc-ssd
               ]
               ++ [
+                ./modules/nixos/system/dynamic-lib.nix
                 ./modules/nixos/system/firefox.nix
                 ./modules/nixos/system/greetd.nix
                 ./modules/nixos/system/mango.nix
@@ -284,6 +289,9 @@
                 ./modules/nixos/system/sops.nix
                 ./modules/nixos/system/stylix.nix
                 ./modules/nixos/system/tailscale.nix
+              ]
+              ++ [
+                ./modules/nixos/system/kde.nix
               ]
             );
 
