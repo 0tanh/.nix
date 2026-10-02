@@ -21,6 +21,10 @@
 
     snippets = [
       {
+        description = "Check why home manager has failed to activate";
+        command = "journalctl -eu home-manager-betty.service";
+      }
+      {
         description = "Compress a video to a target filesize in M";
         command = "ffmpeg -i <file>.mp4 -c:v libx264 -b:v <size_in_M> -preset medium -c:a aac -b:a 128k <file>_<size_in_M>.mp4";
 
