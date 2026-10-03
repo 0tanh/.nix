@@ -291,7 +291,7 @@
                 ./modules/nixos/system/tailscale.nix
               ]
               ++ [
-                ./modules/nixos/system/kde.nix
+                #./modules/nixos/system/kde.nix
               ]
             );
 
