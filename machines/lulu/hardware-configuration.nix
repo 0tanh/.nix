@@ -12,6 +12,7 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+    ./lulu-geforce.nix
   ];
 
   boot.initrd.availableKernelModules = [
@@ -68,11 +69,6 @@
     # Open Source Graphics Driver
     "nouveau"
   ];
-  #[  ];
-  ## Does Not Work On GTX650
-  # lib.mkDefault [
-  # "nvidia"
-  # ];
 
   # https://github.com/NixOS/nixos-hardware/blob/master/common/gpu/nvidia/kepler/default.nix
   hardware.nvidia.open = false;
